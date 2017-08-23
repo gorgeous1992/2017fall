@@ -2,7 +2,9 @@
  \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{mathtools, eucal}
+\usepackage{xparse}
  
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
  
 \begin{document}
@@ -13,442 +15,166 @@
 %General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
 %Or just google stuff
  
-\title{Homework 1 Solutions}
+\title{MA 515 Prerequisites Test Solutions}
 \author{Zheming Gao}
 \maketitle
 
-\section{Problem 1}
+\section*{Problem 1}
 
-Solutions: 
-\begin{enumerate}
-\item 
-\begin{equation*}
-det
-\begin{pmatrix}
-a^2 & ab \\
-ab & b^2
-\end{pmatrix}
-= a^2b^2 - abab = 0.
-\end{equation*}
+\begin{proof}
 
-\item
-\begin{equation*}
-det
-\begin{pmatrix}
-\cos\alpha & -\sin\alpha \\
-\sin\alpha & \cos\alpha
-\end{pmatrix}
-= \cos^2\alpha + \sin^2\alpha = 1.
-\end{equation*}
+For all $\epsilon > 0$, we need to find a $N$ such that $\forall n > N$, $|x_n - 2| < \epsilon$.
 
-\item
-\begin{equation*}
-det
-\begin{pmatrix}
-1 & x & x \\
-x & 2 & x \\
-x & x & 3
-\end{pmatrix}
-= 1\times 2 \times 3 + x^3 + x^3 - 2x^2 - x^2 - 3x^2 = 
-2x^3 - 6x^2 + 6.
-\end{equation*}
+We may let $N = \lfloor{2/\epsilon - 1} \rfloor + 1$. Then, for all $n > N$, 
 
-\item
-Similar to the problem above, 
-\begin{equation*}
-\begin{aligned}
-det
-\begin{pmatrix}
-1 & 1 & 1 \\
-a & b & c \\
-a^2 & b^2 & c^2
-\end{pmatrix}
-& = bc^2 + a^2c + ab^2 - a^2b - ac^2 - b^2c \\
-& = ab(b-a) + ac(a-c) + bc(c-b).
-\end{aligned}
-\end{equation*}
+$$
+|\frac{2n}{n+1} - 2| - \epsilon = \frac{2}{n+1} - \epsilon < \frac{2}{\lfloor{2/\epsilon - 1} \rfloor + 2} < \frac{2}{2/\epsilon} = \epsilon.
+$$
 
-\item
-Change the order of columns. And apply the operations on matrix blocks:
-\begin{equation*}
-\begin{aligned}
-det
-\begin{pmatrix}
-1 & 0 & 2 & a\\
-2 & 0 & b & 0 \\
-3 & c & 4 & 5 \\
-d & 0 & 0 & 0
-\end{pmatrix}
-& = 
-- det
-\begin{pmatrix}
-0 & 2 & a & 1\\
- 0 & b & 0 & 2 \\
-c & 4 & 5 & 3\\
-0 & 0 & 0 & d
-\end{pmatrix}
- \\
-& = 
--det 
-\begin{pmatrix}
-0 & 2 & a\\
-0 & b & 0 \\
-c & 4 & 5
-\end{pmatrix}
-\cdot d \\
-& = abcd.
-\end{aligned}
-\end{equation*}
+In conclusion, the sequence $\{x_n\}$ converges to $2$.
 
-\item
-Same idea as the problem above. Note that it won't change the determinant of a matrix if we add one row multiplied by a constant number on another row. 
-
-suppose $a\neq 0$. Then, add $\frac{1}{a}$row1 on row2. The determinant doesn't change.
-\begin{equation*}
-det
-\begin{pmatrix}
-a & 1 & 0 & 0\\
--1 & b & 1 & 0 \\
-0 & -1 & c & 1 \\
-0 & 0 & -1 & d
-\end{pmatrix}
-= 
-det
-\begin{pmatrix}
-a & 1 & 0 & 0\\
-0 & b + \frac{1}{a} & 1 & 0 \\
-0 & -1 & c & 1 \\
-0 & 0 & -1 & d
-\end{pmatrix}
-\end{equation*}
-
-Then change orders of rows, and change orders of columns. 
-\begin{equation*}
-\begin{aligned}
-det
-\begin{pmatrix}
-a & 1 & 0 & 0\\
-0 & b + \frac{1}{a} & 1 & 0 \\
-0 & -1 & c & 1 \\
-0 & 0 & -1 & d
-\end{pmatrix}
-& = 
-- det
-\begin{pmatrix}
-0 & b + \frac{1}{a} & 1 & 0 \\
-0 & -1 & c & 1 \\
-0 & 0 & -1 & d \\
-a & 1 & 0 & 0
-\end{pmatrix} \\
-& = 
-det
-\begin{pmatrix}
-b + \frac{1}{a} & 1 & 0 & 0 \\
--1 & c & 1 & 0 \\
-0 & -1 & d & 0\\
-1 & 0 & 0 & a
-\end{pmatrix} \\
-& = 
-det 
-\begin{pmatrix}
-b + \frac{1}{a} & 1 & 0\\
--1 & c & 1 \\
-0 & -1 & d
-\end{pmatrix} 
-\cdot a \\
-& = 1 + ab + ad + cd + abcd.
-\end{aligned}
-\end{equation*}
-
-\end{enumerate}
+\end{proof}
 
 
-\section{Problem 2}
-
-Solution:
-All linear systems can be formed as $Ax = b$. 
-\begin{enumerate}
-\item
-In this problem, $x \in \mathbb R^4$, $A$ is a 4 by 4 matrix and $b$ is a 4 by 1 vector.
-
-\begin{equation*}
-[A|b] = \begin{bmatrix}
-2 & -1/2 & -1/2 & 0 & 0 \\
--1/2 & 2 & 0 & -1/2 & 3 \\
--1/2 & 0 & 2 & -1/2 & 3 \\
-0 & -1/2 & -1/2 & 2 & 0 
-\end{bmatrix} \xrightarrow {Gauss \ \ elimination}
-\begin{bmatrix}
-1 & -1/4 & -1/4 & 0 & 0 \\
-0 & 1 & -1/15 & -4/15 & 8/5 \\
-0 & 0 & 1 & -2/7 & 12/7 \\
-0 & 0 & 0 & 1 & 1 
-\end{bmatrix}
-\end{equation*}
-
-Thus, the solution to the linear system is $x = (1, 2, 2, 1)^T$.
-
-\item
-\begin{equation*}
-[A|b] = \begin{bmatrix}
-2 & 3 & 5 & 1 & 3 \\
-3 & 4 & 2 & 3 & -2 \\
-1 & 2 & 28 & -1 & 8 \\
-7 & 9 & 1 & 8 & 0 
-\end{bmatrix} \xrightarrow {Gauss \ \ elimination}
-\begin{bmatrix}
-1 & 3/2 & 5/2 & 1/2 & 3/2 \\
-0 & 1 & 11 & -3 & 13 \\
-0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 1 
-\end{bmatrix}
-\end{equation*}
-
-We see $[A|b]$ is not in full rank so there is no solution to the linear system.
-\end{enumerate}
-
-\section{Problem 3}
-$A = P\Lambda Q$, $A^2 = P\Lambda QP\Lambda Q$. Since $QP = I$, $A^2 = P \lambda^2 Q$. Hence, $A^k = P\Lambda ^k Q$. 
-
-It is enough to calculate what $\Lambda^k$. Since $\Lambda$ is a diagonal matrix, 
+\section*{Problem 2}
+During the proof, we will need the linearity of limit. i.e.
+$\alpha \in \mathbb{R}, \{x_n\} \rightarrow 3$ and $\{y_n\} \rightarrow 5$ , then
 \begin{itemize}
-\item k is a odd number, 
+\item 
+$$
+\lim_{n\rightarrow \infty}\alpha x_n = 3\alpha
+$$
 
-$\Lambda ^k = \Lambda$. Then 
-\begin{equation*}
-A^k = P\Lambda Q = \begin{pmatrix}
-7 & -12 \\
-6 & -7
-\end{pmatrix}.
-\end{equation*}
-\item k is an even number, 
-
-$\Lambda ^k = I$. Then 
-\begin{equation*}
-A^k = PIQ = PQ = I.
-\end{equation*}
-
+\item
+$$
+\lim_{n\rightarrow \infty} x_n + y_n = 3 + 5 = 8.
+$$
 \end{itemize}
 
-\section{Problem 4}
-
-The linear system can be formed as $Ax = b$, where
-\begin{equation*}
-A = \begin{bmatrix}
-1 & 1 & 1\\
-0 & 2 & 2\\
-1 & -1 & 0
-\end{bmatrix}, \ \ 
-b = \begin{bmatrix}
-1 \\
-1 \\
-2
-\end{bmatrix}
-\end{equation*}
-
-It is clear that $A$ is invertible.(You may check that A is of full rank)
-To find the inverse of $A$, i.e. $A^{-1}$, there is one method by Gauss elimination
-
-\begin{equation*}
-[A|I] = \begin{bmatrix}
-1 & 1 & 1 & 1 & 0 & 0 \\
-0 & 2 & 2 & 0 & 1 & 0 \\
-1 & -1 & 0 & 0 & 0 & 1
-\end{bmatrix} \xrightarrow {Gauss \ \ elimination}
-\begin{bmatrix}
-1 & 0 & 0 & 1 & -1/2 & 0 \\
-0 & 1 & 0 & 1 & -1/2 & -1 \\
-0 & 0 & 1 & -1 & 1 & 1 
-\end{bmatrix} = [I|A^{-1}]
-\end{equation*}
-
-The solution is $x = A^{-1}b = (1/2, -3/2, 2)^T$.
-
-
-\section{Problem 5}
-\begin{enumerate}
-\item False
-Counter example:
-
-Let 
-$$
-A = \begin{pmatrix}
-1 & 0 \\
-0 & 0
-\end{pmatrix} \quad
-B = \begin{pmatrix}
-0 & 0 \\
-0 & 1
-\end{pmatrix} 
-$$
-
-Neither $A$ nor $B$ is invertible, but $A + B = I$, which is invertible.
-
-\item True
 \begin{proof}
-We use the notation $\mathcal R (A)$ on be half of "Range of matrix $A$". And there is a fact that $\mathcal R (AB) \subset \mathcal R (A)$. Hence, the dimensions of $\mathcal R (A)$ and $\mathcal R(B)$ are related in the following inequality chain:
+We need to show that $\forall \epsilon > 0, \exists N$, such that $\forall n > N$, $|x_ny_n - 15| <  \epsilon$.
 
+Since both $\{x_n\}$ and $\{y_n\}$ are convergent, we know,$\forall \epsilon_1 > 0, \exists N_1, N_2$, such that for all $m > N_1, n > N_2$, 
+ 
 $$
-\dim(\mathcal R(AB)) \leq \dim(\mathcal R(A)) \leq n.
-$$
-
-Since $AB$ is invertible, $\dim(\mathcal R(AB)) = n$. Hence, $\dim(\mathcal R(AB)) = \dim(\mathcal R(A)) = n$, which implies two facts that
-\begin{enumerate}
-\item\label{fact1} $\mathcal R(A)$ is of full rank.
-
-\item\label{fact2} $\mathcal R(A) = \mathcal R(AB)$.
-\end{enumerate}
-
-From (\ref{fact1}) we know $A$ is invertible and from (\ref{fact2}) we know that $B$ is of full rank, which also implies that $B$ is invertible.
-\end{proof}
-
-
-\item False
-Counter example:
-We might let
-$$
-A = \begin{pmatrix}
-1 & 0 \\
-0 & 1
-\end{pmatrix}, \quad
-B = \begin{pmatrix}
-1 & 0 \\
-0 & 0
-\end{pmatrix}
+|x_m - 3| < \sqrt{\epsilon_1}, \quad |y_n - 5| < \sqrt{\epsilon_1}.
 $$
 
-Hence, $$AB = \begin{pmatrix}
-1 & 0 \\
-0 & 0
-\end{pmatrix}
+We may let $N_3 = \max{N_1, N_2}$. Then for all $n > N_3$, 
+
+$$
+|(x_n - 3)(y_n - 5)| < \epsilon_1.
 $$
 
-Obviously, $AB$ is not invertible, but $A$ is invertible.
-
-
-
-\item True.
-
-\begin{proof}
-Since $A$ is invertible, we know that the kernel of $A$, denoted as $\mathcal N(A) = \{0\}$. i.e., $Ax = 0$ implies $x = 0$. 
-
-Let $kAx = 0$. Change the order of factors on left side and we obtain $A\cdot kx = 0$, which implies that $kx = 0$. With $k\neq 0$, we know that $x = 0$. In all, we conclude that $\mathcal N(kA) = \{0\}$, which is an equivalent to the fact that $kA$ is invertible. And this proves the claim.
-
-\end{proof}
-\end{enumerate}
-
-
-\section{Problem 6}
-Solution: (b)
-
-\begin{proof}
-Since $A = B^T$, we know $A^{-1} = B^{-T}$. Then, 
+In last inequality, use triangle inequality and obtain the left-hand side: 
 
 $$
 \begin{aligned}
-A^T(B^{-1}A^{-1} + I)^T 
-& = A^T(A^{-T}B^{-T} + I) \\
-& = A^TA^{-T}B^{-T} + A^T \\
-& = B^{-T} + A^T \\
-& = (B^T)^{-1} + A^T = A^{-1} + B
+LHS = |x_ny_n - 3y_n - 5x_n + 30 -15| & \geqslant |x_ny_n - 15| - |3y_n + 5x_n - 30| \\
+& \geqslant |x_ny_n - 15| - |3(y_n - 5)| - |5(x_n - 3)| \\
+& \geqslant |x_ny_n - 15| - 8\sqrt{\epsilon_1}
 \end{aligned}
 $$
 
+Hence, we have the following,
+$$
+|x_ny_n - 15| \leqslant 8\sqrt{\epsilon_1} + \epsilon_1 \quad \rightarrow 0 
+$$
+
+as $\epsilon$ goes to 0.
+
+Then the claim of $\lim_{n \rightarrow \infty} x_ny_n = 15$ is proved.
+
+
+
 \end{proof}
 
+\section*{Problem 3}
 
-\section{Problem 7}
-Solution: 
-
-Let $A = [\alpha_1^T, \alpha_2^T, \alpha_3^T, \alpha_4^T]$, and $x = (x_1, x_2, x_3, x_4)^T$. Solve linear system $Ax = \alpha^T$ and we obtain $x = (\frac{5}{4}, \frac{1}{4}, -\frac{1}{4}, -\frac{1}{4})^T$.
-
-\section{Problem 8}
-Solution: 
-
-Build matrix $A = [\alpha_1, \alpha_2, \alpha_3]$. vectors $\alpha_1, \alpha_2$ and $\alpha_3$ are linearly independent if and only if $A$ is of full rank. Hence, we only need to check the rank of $A$ by Gauss elimination.
-
-$$
-A = \begin{pmatrix}
-1 & 0 & 1 \\
-1 & 2 & 3 \\
-1 & 5 & 6
-\end{pmatrix} \xrightarrow {Gauss \quad elimination}
-\begin{pmatrix}
-1 & 0 & 1 \\
-0 & 2 & 2 \\
-0 & 0 & 0
-\end{pmatrix}
-$$
-
-This implies that $Rank(A) = 2 < 3$. In conclusion, $\alpha_1, \alpha_2$ and $\alpha_3$ are NOT linearly independent.
-
-\section{Problem 9}
 \begin{proof}
-First step, we'd like to show $\delta_1 + \delta_2$, $\delta_2 + \delta_3$ and $\delta_3 + \delta_1$ are linearly independent based on $\delta_1$, $\delta_2$ and $\delta_3$ are linearly independent. 
 
-Recall the definition of linearly dependence： 
- $\delta_1$, $\delta_2$ and $\delta_3$ are linearly independent if 
- $$
- \alpha_1\delta_1 + \alpha_2\delta_2 + \alpha_3\delta_3 = 0 \iff \alpha_1 = \alpha_2 = \alpha_3 = 0.
- $$
- 
-Hence suppose $\beta_1(\delta_1+\delta_2) + \beta_2(\delta_2+\delta_3) + \beta_3(\delta_3+\delta_1) = 0$, we only need to show that $\beta_1 = \beta_2 = \beta_3 = 0$. 
+From $\{x_n\}$ is a Cauchy sequence we know that $\forall \epsilon > 0, \exists N$ such that $\forall n, m > N$, $|x_n - x_m| < \epsilon$. We may let $m = N + 1$ and then $\forall n > N, |x_n - x_{N+1}| < \epsilon$, which implies $|x_n| < \epsilon + |x_{N+1}|$.
 
-Rearrange the left side of it and obtain $(\beta_1 + \beta_3)\delta_1 + (\beta_1 + \beta_2)\delta_2 + (\beta_2 + \beta_3)\delta_3 = 0$. From the independence of $\delta_1$, $\delta_2$ and $\delta_3$, we have 
-$$
-\beta_1 + \beta_3 = 0, \beta_1 + \beta_2 = 0, \beta_2 + \beta_3 = 0.
-$$
-which implies $\beta_1 = \beta_2 = \beta_3 = 0$. 
+For all $\epsilon > 0$, we may let $K_\epsilon = \max\{|x_1|, |x_2|, \dots, |x_N|, |x_{N+1} + \epsilon|\} $. Then $\forall n \in \mathbb{N}$, $|x_n| < K_\epsilon $. Here $K_\epsilon < +\infty$.
 
-For the opposite direction of this claim, use the similar idea above and we only need to show that 
+Since $\epsilon$ is arbitrary chosen and we let it go to 0. Then $K_\epsilon \rightarrow K < +\infty$ and $\{x_n\}$ is bounded by $K$.
 
-$$
-\eta_1\delta_1 + \eta_2\delta_2 + \eta_3\delta_3 = 0 \Rightarrow \eta_1 = \eta_2 = \eta_3 = 0
-$$
+Hence, Cauchy sequence is bounded.
 
-based on the linear independence of $\delta_1 + \delta_2$, $\delta_2 + \delta_3$ and $\delta_3 + \delta_1$.
 
-Suppose $\eta_1\delta_1 + \eta_2\delta_2 + \eta_3\delta_3 = 0$. And construct coefficient $\gamma_1 = \frac{1}{2}(\eta_2 + \eta_1 - \eta_3)$, $\gamma_1 = \frac{1}{2}(\eta_2 - \eta_1 + \eta_3)$ and $\gamma_1 = \frac{1}{2}(\eta_3 - \eta_2 + \eta_1)$. It is easy to verify that
-
-$$
-\gamma_1(\delta_1 + \delta_2) + \gamma_2(\delta_2+\delta_3) + \gamma_3(\delta_3+\delta_1) = \eta_1\delta_1 + \eta_2\delta_2 + \eta_3\delta_3 = 0.
-$$
-
-By the independence of $\delta_1 + \delta_2$, $\delta_2 + \delta_3$ and $\delta_3 + \delta_1$, we obtain $\gamma_1 = \gamma_2 = \gamma_3 = 0$, which implies $\eta_1 = \eta_2 = \eta_3 = 0$.
-
-Hence, the claim is proved.
 \end{proof}
 
 
+\section*{Problem 4}
 
-\section{Problem 10}
-Solution:
+Recall the definition of continuous. A function $f$: $\mathbb{R} \rightarrow \mathbb{R}$ is continuous at $c$ if $f$ is defined at $c$ and satisfies that $\forall \epsilon > 0$, there exists $\delta > 0$ such that $\forall |x_n - c| < \delta$, $|f(x_n) - f(c)| < \epsilon$.
+
+\begin{proof}
+Since the sequence $\{x_n\}$ converges to $c$, we know that $\forall \epsilon_0 > 0$, $\exists N_0$ such that $|x_n - c| \epsilon_0$. With the fact that $f$ is continuous at $c$, $\forall \epsilon > 0$, there exists $\delta > 0$. And for this $\delta$, there exists $N_\epsilon$, such that $\forall n > N_\epsilon$, 
+$$
+|f(x_n) - f(c)| < \epsilon.
+$$
+
+Rewrite above, we have $\forall \epsilon > 0, \exists N_\epsilon$, such that 
+$$
+\forall n > N_\epsilon, \quad |f(x_n) - f(c)| < \epsilon.
+$$
+
+which proves the equivalent statement of $\lim_{n\rightarrow \infty} f(x_n) = f(c)$.
+
+\end{proof}
+
+
+\section*{Problem 5}
+$\forall x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{R}^2$, let metric $d_1(x, y) = ||x - y||$, where $||x|| = \sqrt{x_1^2 + x_2^2}$ is the norm on $X$. If we show $(X, d_1)$ is a metric space, then we can use this to show the triangle inequality for metric $d$.
+
+$\forall x\in X$, let $\bar x = (2x_1, 3x_2)$, and it is clear that $d(x, y) = d_1(\bar x, \bar y)$. Then $\forall x, y, z \in X$, 
+$$
+d(x,y) + d(y, z) = d_1(\bar x, \bar y) + d_1(\bar y, \bar z) \geqslant d_1(\bar x, \bar z) = d(x, z).
+$$
+
+Moreover, from the definition we can see that $d$ satisfies 
 \begin{enumerate}
-\item
-$$
-A \xrightarrow {Gauss \quad elimination}
-\begin{pmatrix}
-1 & 2 & 3 & 4 & 5 \\
-0 & 0 & 1 & 2 & 3 \\
-0 & 0 & 0 & 0 & 4 \\
-0 & 0 & 0 & 0 & 0
-\end{pmatrix}
-$$
-
-From this we know that $Rank(A) = 3$.
-
-\item
-$$
-A \xrightarrow {Gauss \quad elimination}
-\begin{pmatrix}
-3 & 2 & -1 & -3 & -2 \\
-0 & -7/3 & 11/3 & 3 & -5/3 \\
-0 & 0 & 0 & 1 & 2 
-\end{pmatrix}
-$$
-
-From this we know that $Rank(A) = 3$.
+\item $d(x, x) = 0$
+\item $d(x, y) = d(y, x)$.
 \end{enumerate}
+
+Hence, $(X, d)$ is a metric space.
+
+In the following we only need to show that $(X, d_1)$ is a metric space.
+\begin{proof}
+We see that $d_1$ satisfies that $d(x, x) = 0$ and $d(x, y) = d(y, x)$. So the only thing we need to show is the triangle inequality of $d_1$. i.e., $\forall x, y, z \in X$, 
+$$
+||x- y|| + ||y - z|| \geqslant ||x - z||.
+$$
+
+We may let $x - y = a,  y - z = b$ and $ x - z = a + b$. Then use Cauchy-Schwartz inequality,
+
+$$
+\begin{aligned}
+||a + b||^2 = (a + b)^T(a + b) & = ||a||^2 + ||b||^2 + 2a^Tb \\
+& \leqslant ||a||^2 + ||b||^2 + 2 ||a||||b|| = (||a||+||b||)^2
+\end{aligned}
+$$
+
+Take the square root on both sides and obtain $||a+b|| \leqslant ||a|| + ||b||$, which proves the triangle inequality of metric $d_1$.
+
+\end{proof}
+
+\section*{Problem 6}
+\begin{proof}
+
+Obviously, $\{x_n\}$ is a Cauchy sequence. Recall that in problem 3, we have already shown that $\{x_n\}$ is bounded. Use Bolzano-Weierstrass theorem and we know that there exists a  convergent subsequence $\{x_{n_k}\}$. Let's say, the subsequence converges to $c$. i.e., $\forall \epsilon > 0$, $\exists N_1$, such that $\forall n_k > N_1$, $|x_{n_k} - c| < \epsilon/2$. what's more, since $\{x_n\}$ is Cauchy, we know $\exists N_2$, such that $\forall m, n > N_2$, $|x_m - x_n|< \epsilon/2$.
+
+Combine those two conditions and take $N_3 = \max\{N_1, N_2\}$, we see that $\forall n, n_k > N_3$,
+$$
+|x_n - c| = |x_n - x_{n_k} + x_{x_k} - c| \leqslant |x_n - x_{n_k}| + |x_{x_k} - c| < \epsilon/2 + \epsilon/2 = \epsilon.
+$$
+
+which proves the claim that $\{x_n\}$ is convergent.
+
+\end{proof}
+
 
 
 \end{document}
