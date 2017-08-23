@@ -1,0 +1,75 @@
+\documentclass[onesided,10pt]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\real}{\mathbb{R}} 
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\defeq}{\ensuremath{\overset{\mathrm{def}}{=}}}
+\DeclareMathOperator*{\tr}{tr}
+
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\lambdamin}{\lambda_\textup{min}}
+\newcommand{\lambdamax}{\lambda_\textup{max}}
+
+\begin{document}
+\begin{center}
+	\textbf{SEMIDEFINITE OPTIMIZATION (MA 591) --- HW 1}\\[0.5em]
+	Convexity and positive semidefinite matrices
+\end{center}
+\medskip
+
+\begin{enumerate}[\bfseries 1.]
+\item Let $K\subseteq \real^n$ be a full-dimensional convex cone. Find the simplest possible description of the set $K-K \defeq \{\vx-\vy\,|\, \vx\in K, \vy\in K\}.$ (You'll know it when you have it.) How does the answer change if we drop the assumption that $K$ is full-dimensional?
+
+\item Show that for every $(x_0,\dots,x_n)\in\real^{n+1}$, $x_0 \geq \|(x_1,\dots,x_n)\|_2$ if and only if the matrix
+\[\left(\begin{matrix}
+x_0 & x_1 & \cdots & x_n \\
+x_1 & x_0                \\                 
+\vdots &  & \ddots \\
+x_n    &  &        & x_0
+\end{matrix}\right)\]
+is positive semidefinite. (All entires outside of the first row and column and the diagonal are zero.)
+
+\item Let $k$ be any positive integer, $\vA\in\bS^k_+$, and $\vB\in\bS^k$. Show that
+\[ \tr(\vA)\lambdamin(\vB) \leq \tr(\vA\vB) \leq \tr(\vA)\lambdamax(\vB). \]
+\textit{(Extra credit.)} Also show that for every (not necessarily PSD) symmetric matrices $\vA,\vB\in\bS^k$,
+	\[ \sum_{i=1}^k \lambda_i(\vA)\lambda_{k+1-i}(\vB) \leq \tr(\vA\vB) \leq \sum_{i=1}^k \lambda_i(\vA)\lambda_{i}(\vB), \]
+where $\lambda_1,\dots,\lambda_k$ denote the eigenvalues of the appropriate matrices in increasing order.
+	
+\item \emph{Choose Your Own Adventure}\textsuperscript{\tiny TM}:
+\begin{itemize}
+	\item If you are a statistician, show that the elementwise product of two positive semidefinite matrices of the same size is positive semidefinite. (\emph{Hint:} a matrix is PSD if and only if it is a covariance matrix of some multivariate random variable.)
+	\item If you are a linear programming fan, prove rigorously that a function $f\colon \real^n\mapsto\real$ is simultaneously convex and concave if and only if it is affine. (That is, iff it can be written as $f(\vx)=\va^\T\vx+b$ for some $\va\in\real^n$ and $b\in\real$.)
+	\emph{Note:} do not just assume that $f$ is differentiable!
+	\item If you are a geometer at heart, then prove rigorously that $\bS^2_+$ is not a convex polyhedron.
+	\item If linear algebra or matrix theory is your jam, then show that if the symmetric matrices $\vA$ and $\vB$ satisfy $\vA\succcurlyeq\vB\succcurlyeq\vzero$, then they also satisfy $\vA^{1/2}\succcurlyeq\vB^{1/2}$, but $\vA^2\succcurlyeq\vB^2$ does not necessarily hold. \emph{Hint:} for the first half, show first that if $\vx$ is an eigenvector of $\vA^{1/2}-\vB^{1/2}$, then
+	\[ \vx^\T(\vA^{1/2}+\vB^{1/2})(\vA^{1/2}-\vB^{1/2})\vx = \vx^\T(\vA-\vB)\vx\]
+	holds. (Even though $(\vA^{1/2}+\vB^{1/2})(\vA^{1/2}-\vB^{1/2})\neq\vA-\vB$ in general, so do not use that ``identity''.)
+\end{itemize}
+
+
+
+\item \textit{(Extra credit.) Do both parts.}
+\begin{enumerate}
+	\item Let $f$ and $g$ be two convex, continuously differentiable functions on the real line, both of which attain a minimum. Prove using basic calculus that $f+g$ also attains a minimum.
+
+	\item Show that the previous assertion \emph{fails} for multivariate functions. That is, find two convex functions $f$ and $g$ with continuous gradients over $\real^n$, for which $f+g$ fails to attain a minimum even though both $f$ and $g$ have minima.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\bigskip
+
+\noindent {\bf Due on August 30 (Wednesday), by the start of the class.} (You may turn in typeset solutions by email.)
+
+\end{document}
