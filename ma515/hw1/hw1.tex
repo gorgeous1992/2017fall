@@ -15,7 +15,7 @@
 %General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
 %Or just google stuff
  
-\title{MA 515 Prerequisites Test Solutions}
+\title{MA 515 Homework 1}
 \author{Zheming Gao}
 \maketitle
 
@@ -23,132 +23,215 @@
 
 \begin{proof}
 
-For all $\epsilon > 0$, we need to find a $N$ such that $\forall n > N$, $|x_n - 2| < \epsilon$.
+To show that $(X, d)$ is a metric space, we need to verify that $d(x, y)$ is well defined as a distance. Obviously, $\forall x, y in X$, $d(x, x) = 0$ and $d(x, y) = d(y, x)$ due to the properties of absolute value. Hence, we only need to verify the triangle inequality holds.
 
-We may let $N = \lfloor{2/\epsilon - 1} \rfloor + 1$. Then, for all $n > N$, 
-
+Let $a = \sqrt{|x - y|}$ and $b = \sqrt{|y - z|}$. Hence, 
+$a$ and $b$ are non-negative, which promise the following relations,
 $$
-|\frac{2n}{n+1} - 2| - \epsilon = \frac{2}{n+1} - \epsilon < \frac{2}{\lfloor{2/\epsilon - 1} \rfloor + 2} < \frac{2}{2/\epsilon} = \epsilon.
+(a + b)^2 - (a^2 + b^2) = 2ab \geqslant 0.
 $$
 
-In conclusion, the sequence $\{x_n\}$ converges to $2$.
+Therefore, we have
+$$
+d(x, y) + d(y, z) = a + b \geqslant \sqrt{a^2 + b^2} = \sqrt{|x - y|+|y - z|} \geqslant \sqrt{|x - z|} = d(x, z).
+$$
+
+which proves the triangle inequality. In conclusion, $(X, d)$ is a metric space.
 
 \end{proof}
 
 
 \section*{Problem 2}
-During the proof, we will need the linearity of limit. i.e.
-$\alpha \in \mathbb{R}, \{x_n\} \rightarrow 3$ and $\{y_n\} \rightarrow 5$ , then
-\begin{itemize}
-\item 
-$$
-\lim_{n\rightarrow \infty}\alpha x_n = 3\alpha
-$$
 
-\item
-$$
-\lim_{n\rightarrow \infty} x_n + y_n = 3 + 5 = 8.
-$$
-\end{itemize}
+Yes. $(X, d)$ is a metric space.
 
 \begin{proof}
-We need to show that $\forall \epsilon > 0, \exists N$, such that $\forall n > N$, $|x_ny_n - 15| <  \epsilon$.
 
-Since both $\{x_n\}$ and $\{y_n\}$ are convergent, we know,$\forall \epsilon_1 > 0, \exists N_1, N_2$, such that for all $m > N_1, n > N_2$, 
- 
-$$
-|x_m - 3| < \sqrt{\epsilon_1}, \quad |y_n - 5| < \sqrt{\epsilon_1}.
-$$
-
-We may let $N_3 = \max{N_1, N_2}$. Then for all $n > N_3$, 
-
-$$
-|(x_n - 3)(y_n - 5)| < \epsilon_1.
-$$
-
-In last inequality, use triangle inequality and obtain the left-hand side: 
+We will use the result from problem 1 to show this. Still, with the properties of absolute value and integration, we know that $\forall f, g \in X$, $d(f, f) = 0$ and $d(f, g) = d(g, f)$. Then, we only need to prove the triangle inequality. $\forall f, g, h \in X$, use the linearity of integration, triangle inequality for absolute value and result from problem 1, we have
 
 $$
 \begin{aligned}
-LHS = |x_ny_n - 3y_n - 5x_n + 30 -15| & \geqslant |x_ny_n - 15| - |3y_n + 5x_n - 30| \\
-& \geqslant |x_ny_n - 15| - |3(y_n - 5)| - |5(x_n - 3)| \\
-& \geqslant |x_ny_n - 15| - 8\sqrt{\epsilon_1}
+d(f, g) + d(g, h) & = \int_a^b |g(t) - f(t)| + \sqrt{|g(t) - f(t)|} dt + \int_a^b |h(t) - g(t)| + \sqrt{|h(t) - g(t)|} dt \\
+& =  \int_a^b |g(t) - f(t)| + |h(t) - g(t)| + \sqrt{|g(t) - f(t)|} + \sqrt{|h(t) - g(t)|} dt \\
+& \geqslant \int_a^b |h(t) - f(t)| + \sqrt{|h(t) - f(t)|} dt = d(f, h).
 \end{aligned}
 $$
 
-Hence, we have the following,
-$$
-|x_ny_n - 15| \leqslant 8\sqrt{\epsilon_1} + \epsilon_1 \quad \rightarrow 0 
-$$
-
-as $\epsilon$ goes to 0.
-
-Then the claim of $\lim_{n \rightarrow \infty} x_ny_n = 15$ is proved.
-
-
+In conclusion, $(X, d)$ is a metric space.
 
 \end{proof}
 
 \section*{Problem 3}
 
+We will prove (b) first and use it to prove (a).
+
+\begin{enumerate}
+\item (b)
 \begin{proof}
+Since $(X,d)$ is a metric space, so $\forall x, y ,z \in X$ we apply triangle inequality on $d(x, z)$ and obtain $d(x, z) \leqslant d(x, y) + d(y, z)$, from where we know that $d(x, z)- d(y, z) \leqslant d(x, y)$. Similarly, from $d(y, z) \leqslant d(y, x) + d(x, z)$, we know $d(y, z)- d(x, z) \leqslant d(x, y)$.
 
-From $\{x_n\}$ is a Cauchy sequence we know that $\forall \epsilon > 0, \exists N$ such that $\forall n, m > N$, $|x_n - x_m| < \epsilon$. We may let $m = N + 1$ and then $\forall n > N, |x_n - x_{N+1}| < \epsilon$, which implies $|x_n| < \epsilon + |x_{N+1}|$.
-
-For all $\epsilon > 0$, we may let $K_\epsilon = \max\{|x_1|, |x_2|, \dots, |x_N|, |x_{N+1} + \epsilon|\} $. Then $\forall n \in \mathbb{N}$, $|x_n| < K_\epsilon $. Here $K_\epsilon < +\infty$.
-
-Since $\epsilon$ is arbitrary chosen and we let it go to 0. Then $K_\epsilon \rightarrow K < +\infty$ and $\{x_n\}$ is bounded by $K$.
-
-Hence, Cauchy sequence is bounded.
-
+In conclusion, $\forall x, y, z \in X$, 
+$$
+|d(x, z)- d(y, z)| \leqslant d(x, y).
+$$
 
 \end{proof}
 
+\item (a)
+
+\begin{proof}
+
+Now we use (b) to show (a). Rewrite left hand side and use triangle inequality,
+$$
+\begin{aligned}
+LHS = |d(x, y) - d(z, w)| & = |d(x, y) - d(y, z) + d(y, z) - d(z, w)| \\
+& \leqslant |d(x, y) - d(y, z)| + |d(y, z) - d(z, w)| \\
+& = |d(y, x) - d(y, z)| + |d(z, y) - d(z, w)| \\
+& \leqslant d(x, z) + d(y, w)
+\end{aligned}
+$$
+
+This proves the inequality in $(a)$.
+
+\end{proof}
+
+\end{enumerate}
 
 \section*{Problem 4}
 
-Recall the definition of continuous. A function $f$: $\mathbb{R} \rightarrow \mathbb{R}$ is continuous at $c$ if $f$ is defined at $c$ and satisfies that $\forall \epsilon > 0$, there exists $\delta > 0$ such that $\forall |x_n - c| < \delta$, $|f(x_n) - f(c)| < \epsilon$.
+\begin{enumerate}
+\item (a) 
+
+Example:
+
+We might let $x = \{x_n\}_{n\in\mathbb{N}}$ and $x_n = 1/\sqrt{n}$. This satisfies $x_n \rightarrow 0$ as $n \rightarrow +\infty$, but doesn't satisfy $x \in \ell^2$ since
+
+$$
+\sum_{n = 1}^{+\infty} |x_n|^2 = \sum_{n = 1}^{+\infty} \frac{1}{n} = +\infty.
+$$
+
+\item (b)
+
+Example: 
+
+Use the same $x = \{x_n\}_{n\in\mathbb{N}} = \{1/\sqrt{n}\}$. $x \notin \ell^2$, but $x \in \ell^3$ since 
+
+$$
+\sum_{n = 1}^{+\infty} |x_n|^3 = \sum_{n = 1}^{+\infty}\left(\frac{1}{n}\right)^{3/2} < +\infty.
+$$
+
+\end{enumerate}
+
+
+\section*{Problem 5}
 
 \begin{proof}
-Since the sequence $\{x_n\}$ converges to $c$, we know that $\forall \epsilon_0 > 0$, $\exists N_0$ such that $|x_n - c| \epsilon_0$. With the fact that $f$ is continuous at $c$, $\forall \epsilon > 0$, there exists $\delta > 0$. And for this $\delta$, there exists $N_\epsilon$, such that $\forall n > N_\epsilon$, 
+We will prove this by contradiction. Let $x: = \{x_n\}_{n=1}^{+\infty} \in \ell^p$, so $x$ satisfies $\sum_{n=1}^{+\infty} |x_n|^p < +\infty$. $(p > 1)$
+
+Suppose that $x$ is not a bounded sequence, i.e., for any $M > 0$, $\exists N$ such that $\forall n > N$, $|x_n| > M$. We might let $M = 1$, then there exists $N_0$ such that 
+$\forall n > N_0$,
+
 $$
-|f(x_n) - f(c)| < \epsilon.
+\sum_{n = 1}^{+\infty} |x_n|^p \geqslant \sum_{n = N_0 + 1}^{+\infty} |x_n|^p > \sum_{n = N_0 + 1}^{+\infty} M^p > +\infty.
 $$
 
-Rewrite above, we have $\forall \epsilon > 0, \exists N_\epsilon$, such that 
+which contradicts to the fact that $x \in \ell^p$. Hence, $x$ is a bounded sequence. Equivalently, $x$ is in $\ell^{+\infty}$.
+
+\end{proof}
+
+\section*{Problem 6}
+
+\begin{enumerate}
+\item (a)
+
+\begin{proof}
+Need to show that $d_f(x, y)$ is a metric. First of all, $\forall x \in X$, since $(X, d)$ is a metric space, we have
+
 $$
-\forall n > N_\epsilon, \quad |f(x_n) - f(c)| < \epsilon.
+d_f(x, x) = f \circ d(x, x) = f(0) = 0.
 $$
 
-which proves the equivalent statement of $\lim_{n\rightarrow \infty} f(x_n) = f(c)$.
+Also, $\forall x, y \in X$, 
+
+$$
+d_f(x, y) = f\circ d(x, y) = f \circ d(y, x) = d_f(y, x).
+$$
+
+For triangle inequality, $\forall x, y, z \in X$, use supper-additivity of $f$ and obtain
+
+$$
+\begin{aligned}
+d_f(x, y) + d_f(y, z) & = f\circ d(x, y) + f\circ d(y, z) \\
+& \geqslant f\circ (d(x, y) + d(y, z)) \geqslant f\circ d(x, z) = d_f(x, z).
+\end{aligned}
+$$
+
+In conclusion, $(X, d_f)$ is a metric space.
+
+\end{proof}
+
+\item (b)
+
+\begin{proof}
+
+Let $f: \mathbb{R}_+ \rightarrow \mathbb{R}_+$. $f(x) = x/(1 + x)$. It is clear that 
+\begin{enumerate}
+\item [(i)]
+$$
+f(0) = 0\ \text{and}\  f(s) > 0 \ \text{for all}\  s>0,
+$$
+
+\item [(ii)]
+$f$ has supper-additivity, because $\forall x, y \geqslant 0$, 
+
+$$
+\begin{aligned}
+f(x + y) - f(x) - f(y) & = \frac{x+y}{1+x+y} - \frac{x}{1+x} - \frac{y}{1+y} \\
+& = \left( \frac{x}{1+x+y} - \frac{x}{1+x} \right) + \left( \frac{y}{1+x+y} - \frac{y}{1+y} \right) \leqslant 0.
+\end{aligned}
+$$
+
+With the result in part (a), $d_f(x, y) = \tilde{d}(x, y)$ is a metric.
+
+\end{enumerate}
+
+\end{proof}
+
+\end{enumerate}
+
+\section*{Problem 7}
+\begin{enumerate}
+\item (a)
+\begin{proof}
+To prove $d$ is a metric, we need to verify three conditions. First of all, $\forall x\in X$, $d(x, x) = d_1(x_1, x_1) + d_2(x_2, x_2) = 0$. 
+
+Also, $\forall x, y \in X$, 
+$$
+d(x, y) = d_1(x_1, y_1) + d_2(x_2, y_2) = d_1(y_1, x_1) + d_2(y_2, x_2) = d(y, x).
+$$
+
+For triangle inequality, $\forall x, y, z \in X$, we have 
+
+$$
+\begin{aligned}
+d(x, y) + d(y, z) & =  d_1(x_1, y_1) + d_2(x_2, y_2) +  d_1(y_1, z_1) + d_2(y_2, z_2) \\
+& = [d_1(x_1, y_1) + d_1(y_1, z_1)] + [d_2(x_2, y_2) +   d_2(y_2, z_2)] \\
+& \geqslant d_1(x_1, z_1) + d_2 (x_2, z_2) = d(x, z).
+\end{aligned}
+$$
+
+Hence, $d$ is a metric.
 
 \end{proof}
 
 
-\section*{Problem 5}
-$\forall x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{R}^2$, let metric $d_1(x, y) = ||x - y||$, where $||x|| = \sqrt{x_1^2 + x_2^2}$ is the norm on $X$. If we show $(X, d_1)$ is a metric space, then we can use this to show the triangle inequality for metric $d$.
+\item (b)
 
-$\forall x\in X$, let $\bar x = (2x_1, 3x_2)$, and it is clear that $d(x, y) = d_1(\bar x, \bar y)$. Then $\forall x, y, z \in X$, 
-$$
-d(x,y) + d(y, z) = d_1(\bar x, \bar y) + d_1(\bar y, \bar z) \geqslant d_1(\bar x, \bar z) = d(x, z).
-$$
-
-Moreover, from the definition we can see that $d$ satisfies 
-\begin{enumerate}
-\item $d(x, x) = 0$
-\item $d(x, y) = d(y, x)$.
-\end{enumerate}
-
-Hence, $(X, d)$ is a metric space.
-
-In the following we only need to show that $(X, d_1)$ is a metric space.
 \begin{proof}
-We see that $d_1$ satisfies that $d(x, x) = 0$ and $d(x, y) = d(y, x)$. So the only thing we need to show is the triangle inequality of $d_1$. i.e., $\forall x, y, z \in X$, 
-$$
-||x- y|| + ||y - z|| \geqslant ||x - z||.
-$$
 
-We may let $x - y = a,  y - z = b$ and $ x - z = a + b$. Then use Cauchy-Schwartz inequality,
+Similarly to part (a), it is only need to show the triangle inequality for $\tilde d$.
+
+$\forall x, y \in X$, let $\tilde d (x, y) = ||x - y||$. Actually, $||\cdot||$ is the Euclidean norm defined on $\mathbb R^2$. We would like to show that the triangle inequality holds for $||\cdot||$. And it is enough to show that $\forall a, b \in X$, $||a+b|| \leqslant ||a|| + ||b||$. Use Cauchy-Schwartz inequality,
 
 $$
 \begin{aligned}
@@ -157,24 +240,36 @@ $$
 \end{aligned}
 $$
 
-Take the square root on both sides and obtain $||a+b|| \leqslant ||a|| + ||b||$, which proves the triangle inequality of metric $d_1$.
+Hence, $\tilde d $ is a metric.
 
 \end{proof}
+\end{enumerate}
 
-\section*{Problem 6}
+
+\section*{Problem 8}
+
 \begin{proof}
 
-Obviously, $\{x_n\}$ is a Cauchy sequence. Recall that in problem 3, we have already shown that $\{x_n\}$ is bounded. Use Bolzano-Weierstrass theorem and we know that there exists a  convergent subsequence $\{x_{n_k}\}$. Let's say, the subsequence converges to $c$. i.e., $\forall \epsilon > 0$, $\exists N_1$, such that $\forall n_k > N_1$, $|x_{n_k} - c| < \epsilon/2$. what's more, since $\{x_n\}$ is Cauchy, we know $\exists N_2$, such that $\forall m, n > N_2$, $|x_m - x_n|< \epsilon/2$.
+$\forall x, y \in X$ and $K \subset X, K \neq \phi$, 
+consider $d(x, y) + d_K(x)$.
 
-Combine those two conditions and take $N_3 = \max\{N_1, N_2\}$, we see that $\forall n, n_k > N_3$,
 $$
-|x_n - c| = |x_n - x_{n_k} + x_{x_k} - c| \leqslant |x_n - x_{n_k}| + |x_{x_k} - c| < \epsilon/2 + \epsilon/2 = \epsilon.
+\begin{aligned}
+d(x, y) + d_K(x) & = d(x, y) + \inf_{w \in K} d(x, w) \\
+& = \inf_{w \in K} \left\{  d(x, y) + d(x, w) \right\} \\
+& \geqslant \inf_{w\in K} d(y, w) = d_K(y).
+\end{aligned}
 $$
 
-which proves the claim that $\{x_n\}$ is convergent.
+Hence, $d_K(y) - d_K(x) \leqslant d(x, y)$.
+
+Similarly, consider $d(x, y) + d_K(y)$ and with similar argument, we will get $d(x, y) \geqslant d_K(y) - d_K(x)$.
+
+In all, $d_K$ is 1-Lipschitz continuous. i.e., 
+$$
+|d_K(y) - d_K(x)| \leqslant d(x, y) \quad \forall x, y \in X.
+$$
 
 \end{proof}
-
-
 
 \end{document}
