@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  4 SEP 2017 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  5 SEP 2017 11:32
 entering extended mode
 **./hw2.tex
 (hw2.tex
@@ -316,27 +316,26 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <fig1.pdf, id=13, 5038.82
-5pt x 2613.765pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<fig1.pdf, id=13, 4969.56625pt x 2544.50626pt>
 File: fig1.pdf Graphic file (type pdf)
-
-<use fig1.pdf>
+ <use fig1.pdf>
 Package pdftex.def Info: fig1.pdf used on input line 113.
-(pdftex.def)             Requested size: 234.8775pt x 121.80203pt.
- [2 <./fig1.pdf>] <fig2.pdf, id=19, 2645.885pt x 1372.12625pt>
+(pdftex.def)             Requested size: 234.8775pt x 120.24408pt.
+ [2 <./fig1.pdf>]
+<fig2.pdf, id=19, 2645.885pt x 1372.12625pt>
 File: fig2.pdf Graphic file (type pdf)
-
-<use fig2.pdf>
+ <use fig2.pdf>
 Package pdftex.def Info: fig2.pdf used on input line 164.
 (pdftex.def)             Requested size: 234.8775pt x 121.79015pt.
- [3 <./fig2.pdf>] [4]
-<fig3.jpg, id=27, 522.95375pt x 543.02875pt>
+ [3 <./fig2.pdf>]
+[4] <fig3.jpg, id=27, 522.95375pt x 543.02875pt>
 File: fig3.jpg Graphic file (type jpg)
  <use fig3.jpg>
-Package pdftex.def Info: fig3.jpg used on input line 322.
+Package pdftex.def Info: fig3.jpg used on input line 316.
 (pdftex.def)             Requested size: 234.8775pt x 243.89665pt.
  [5]
-Overfull \hbox (13.30484pt too wide) detected at line 340
+Overfull \hbox (13.30484pt too wide) detected at line 334
 [][]
  []
 
@@ -360,7 +359,7 @@ fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on hw2.pdf (7 pages, 262541 bytes).
+Output written on hw2.pdf (7 pages, 259260 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
