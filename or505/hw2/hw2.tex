@@ -356,8 +356,32 @@ This is fine. But after this we will see that there is no feasible solutions to 
 
 (There might be different answers for this part.)
 
+Part 1, we minimize the shipping cost from sources to HK and Taiwan. The amount of goods that the HK and Taiwan can deal with is less than the amount ordered from sources.
 
+\begin{equation*}
+\begin{aligned}
+\text{Minimize} \quad & 50H_1 + 90 H_2 + 70H_3 + 60T_1 + 95T_2 + 50 T_3  \\
+\text{subject\  to} \quad & T_1 + H_1 \leqslant 60 \\
+& T_2 + H_2 \leqslant 45 \\
+& T_3 + H_3 \leqslant 30 \\
+& \sum_{i = 1}^3 H_i = 60 \\
+& \sum_{i = 1}^3 T_i = 50 \\
+& T_i, H_i \geqslant 0, i = 1, 2, 3 \\
+\end{aligned}
+\end{equation*}
 
+Part 2, we minimize the shipping cost from HK and Taiwan to destinations. The amount of goods that the HK and Taiwan can deal with is less than the amount demanded.
+
+\begin{equation*}
+\begin{aligned}
+\text{Minimize} \quad & 150h_1 + 180h_2 + 130t_1 + 200 t_2 \\
+\text{subject\  to} \quad & h_1 + t_1 \leqslant 80 \\
+& h_2 + t_2 \leqslant 55 \\
+& h_1 + h_2 = 60 \\
+& t_1 + t_2 = 50 \\
+& t_j, h_j \geqslant 0, j = 1, 2.
+\end{aligned}
+\end{equation*}
 
 
 
