@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{mathtools, eucal}
+\usepackage{xparse}
+ 
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{MA 515 Homework 2}
+\author{Zheming Gao}
+\maketitle
+
+\section*{Problem 5}
+
+\begin{proof}
+
+For one direction, if $f$ is not continuous, then by definition, there exists $\epsilon_0 > 0$, for each $n$, $\exists x_n \in X$, such that $|x_n - x| < 1/n$, but $\sigma (f(x_n), f(x)) \geqslant \epsilon_0$. And this implies a contradiction, for then $x_n \rightarrow x$ but $f(x_n)$ doesn't converge to $f(x)$.
+
+For the other direction, we know $f$ is continuous, i.e.,  $\forall \epsilon > 0$, $\exists \delta > 0$, such that $\sigma (f(y) - f(x)) < \epsilon$ holds for all $d(x, y) < \delta$. With $x_n \rightarrow x$, there exists integer $N_\delta > 0$, such that $d(x_n , x) < \delta$ holds for all $n > N_\delta$.
+
+Hence, $\forall \epsilon > 0$, $\exists N_\delta > 0$ such that $\sigma (f(x_n) - f(x)) < \epsilon$ holds for all $n > N_\delta$. And this is equivalent to $f(x_n) \rightarrow f(x)$.
+
+\end{proof}
+
+
+\end{document}
