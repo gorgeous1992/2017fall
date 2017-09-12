@@ -190,6 +190,32 @@ Let $P_i : = \{ x\in\mathbb{R}^n | a_i^T x = b_i  \}$ and each $P_i$ is a hyperp
 
 \end{proof}
 
+\section*{Problem 2.6}
+
+\begin{proof}
+
+Consider a LP problem in standard form. 
+
+\begin{equation*}
+\begin{aligned}
+\text{Minimize} \quad & c^Tx \\
+\text{subject\  to} \quad & Ax = b \\
+ & x \geqslant 0
+\end{aligned}
+\end{equation*}
+
+where $A \in \mathbb{R}^{m\times n}$, $x\in \mathbb{R}^n$, $b \in \mathbb{R}^m$.
+
+Denote its feasible domain as $P := \{x \in \mathbb{R}^n | Ax = b, x \geqslant 0 \}$. Let the supporting hyperplane $H$ of feasible domain $P$ be the following,
+
+$$
+H: = \left\{  x\in\mathbb{R}^n| -c^Tx = \beta \right\}.
+$$
+
+and $\forall x\in P$, $-c^Tx \leqslant \beta$. since $H\cap P \neq \phi$, take any $x^* \in H\cap P$, we have $c^Tx^* =  -\beta$. Hence, $\forall x\in P$, $c^Tx \geqslant c^Tx^* = -\beta$, which proves that $x^*$ is an optimal solution to the LP problem.
+
+\end{proof}
+
 
 
 
