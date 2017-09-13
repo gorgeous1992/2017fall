@@ -3,6 +3,7 @@
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{placeins}
 \usepackage{mathtools, eucal}
+\usepackage{color}
  
 
  
@@ -128,6 +129,31 @@ It is obvious that the feasible domain is not bounded but the problem is bounded
 \end{enumerate}
 
 
+\section*{Problem 2.2}
+
+\textbf{\color{red}ATTENTION: } The definitions of POLYHEDRON and POLYTOPE are on page 16, Chapter 2.
+
+\begin{enumerate}
+\item [(a)]
+All of the claims are false. Counterexample is the unit plate ($S = \{(x, y) | x^2 + y^2 \leqslant 1\}$) on $\mathbb{R}^2$.
+
+\item [(b)]
+(i) is true. 
+\begin{proof}
+
+$\forall x, y \in S$, their affine combination is also in $S$. Hence, $\forall \alpha \in (0, 1)$, $\alpha x + (1-\alpha) y \in S$. Since it is the convex combination of $x$ and $y$, it proves the $S$ is convex.
+
+\end{proof}
+
+(ii), (iii) and (iv) are false. For example, let $S = \{(x, y) \in \mathbb{R}^2 | x + y = 1\}$. $S$ is a line on $\mathbb{R}^2$ but it doesn't satisfy the definition of cone. Also, it is obvious $S$ is not a polyhedron or polytope.
+
+\item[(c)] 
+
+
+
+\end{enumerate}
+
+
 \section*{Problem 2.3}
 
 \begin{proof}
@@ -216,13 +242,87 @@ and $\forall x\in P$, $-c^Tx \leqslant \beta$. since $H\cap P \neq \phi$, take a
 
 \end{proof}
 
+\section*{Problem 2.8}
+From problem 2.7, the feasible region is 
 
+\begin{figure}[htbp]
+  \caption{Feasible region $P$.}
+  \centering
+    \includegraphics[width=0.5\textwidth]{2_8P.pdf}
+\end{figure}
 
+In our figures, $x$ is $x_1$ and $y$ is $x_2$. Using the graphic method and we get the results in following figures.
 
+\begin{figure}[htbp]
+  \caption{solution to (a)}
+  \centering
+    \includegraphics[width=0.5\textwidth]{2_8a.pdf}
+\end{figure}
 
+\begin{figure}[htbp]
+  \caption{solution to (b)}
+  \centering
+    \includegraphics[width=0.5\textwidth]{2_8b.pdf}
+\end{figure}
+\begin{figure}[htbp]
+  \caption{solution to (c)}
+  \centering
+    \includegraphics[width=0.5\textwidth]{2_8c.pdf}
+\end{figure}
+\begin{figure}[htbp]
+  \caption{solution to (d)}
+  \centering
+    \includegraphics[width=0.5\textwidth]{2_8d.pdf}
+\end{figure}
+\begin{figure}[htbp]
+  \caption{solution to (e)}
+  \centering
+    \includegraphics[width=0.5\textwidth]{2_8e.pdf}
+\end{figure}
 
+The optimal values can be tracked in the table.
 
+\begin{table}
+\centering
+\caption{optimal solutions}
+\label{2.8values}
+\begin{tabular}{|c|c|c|}
+\hline
+  & max & min \\ \hline
+a & 0   & -40 \\ \hline
+b & 0   & -40 \\ \hline
+c & 0   & -60 \\ \hline
+d & 0   & -20 \\ \hline
+e & 40  & -20 \\ \hline
+\end{tabular}
+\end{table}
 
+\FloatBarrier
 
+\section*{Problem 2.9}
+
+\begin{proof}
+
+Consider set $B$ as the set of optimal solutions to a Lp problem, which as the standard form,
+
+\begin{equation*}
+\begin{aligned}
+\text{Minimize} \quad & c^Tx \\
+\text{subject\  to} \quad & Ax = b \\
+ & x \geqslant 0
+\end{aligned}
+\end{equation*}
+
+where $A \in \mathbb{R}^{m\times n}$, $x\in \mathbb{R}^n$, $b \in \mathbb{R}^m$.
+
+Denote its feasible domain as $P := \{x \in \mathbb{R}^n | Ax = b, x \geqslant 0 \}$. 
+
+Suppose the optimal value is $M$, i.e., $\forall x^*, y^*\in B$, $c^Tx^* = x^Ty^* = M \leqslant c^Tx$, $\forall x\in P$.
+
+Hence, take arbitrary $\alpha \in (0, 1)$, and it is true that $c^T(\alpha x^* + (1-\alpha) y^*) = M$. Hence, $B$ is convex.
+
+\end{proof}
+
+This result is useful to us. We know if there are two different optimal solutions to the LP problem, then any convex combination of those two solutions are also optimal.
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  12 SEP 2017 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  13 SEP 2017 09:14
 entering extended mode
 **./hw3.tex
 (hw3.tex
@@ -172,25 +172,44 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
-) (hw3.aux
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+)) (hw3.aux
 
 LaTeX Warning: Label `L2' multiply defined.
 
 )
 \openout1 = `hw3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -239,32 +258,24 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
 )
-\Gread@gobject=\count106
-
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
-\scratchdimen=\dimen129
+\scratchdimen=\dimen131
 \scratchbox=\box28
 \nofMPsegments=\count108
 \nofMParguments=\count109
 \everyMPshowfont=\toks27
 \MPscratchCnt=\count110
-\MPscratchDim=\dimen130
+\MPscratchDim=\dimen132
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks28
-))) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
@@ -306,33 +317,68 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\Gin@req@height=\dimen131
-\Gin@req@width=\dimen132
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] (hw3.aux)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+<2_8P.pdf, id=22, 2203.23125pt x 1666.225pt>
+File: 2_8P.pdf Graphic file (type pdf)
+ <use 2_8P.pdf>
+Package pdftex.def Info: 2_8P.pdf used on input line 251.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+
+<2_8a.pdf, id=23, 2203.23125pt x 1666.225pt>
+File: 2_8a.pdf Graphic file (type pdf)
+ <use 2_8a.pdf>
+Package pdftex.def Info: 2_8a.pdf used on input line 259.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+
+<2_8b.pdf, id=24, 2203.23125pt x 1666.225pt>
+File: 2_8b.pdf Graphic file (type pdf)
+ <use 2_8b.pdf>
+Package pdftex.def Info: 2_8b.pdf used on input line 265.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+
+<2_8c.pdf, id=25, 2203.23125pt x 1666.225pt>
+File: 2_8c.pdf Graphic file (type pdf)
+ <use 2_8c.pdf>
+Package pdftex.def Info: 2_8c.pdf used on input line 270.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+
+<2_8d.pdf, id=26, 2203.23125pt x 1666.225pt>
+File: 2_8d.pdf Graphic file (type pdf)
+ <use 2_8d.pdf>
+Package pdftex.def Info: 2_8d.pdf used on input line 275.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+
+<2_8e.pdf, id=27, 2203.23125pt x 1666.225pt>
+File: 2_8e.pdf Graphic file (type pdf)
+ <use 2_8e.pdf>
+Package pdftex.def Info: 2_8e.pdf used on input line 280.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+ [4] [5 <./2_8P.pdf> <./2_8a.pdf> <./2_8b.pdf>] [6 <./2_8c.pdf> <./2_8d.pdf> <.
+/2_8e.pdf>] [7]
+(hw3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3516 strings out of 493323
- 49289 string characters out of 3139066
- 124624 words of memory out of 3000000
- 6997 multiletter control sequences out of 15000+200000
- 12136 words of font info for 47 fonts, out of 3000000 for 9000
+ 3595 strings out of 493323
+ 50378 string characters out of 3139066
+ 125466 words of memory out of 3000000
+ 7065 multiletter control sequences out of 15000+200000
+ 12443 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,9n,32p,357b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,9n,32p,357b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
@@ -344,9 +390,9 @@ msfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw3.pdf (4 pages, 127027 bytes).
+Output written on hw3.pdf (7 pages, 558060 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
