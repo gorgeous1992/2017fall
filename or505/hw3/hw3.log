@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  13 SEP 2017 09:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  13 SEP 2017 12:20
 entering extended mode
 **./hw3.tex
 (hw3.tex
@@ -328,45 +328,45 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-<2_8P.pdf, id=22, 2203.23125pt x 1666.225pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
+<2_8P.pdf, id=29, 2203.23125pt x 1666.225pt>
 File: 2_8P.pdf Graphic file (type pdf)
  <use 2_8P.pdf>
-Package pdftex.def Info: 2_8P.pdf used on input line 251.
+Package pdftex.def Info: 2_8P.pdf used on input line 295.
 (pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
 
-<2_8a.pdf, id=23, 2203.23125pt x 1666.225pt>
+<2_8a.pdf, id=30, 2203.23125pt x 1666.225pt>
 File: 2_8a.pdf Graphic file (type pdf)
  <use 2_8a.pdf>
-Package pdftex.def Info: 2_8a.pdf used on input line 259.
+Package pdftex.def Info: 2_8a.pdf used on input line 303.
 (pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
 
-<2_8b.pdf, id=24, 2203.23125pt x 1666.225pt>
+<2_8b.pdf, id=31, 2203.23125pt x 1666.225pt>
 File: 2_8b.pdf Graphic file (type pdf)
  <use 2_8b.pdf>
-Package pdftex.def Info: 2_8b.pdf used on input line 265.
+Package pdftex.def Info: 2_8b.pdf used on input line 309.
 (pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
 
-<2_8c.pdf, id=25, 2203.23125pt x 1666.225pt>
+<2_8c.pdf, id=32, 2203.23125pt x 1666.225pt>
 File: 2_8c.pdf Graphic file (type pdf)
  <use 2_8c.pdf>
-Package pdftex.def Info: 2_8c.pdf used on input line 270.
+Package pdftex.def Info: 2_8c.pdf used on input line 314.
 (pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
 
-<2_8d.pdf, id=26, 2203.23125pt x 1666.225pt>
+<2_8d.pdf, id=33, 2203.23125pt x 1666.225pt>
 File: 2_8d.pdf Graphic file (type pdf)
  <use 2_8d.pdf>
-Package pdftex.def Info: 2_8d.pdf used on input line 275.
+Package pdftex.def Info: 2_8d.pdf used on input line 319.
 (pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
 
-<2_8e.pdf, id=27, 2203.23125pt x 1666.225pt>
+<2_8e.pdf, id=34, 2203.23125pt x 1666.225pt>
 File: 2_8e.pdf Graphic file (type pdf)
  <use 2_8e.pdf>
-Package pdftex.def Info: 2_8e.pdf used on input line 280.
+Package pdftex.def Info: 2_8e.pdf used on input line 324.
 (pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
- [4] [5 <./2_8P.pdf> <./2_8a.pdf> <./2_8b.pdf>] [6 <./2_8c.pdf> <./2_8d.pdf> <.
-/2_8e.pdf>] [7]
-(hw3.aux)
+ [6 <./2_8P.pdf>]
+[7 <./2_8a.pdf> <./2_8b.pdf> <./2_8c.pdf>] [8 <./2_8d.pdf> <./2_8e.pdf>]
+[9] (hw3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -374,7 +374,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3595 strings out of 493323
  50378 string characters out of 3139066
- 125466 words of memory out of 3000000
+ 124466 words of memory out of 3000000
  7065 multiletter control sequences out of 15000+200000
  12443 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -390,9 +390,9 @@ msfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw3.pdf (7 pages, 558060 bytes).
+Output written on hw3.pdf (9 pages, 562252 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

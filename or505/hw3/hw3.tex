@@ -137,6 +137,8 @@ It is obvious that the feasible domain is not bounded but the problem is bounded
 \item [(a)]
 All of the claims are false. Counterexample is the unit plate ($S = \{(x, y) | x^2 + y^2 \leqslant 1\}$) on $\mathbb{R}^2$.
 
+\vspace{50mm}
+
 \item [(b)]
 (i) is true. 
 \begin{proof}
@@ -147,7 +149,49 @@ $\forall x, y \in S$, their affine combination is also in $S$. Hence, $\forall \
 
 (ii), (iii) and (iv) are false. For example, let $S = \{(x, y) \in \mathbb{R}^2 | x + y = 1\}$. $S$ is a line on $\mathbb{R}^2$ but it doesn't satisfy the definition of cone. Also, it is obvious $S$ is not a polyhedron or polytope.
 
+\vspace{50mm}
+
 \item[(c)] 
+All of them are false. A counterexample is $S = \{(x, y)| x = 0, y \geqslant 0 
+\} \cup \{(x, y)| y = 0, x \geqslant 0 \} $. We see that $S$ is the union of non-negative parts of $x$ and $y$ axis on $\mathbb{R}^2$. By definition, $S$ is a cone. But it is neither convex nor affine. Also, $S$ is not a polyhedron, so it is not a polytope, either. 
+
+\vspace{50mm}
+
+\item [(d)]
+
+If $S$ is a polyhedron, it is the intersection of finite half spaces. So we may express $S$ as a set $\{x\in \mathbb{R}^n | Ax \leqslant b, A\in \mathbb{R}^{m\times n}, b\in\mathbb{R}^m \}$, which means that $S$ is an intersection of $m$ half spaces.
+
+For (i), it is ture and we would like to show that $S$ is convex.
+\begin{proof}
+
+Take $x, y \in S$, and $\forall \alpha \in (0, 1)$, the convex combination of $x$ and $y$ is in $S$. This is true because 
+$$
+A(\alpha x + (1- \alpha) y) = \alpha Ax + (1-\alpha)Ay \leqslant \alpha b + (1-\alpha) b = b.
+$$
+
+Hence, $S$ is a convex set.
+
+\end{proof}
+
+For (ii) and (iii), they are false and we will give a counterexample in $\mathbb{R}^2$.
+
+Let $S : = \{(x, y) | 0\leqslant x \leqslant 1, 0\leqslant y \leqslant 1 \}$. It is clear that $S$ is a polyhedron, but $S$ is neither affine nor a cone.
+
+\vspace{50mm}
+
+For (iv), it is false because we may give a unbounded polyhedron $S = \{(x, y) | x\geqslant 0, y\geqslant 0, x+y \geqslant 1\}$. And it is not a polytope.
+
+\vspace{50mm}
+
+
+
+\item[(e)]
+
+If $S$ is a polytope, it must be a polyhedron. So (i) and (iv) are true. 
+
+(ii) and (iii) are false. We may raise the same counterexample as the first one(the unit square) in part (d).
+
+
 
 
 
