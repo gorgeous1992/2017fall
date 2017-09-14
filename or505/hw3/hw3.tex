@@ -3,6 +3,7 @@
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{placeins}
 \usepackage{mathtools, eucal}
+\usepackage{graphicx}
 \usepackage{color}
  
 
@@ -15,7 +16,7 @@
 %General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
 %Or just google stuff
  
-\title{Homework 2 Solutions}
+\title{Homework 3 Solutions}
 \author{Zheming Gao}
 \maketitle
 
@@ -116,7 +117,7 @@ Next we give a counterexample to show that the opposite direction is not ture.
 
 Consider the following LP problem:
 
-\begin{equation}\label{L2}
+\begin{equation}
 \begin{aligned}
 \text{Minimize} \quad & 2x_1 + x_2 \\
 \text{subject\  to} \quad & x_1 + x_2 \geqslant 1 \\
@@ -147,11 +148,19 @@ $\forall x, y \in S$, their affine combination is also in $S$. Hence, $\forall \
 
 \end{proof}
 
-(ii), (iii) and (iv) are false. For example, let $S = \{(x, y) \in \mathbb{R}^2 | x + y = 1\}$. $S$ is a line on $\mathbb{R}^2$ but it doesn't satisfy the definition of cone. 
-
-Also, if we let $S = \{(0, 0)\} \subset \mathbb{R}^2$, then $S$ is affine but not a polyhedron or polytope.
+(ii) is false. For example, let $S = \{(x, y) \in \mathbb{R}^2 | x + y = 1\}$. $S$ is a line on $\mathbb{R}^2$ but it doesn't satisfy the definition of cone. 
 
 \vspace{50mm}
+
+(iii) is true. 
+\begin{proof}
+
+If $S$ is affine, then pick $x_0 \in S$, construct set $S_0: = \{x-x_0 | x \in S\} $. It is clear to see that $S_0$ is a linear subspace (Use the definition and it is obvious). Then $S_0$ must be a solution set of a linear system, say $Ay = 0$ for all $y \in S_0$. This is equivalent to say that $\exists A$ such that $\forall x\in S$, $Ax = Ax_0$. Let $b = Ax_0$, and $S$ can be expressed as the intersection of two sets: $P_1 : = \{x | Ax \geqslant b\}$ and $P_2 : = \{x | Ax \leqslant b\}$. Since $P_1$ and $P_2$ are both finite intersections of half spaces, we conclude that $S$ is a finite intersection of half spaces, i.e., $S$ is a polyhedron. 
+
+\end{proof}
+
+(iv) is false because $S$ may not be bounded. Use the same counterexample as for (ii).
+
 
 \item[(c)] 
 All of them are false. A counterexample is $S = \{(x, y)| x = 0, y \geqslant 0 
