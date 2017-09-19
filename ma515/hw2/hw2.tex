@@ -51,7 +51,9 @@ Let $F = Y\setminus \mathcal{O}$ and $F$ is closed in $Y$.
 \section*{Problem 2}
 
 \begin{enumerate}
-\item [(a)]
+\item [(a) Part I]
+
+\begin{proof}
 
 We want to show $\overline{U\cup V} \subset \overline U \cup \overline V$. Take $x \in \overline U$, by definition of closure, $\forall \epsilon >0$, $\exists y \in U\subset (U\cup V)$ such that  $d(x, y) < \epsilon$. This implies that $x \in \overline{U\cup V}$. Hence, $\overline U \subset \overline{U\cup V}$. Similarly, $\overline V \subset \overline{U\cup V}$. In all, $\overline U \cup \overline V \subset \overline{U\cup V}$.
 
@@ -59,7 +61,12 @@ For the other direction, we prove it by contradiction. Suppose $\exists y \in \o
 
 In conclusion, $\overline{U\cup V} = \overline U \cup \overline V$.
 
-\item [(b)]
+\end{proof}
+
+
+\item [(a) Part II]
+
+\begin{proof}
 
 We want to show $\overline{U \cap V} \subset \overline U \cap \overline V$. If $x\in \overline{U\cap V}$, $\forall \epsilon > 0$, $\exists y \in U\cap V$ such that $d(x, y) < \epsilon$. Since $y y \in U\cap V \Rightarrow y \in U, y \in V$, we know that $x\in \overline U, x \in\overline V$. Hence, $x\in \overline U \cap \overline V$, i.e, $\overline{U \cap V} \subset \overline U \cap \overline V$.
 
@@ -67,11 +74,51 @@ Conversely, we prove it by contradiction. Suppose there exists $x \in \overline 
 
 In conclusion, $\overline{U \cap V} = \overline U \cap \overline V$.
 
+\end{proof}
+
+
+
+\item [(b)]
+
+\begin{proof}
+
+$\forall x \in \overline U$, there exists a sequence $\{x_n\}$ in $U$ such that $x_n \rightarrow x$. Since $U \subset V$, then $x_n$ also converges in $\overline V$. Hence, $x \in \overline V$. This proves that $\overline U \subset \overline V$.
+
+\end{proof}
+
 \end{enumerate}
 
+\section*{Problem 3}
+\begin{proof} 
+\ 
+\begin{enumerate}
+\item [Step 1]
 
+We would like to show that if $x\in K$, then $d_K(x) = 0$. By definition, $\forall x\in K$, $d_K(x) = \inf_{w\in K} d(x, w)$. Since $d(x, w) \geqslant 0$ and $d(x, w) = 0$ when $w = x$. Hence, $d_K (x) = \inf_{w\in K} d(x, w) = d(x, x) = 0$.
 
+\item [Step 2]
 
+Conversely, let's prove it by contradiction. When $d_K(x) = 0$, suppose $x \notin K$, which is to say that $x\in K^c$. Since $K$ is closed, $K^c$ is open. Then $\exists \delta > 0 $ such that $B(x, \delta) \in K^c$, which implies $B(x, \delta) \cap = \phi$.  Thus, $\forall w \in K$, $d(x, w) > \delta > 0$, and it implies $\inf_{w\in K} d(x, w) \geqslant \delta > 0$. This leads to a contradiction to the assumption.
+
+\end{enumerate}
+
+\end{proof}
+
+\section*{Problem 4}
+
+\begin{proof}
+
+Consider $f$ as a continuous map from $X$ to $Y$. $\forall F \subset Y$ closed, we have $Y \setminus F \subset Y$ is open in $Y$. Then $f^{-1} (Y\setminus F) = f^{-1}(Y)\setminus f^{-1}(F) = X\setminus f^{-1}(F)$ is open in $X$. This implies that $f^{-1}(F)$ is closed in $X$.
+
+Conversely, $\forall E \subset Y$ open subset in $Y$, $Y\setminus E$ is closed in $Y$. 
+
+$$
+f^{-1}(E) = f^{-1}(Y\setminus (Y\setminus E)) = f^{-1}(Y) \setminus f^{-1}(Y\setminus E) = X \setminus f^{-1}(Y\setminus E).
+$$
+
+Since $f^{-1}(Y\setminus E)$ is closed in $X$, $f^{-1}(E)$ is open in $X$. Hence, the preimage of any open set is also open and this satisfies the definition of continuous function. Thus, $f$ is continuous. 
+
+\end{proof}
 
 
 \section*{Problem 5}
@@ -85,6 +132,38 @@ For the other direction, we know $f$ is continuous, i.e.,  $\forall \epsilon > 0
 Hence, $\forall \epsilon > 0$, $\exists N_\delta > 0$ such that $\sigma (f(x_n) - f(x)) < \epsilon$ holds for all $n > N_\delta$. And this is equivalent to $f(x_n) \rightarrow f(x)$.
 
 \end{proof}
+
+
+\section*{Problem 6}
+
+\begin{proof}
+
+Prove by contradiction. Suppose a Cauchy sequence $\{x_n\}$ does not converges to $x$, though it has subsequence $\{x_{n_k}\}$ that converges to $x\in X$. Then $\exists \epsilon > 0$, for any $N > 0$, $d(x_n, x) \geqslant \epsilon$ for some $n > N$. Since $\{x_{n_k}\}$ converges to $x$, there exists $N_1 > 0$, such that $d(x_{n_k}, x) < \epsilon/2$, $\forall n_k > N_1$. Also, $\{x_n\}$ is Cauchy and it leads to $\exists N_2 > 0$, such that $d(x_m, x_n) <\epsilon/2$, $\forall m, n > N_2$. 
+
+Taking $N = \max\{N_1, N_2\}$ and for some $n, n_k > N$, we use triangle inequality and get,
+
+$$
+\epsilon \leqslant d(x_n, x) \leqslant d(x_n, x_{n_k}) + d(x_{n_k}, x) < \epsilon/2 + \epsilon/2 = \epsilon.
+$$
+
+which is obviously a contradiction.
+
+\end{proof}
+
+
+\section*{Problem 7}
+
+\section*{Problem 8}
+
+\begin{proof}
+
+Take a Cauchy sequence $\{x_n\}$ on $(X, \tilde{d})$. Then $\forall \epsilon > 0$, $\exists N > 0$, such that $\tilde d(x_m, x_n) < \epsilon $, for all $m, n > N$. Since $\tilde d(x, y) = d(x, y)/(1+d(x, y))$, we know $d(x, y) < \epsilon / (1-\epsilon)$. It is clear that $\epsilon / (1-\epsilon) \rightarrow 0$ as $\epsilon \rightarrow 0$. Hence, $\{x_n\}$ is also a Cauchy sequence on $(X, d)$. With the fact that $(X, d)$ is complete, $\{x_n\}$ is convergent and it leads to the completeness of $(x, \tilde{d})$.
+
+
+\end{proof}
+
+
+
 
 \section*{Problem 11}
 
