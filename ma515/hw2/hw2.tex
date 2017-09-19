@@ -50,6 +50,30 @@ Let $F = Y\setminus \mathcal{O}$ and $F$ is closed in $Y$.
 
 \section*{Problem 2}
 
+\begin{enumerate}
+\item [(a)]
+
+We want to show $\overline{U\cup V} \subset \overline U \cup \overline V$. Take $x \in \overline U$, by definition of closure, $\forall \epsilon >0$, $\exists y \in U\subset (U\cup V)$ such that  $d(x, y) < \epsilon$. This implies that $x \in \overline{U\cup V}$. Hence, $\overline U \subset \overline{U\cup V}$. Similarly, $\overline V \subset \overline{U\cup V}$. In all, $\overline U \cup \overline V \subset \overline{U\cup V}$.
+
+For the other direction, we prove it by contradiction. Suppose $\exists y \in \overline{U \cup V}$ such that $y \notin \overline U \cup \overline V$. Then there exists $\epsilon > 0$, such that, $d(x, y) \geqslant \epsilon$ and $d(x, z) \geqslant \epsilon$ for all $x\in U, z \in V$. i.e, $\forall w in U\cup V$, $d(w, y) > \epsilon$, which is $y\notin \overline{U \cup V}$ (contradiction).
+
+In conclusion, $\overline{U\cup V} = \overline U \cup \overline V$.
+
+\item [(b)]
+
+We want to show $\overline{U \cap V} \subset \overline U \cap \overline V$. If $x\in \overline{U\cap V}$, $\forall \epsilon > 0$, $\exists y \in U\cap V$ such that $d(x, y) < \epsilon$. Since $y y \in U\cap V \Rightarrow y \in U, y \in V$, we know that $x\in \overline U, x \in\overline V$. Hence, $x\in \overline U \cap \overline V$, i.e, $\overline{U \cap V} \subset \overline U \cap \overline V$.
+
+Conversely, we prove it by contradiction. Suppose there exists $x \in \overline U \cap \overline V$, such that $x \notin \overline {U\cap V}$. Then, there exists $\epsilon > 0$ such that $\forall z \in U\cap V$, $d(x, z)\geqslant \epsilon$. Since $z\in U\cap V \Rightarrow z\in \overline U$, it implies that $x\in \overline U$, which leads to a contradiction.
+
+In conclusion, $\overline{U \cap V} = \overline U \cap \overline V$.
+
+\end{enumerate}
+
+
+
+
+
+
 \section*{Problem 5}
 
 \begin{proof}
