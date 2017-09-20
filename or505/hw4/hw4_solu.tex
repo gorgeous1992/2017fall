@@ -1,0 +1,263 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{placeins}
+\usepackage{mathtools, eucal}
+\usepackage{graphicx}
+\usepackage{color}
+ 
+
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{Homework 3 Solutions}
+\author{Zheming Gao}
+\maketitle
+
+
+\section*{Problem 4}
+
+\begin{enumerate}
+\item[(1)]
+\begin{proof}
+
+If $d\in E$, then for any $x^0 \in P$, $x^0+\lambda d \in P$, for all $\lambda \geqslant 0$. This implies that $Ax^0 = b, x^0 \geqslant 0$, and $A(x^0 + \lambda d) = b, x^0 + \lambda d \geqslant 0$. Eliminate $Ax^0$ from the last equality and get $\lambda Ad = 0$. Since $\lambda \geqslant$, $Ad = 0$ is proved.
+Also, $x^0 \geqslant 0$ and $\forall \lambda \geqslant 0$, hence $d \geqslant 0$.
+
+Conversely, we need to show that for $d\in\mathbb R^n$, if $d \geqslant 0$ and $Ad = 0$, then $d\in E$. Take $d$ that satisfies the given condition. For any $y \in P$, $Ay = b, y \geqslant 0$. Hence, we will have $A(y + \lambda d) = b$, $\forall \lambda \geqslant 0$. Also, it is true that $y + \lambda d \geqslant 0$, due to the positiveness of $y, \lambda$ and $d$. In conclusion, $d$ is a extremal direction of $P$.
+\end{proof}
+
+\item[(2)]
+
+\begin{proof}
+
+We need to express $E$ in a form of set.
+
+$$
+E = \{d \in \mathbb{R}^n | y + \lambda d \in P, \forall \lambda \geqslant 0, y\in P \}.
+$$
+
+Take any $d \in E$, need to check if $\alpha d\in E$, $\forall \alpha \geqslant 0$. Actually, this is true. For any $y\in P$, $y + \lambda (\alpha d) = y + (\lambda\alpha)d \in P$ because $\lambda\alpha \geqslant 0$. Thus, $\lambda d\in E$, which proves that $E$ is a cone.
+
+\end{proof}
+
+\item[(3)]
+
+\begin{proof}
+
+Take two points $d_1, d_2 \in E$ and $\beta \in (0, 1)$. For any $y\in P, \lambda \geqslant 0$, 
+
+$$
+y + \lambda(\beta d_1 + (1-\beta)d_2) = \beta(y+\lambda d_1) + (1-\beta)(y + \lambda d_2).
+$$
+
+Let $x^1 = y + \lambda d_1$ and $x^2 = y + \lambda d_2$. Hence, the convex combination of $x^1$ and $x^2$ are in $P$ since $P$ is a convex polyhedron. This implies that $E$ is convex.
+
+\end{proof}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Problem 5}
+
+\begin{enumerate}
+\item [(1)]
+We plot the graph of $F_3$.
+
+
+\item [(2)]
+$$
+B = \{(x_1, x_2, x_3)^T \in \mathbb R^3 | |x_1| + |x_3| = x_2 \}.
+$$
+
+
+
+\item [(3)]
+
+$$
+I = \{(x_1, x_2, x_3)^T \in \mathbb R^3 | |x_1| + |x_3| < x_2 \}.
+$$
+
+
+\item [(4)]
+
+Extreme point: $(0, 0, 0)^T$.
+
+Vertex: $(0, 0, 0)^T$.
+
+\item [(5)]
+\begin{proof}
+
+First, we show that $F_3$ is a cone. Take $x = (x_1, x_2, x_3)^T \in F_3$ and $\forall \lambda \geqslant 0$, check if $\lambda x \in F_3$. 
+
+$$
+|\lambda x_1| + |\lambda x_3| = \lambda |x_1| + \lambda |x_3| = \lambda (|x_1| + |x_3|) \leqslant \lambda x_2.
+$$
+
+Hence, $\lambda x$ is in $F_3$. In conclusion, $F_3$ is a cone.
+
+Next, we need to show $F_3$ is convex. Take $x, y \in F_3$ and $\forall \eta \in (0, 1)$, $\eta x + (1- \eta) y = (\eta x_1 + (1-\eta)y_1, \eta x_2 + (1-\eta)y_2, \eta x_3 + (1-\eta)y_3)$. Use triangle inequality of absolute value and we get
+
+$$
+\begin{aligned}
+|\eta x_1 + (1-\eta)y_1| + |\eta x_3 + (1-\eta)y_3| & \leqslant \eta |x_1| + (1-\eta)|y_1| + \eta |x_3| + (1-\eta)|y_3| \\
+& = \eta (|x_1|+|x_3|) + (1-\eta)(|y_1|+|y_3|) \\
+& \leqslant \eta x_2 + (1-\eta) y_2.
+\end{aligned}
+$$
+
+Hence, $\eta x + (1- \eta) y \in F_3$. This implies that $F_3$ is convex.
+
+\end{proof}
+
+\item [(6)]
+
+(Any reasonable answers will be fine for this question.)
+
+\textbf{Example answer:}
+
+$\mathbb R_+^3$ are different from $F_3$ and $\mathbb R_+^3 \cap F_3 \neq \phi$. 
+
+$(-1, 2, -1)^T \notin \mathbb R_+^3$ but in $F_3$. $(2,1,2)^T \notin F_3$, but in $\mathbb R_+^3$.
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+\section*{Problem 6}
+We plot the region of $P_1$.
+
+\begin{figure}[htbp]
+  \caption{Region $P_1$.}
+  \centering
+    \includegraphics[width=0.5\textwidth]{p6.pdf}
+\end{figure}
+
+\FloatBarrier
+
+\begin{enumerate}
+\item [(a)]
+Convert $P_1$ to standard equality form.
+$$
+\left\{
+\begin{aligned}
+& 2x_1 - 4x_2 + a_1 & & = 1 \\
+& 3x_1 - x_2   & -a_2 & = -3 \\
+& x_1, x_2, a_1, a_2 & & \geqslant 0.
+\end{aligned}
+\right.
+$$
+
+\item[(b)]
+Basic solutions (in the form of $(x_1, x_2, a_1, a_2)$): 
+$$
+\begin{aligned}
+&(-13/10, -9/10, 0, 0)   \\ 
+&(-1, 0, 3, 0)\\ 
+&(1/2, 0, 0, 9/2) \star\\
+& (0, 3, 13, 0)\star\\ 
+ &(0, -1/4, 0, 13/4)\\
+ & (0, 0, 1, 3)\star
+\end{aligned}
+$$
+
+\item[(c)]
+Basic feasible solutions are those basic solutions with "$\star$".
+
+\item[(d)]
+Let $V$ be the set of all extremal directions. 
+$$
+V = \{v \in\mathbb R^2| v = (1, d)^T, d\in [1/2, 3] \}.
+$$
+
+\item[(e)]
+From the figure, we can see that there are two moving directions to the adjacent points. $u_1$ is to point $(1/2, 0)^T$ and $u_2$ is to point $(0, 3)^T$.
+
+$$
+\begin{aligned}
+&u_1 = (1, 0)^T \\
+&u_2 = (0, 1)^T 
+\end{aligned}
+$$
+\end{enumerate}
+
+\section*{Problem 7}
+
+We plot the region of $P_2$.
+
+\begin{figure}[htbp]
+  \caption{Region $P_2$.}
+  \centering
+    \includegraphics[width=0.5\textwidth]{p7.pdf}
+\end{figure}
+
+\FloatBarrier
+
+\begin{enumerate}
+\item [(a)]
+Convert $P_2$ to standard equality form.
+$$
+\left\{
+\begin{aligned}
+& 2x_1 - 2x_2^+ + 2x_2^- + a_1 & & = 3 \\
+& 8x_1 - x_2^+ + x_2^-   & -a_2 & = -4 \\
+& x_1, x_2^+, x_2^-, a_1, a_2 & & \geqslant 0.
+\end{aligned}
+\right.
+$$
+
+\item[(b)]
+Basic solutions (in the form of $(x_1, x_2, a_1, a_2)$): 
+$$
+\begin{aligned}
+&(-1/2, -1, 0, 0, 0)   \\ 
+&(-1/2, 1, 0, 0, 0) \\ 
+&(-1/2, 0, 0, 4, 0) \\
+& (3/2, 0, 0, 0, 16) \star \\ 
+ &(0, 4, 0, 11, 0) \star \\
+ & (0, -3/2, 0, 0, 11/2) \\
+ & (0, 0, -4, 11, 0) \\
+& (0, 0, 3/2, 0, 11/2) \star \\
+& (0, 0, 0, 3, 4) \star
+\end{aligned}
+$$
+
+\item[(c)]
+Basic feasible solutions are those basic solutions with "$\star$".
+
+\item[(d)]
+Let $V$ be the set of all extremal directions. 
+$$
+V = \{v \in\mathbb R^2| v = (1, d)^T, d\in [1, 8] \}.
+$$
+
+\item[(e)]
+From the figure, we can see that there is only one moving directions to the adjacent point $(0, -3/2)^T$. 
+
+$$
+u = (0, -1)^T
+$$
+\end{enumerate}
+
+\end{document}
