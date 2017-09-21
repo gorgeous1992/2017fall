@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  20 SEP 2017 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  20 SEP 2017 21:04
 entering extended mode
 **./hw4_solu.tex
 (hw4_solu.tex
@@ -132,6 +132,14 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen120
+\enit@toks=\toks27
+\enit@inbox=\box28
+\enitdp@description=\count102
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
 )
@@ -140,16 +148,16 @@ Package: mathtools 2017/05/24 v1.19 mathematical typesetting tools
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count102
-\calc@Bcount=\count103
-\calc@Adimen=\dimen120
-\calc@Bdimen=\dimen121
-\calc@Askip=\skip49
-\calc@Bskip=\skip50
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen121
+\calc@Bdimen=\dimen122
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count104
-\calc@Cskip=\skip51
+\calc@Ccount=\count105
+\calc@Cskip=\skip52
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
@@ -158,15 +166,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count105
-\l_MT_multwidth_dim=\dimen122
-\origjot=\skip52
-\l_MT_shortvdotswithinadjustabove_dim=\dimen123
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen124
-\l_MT_above_intertext_sep=\dimen125
-\l_MT_below_intertext_sep=\dimen126
-\l_MT_above_shortintertext_sep=\dimen127
-\l_MT_below_shortintertext_sep=\dimen128
+\g_MT_multlinerow_int=\count106
+\l_MT_multwidth_dim=\dimen123
+\origjot=\skip53
+\l_MT_shortvdotswithinadjustabove_dim=\dimen124
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen125
+\l_MT_above_intertext_sep=\dimen126
+\l_MT_below_intertext_sep=\dimen127
+\l_MT_above_shortintertext_sep=\dimen128
+\l_MT_below_shortintertext_sep=\dimen129
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\eucal.sty"
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
@@ -196,10 +204,10 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count106
+\Gread@gobject=\count107
 ))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
+\Gin@req@height=\dimen130
+\Gin@req@width=\dimen131
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -211,18 +219,18 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ) (hw4_solu.aux)
 \openout1 = `hw4_solu.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -260,17 +268,17 @@ LaTeX Font Info:    ... okay on input line 11.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen131
-\scratchbox=\box28
-\nofMPsegments=\count108
-\nofMParguments=\count109
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen132
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count108
+\scratchdimen=\dimen132
+\scratchbox=\box29
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen133
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks29
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -313,53 +321,60 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+<2_7f.pdf, id=1, 2203.23125pt x 1666.225pt>
+File: 2_7f.pdf Graphic file (type pdf)
+ <use 2_7f.pdf>
+Package pdftex.def Info: 2_7f.pdf used on input line 33.
+(pdftex.def)             Requested size: 234.8775pt x 177.61565pt.
+ [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<p6.pdf, id=15, 2145.01375pt x 1717.41624pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./2_7f.pdf>] [2] [3]
+<p6.pdf, id=25, 2145.01375pt x 1717.41624pt>
 File: p6.pdf Graphic file (type pdf)
  <use p6.pdf>
-Package pdftex.def Info: p6.pdf used on input line 154.
+Package pdftex.def Info: p6.pdf used on input line 266.
 (pdftex.def)             Requested size: 234.8775pt x 188.05159pt.
- [2]
-<p7.pdf, id=19, 590.205pt x 472.76625pt>
+ [4 <./p6.pdf>]
+<p7.pdf, id=30, 590.205pt x 472.76625pt>
 File: p7.pdf Graphic file (type pdf)
  <use p7.pdf>
-Package pdftex.def Info: p7.pdf used on input line 212.
+Package pdftex.def Info: p7.pdf used on input line 324.
 (pdftex.def)             Requested size: 234.8775pt x 188.13649pt.
- [3 <./p6.pdf>] [4 <./p7.pdf>] (hw4_solu.aux) ) 
+ [5] [6 <./p7.pdf>]
+(hw4_solu.aux) ) 
 Here is how much of TeX's memory you used:
- 3571 strings out of 493323
- 50147 string characters out of 3139066
- 123403 words of memory out of 3000000
- 7045 multiletter control sequences out of 15000+200000
+ 3856 strings out of 493323
+ 54952 string characters out of 3139066
+ 130505 words of memory out of 3000000
+ 7325 multiletter control sequences out of 15000+200000
  12443 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,32p,441b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb>
-Output written on hw4_solu.pdf (4 pages, 218447 bytes).
+ 39i,8n,32p,517b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb>
+Output written on hw4_solu.pdf (6 pages, 309713 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
