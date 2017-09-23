@@ -29,7 +29,7 @@
 
 If $\exists \mathcal{O} \in Y$ such that $\mathcal{O}$ is open in $Y$ and $E = \mathcal{O} \cap X$, then $\forall x \in E$, $x$ must be in $\mathcal{O}$. Since $\mathcal{O}$ is open, $\exists r_0$ such that $B_Y(x, r_0) \subset \mathcal{O}$. i.e, $\{y\in Y | d(x, y) < r_0\} \subset \mathcal{O}$. With the fact that $X\subset Y$, $B_X(x, r_0) : = \{ y\in X | d(x, y) < r_0 \} \subset \mathcal{O}$. Hence, $E$ is open in $X$.
 
-Conversely, if $E$ is open in $X$, then for all $x\in E$, there exists $r_x >0$ such that $\{ y\in X | d(x, y) < r_x \} \subset E$. Since $X \subset Y$, let $\mathcal{O}: = \{ y\in Y | d(x, y) < r_x \}$ and it is clear that $\mathcal{O}\cap X \subset E$. What's more, $\forall x \in E$, $x$ is also in $\mathcal{O}\cap X$. Hence, $E = \mathcal{O}\cap X$.
+Conversely, if $E$ is open in $X$, then for all $x\in E$, there exists $r_x >0$ such that $ B_X(x, r_x) := \{ y\in X | d(x, y) < r_x \} \subset E$. Let $\mathcal O_x = \{ y\in Y | d(x, y) < r_x \}$ and $\mathcal O = \cup_{x\in E} \mathcal O_x$. Since $\mathcal O_x \cap X \subset E, \forall x\in E$, we know $\mathcal O \cap X \subset E$. What's more, for any $x\in E$, $x\in\mathcal O$, and it implies $E\subset \mathcal O\cap X$. In all, $E = \mathcal O\cap X$. $\mathcal O$ is open in $Y$ because each $\mathcal O_x$ is an open ball in $Y$ and the union of open sets are open.
 
 \end{proof}
 
