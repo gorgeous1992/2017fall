@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  20 SEP 2017 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  24 SEP 2017 13:46
 entering extended mode
 **./hw4_solu.tex
 (hw4_solu.tex
@@ -345,36 +345,36 @@ File: p6.pdf Graphic file (type pdf)
 Package pdftex.def Info: p6.pdf used on input line 266.
 (pdftex.def)             Requested size: 234.8775pt x 188.05159pt.
  [4 <./p6.pdf>]
-<p7.pdf, id=30, 590.205pt x 472.76625pt>
+[5] <p7.pdf, id=33, 590.205pt x 472.76625pt>
 File: p7.pdf Graphic file (type pdf)
  <use p7.pdf>
-Package pdftex.def Info: p7.pdf used on input line 324.
+Package pdftex.def Info: p7.pdf used on input line 409.
 (pdftex.def)             Requested size: 234.8775pt x 188.13649pt.
- [5] [6 <./p7.pdf>]
-(hw4_solu.aux) ) 
+ [6 <./p7.pdf>]
+[7] (hw4_solu.aux) ) 
 Here is how much of TeX's memory you used:
- 3856 strings out of 493323
- 54952 string characters out of 3139066
- 130505 words of memory out of 3000000
- 7325 multiletter control sequences out of 15000+200000
- 12443 words of font info for 48 fonts, out of 3000000 for 9000
+ 3864 strings out of 493323
+ 55046 string characters out of 3139066
+ 135505 words of memory out of 3000000
+ 7331 multiletter control sequences out of 15000+200000
+ 13064 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,32p,517b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb>
-Output written on hw4_solu.pdf (6 pages, 309713 bytes).
+ 39i,9n,32p,517b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
+sam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on hw4_solu.pdf (7 pages, 314555 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
