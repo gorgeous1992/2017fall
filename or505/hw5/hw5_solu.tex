@@ -105,7 +105,7 @@ B^{-1} & -B^{-1} N \\
 2 & -2 & -1 & 3 & -1 \\
 -1/2 & 3/2 & 1/2 & 0 & -1 \\
 -1/2 & 1/2 & 1/2 & -1 & 1 \\
-0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 \\                                        
 0 & 0 & 0 & 0 & 1
 \end{bmatrix}$.
 
@@ -376,194 +376,76 @@ From point $x = [x_1, x_2, x_3 | x_4, x_5, x_6] = (1/2,1,1/2,0,0,0)^T$, we know 
 
 \section*{Problem 5 (3.8)}
 
-
-
-
-
-
-
-
-
-
-
-
-
-\vspace{50mm}
-\begin{enumerate}
-\item [(1)]
-We plot the graph of $F_3$.
-
-
-\item [(2)]
-$$
-B = \{(x_1, x_2, x_3)^T \in \mathbb R^3 | |x_1| + |x_3| = x_2 \}.
-$$
-
-
-
-\item [(3)]
-
-$$
-I = \{(x_1, x_2, x_3)^T \in \mathbb R^3 | |x_1| + |x_3| < x_2 \}.
-$$
-
-
-\item [(4)]
-
-Extreme point: $(0, 0, 0)^T$.
-
-Vertex: $(0, 0, 0)^T$.
-
-\item [(5)]
 \begin{proof}
 
-First, we show that $F_3$ is a cone. Take $x = (x_1, x_2, x_3)^T \in F_3$ and $\forall \lambda \geqslant 0$, check if $\lambda x \in F_3$. 
-
-$$
-|\lambda x_1| + |\lambda x_3| = \lambda |x_1| + \lambda |x_3| = \lambda (|x_1| + |x_3|) \leqslant \lambda x_2.
-$$
-
-Hence, $\lambda x$ is in $F_3$. In conclusion, $F_3$ is a cone.
-
-Next, we need to show $F_3$ is convex. Take $x, y \in F_3$ and $\forall \eta \in (0, 1)$, $\eta x + (1- \eta) y = (\eta x_1 + (1-\eta)y_1, \eta x_2 + (1-\eta)y_2, \eta x_3 + (1-\eta)y_3)$. Use triangle inequality of absolute value and we get
-
-$$
-\begin{aligned}
-|\eta x_1 + (1-\eta)y_1| + |\eta x_3 + (1-\eta)y_3| & \leqslant \eta |x_1| + (1-\eta)|y_1| + \eta |x_3| + (1-\eta)|y_3| \\
-& = \eta (|x_1|+|x_3|) + (1-\eta)(|y_1|+|y_3|) \\
-& \leqslant \eta x_2 + (1-\eta) y_2.
-\end{aligned}
-$$
-
-Hence, $\eta x + (1- \eta) y \in F_3$. This implies that $F_3$ is convex.
+For a degenerate BFS $x$ with $p(<m)$ positive components, we have $n-p$ zero components in it. And also, $n-m$ of $n-p$ will be nonbasic variables and there will be at most $C(n-p, n-m)$ situations. 
 
 \end{proof}
 
-\item [(6)]
 
-(Any reasonable answers will be fine for this question.)
+\section*{Problem 6 (3.9)}
 
-\textbf{Example answer:}
+\begin{proof}
 
-$\mathbb R_+^3$ are different from $F_3$ and $\mathbb R_+^3 \cap F_3 \neq \phi$. 
+We know $\overline{M} = \begin{bmatrix}
+ B & N \\
+\textbf 0 & I
+\end{bmatrix}$ and let $W = \begin{bmatrix}
+ B^{-1} & -B^{-1}N \\
+\textbf 0 & I
+\end{bmatrix} \in \mathbb{R}^{n\times n}$. Thus, it is enough to check $W\overline M = I$ and $\overline M W = I$.
 
-$(-1, 2, -1)^T \notin \mathbb R_+^3$ but in $F_3$. $(2,1,2)^T \notin F_3$, but in $\mathbb R_+^3$.
-
-\end{enumerate}
-
-
-
-
-
-
-
-
-\section*{Problem 6}
-We plot the region of $P_1$.
-
-
-\begin{enumerate}
-\item [(a)]
-Convert $P_1$ to standard equality form.
-$$
-\left\{
-\begin{aligned}
-& 2x_1 - 4x_2 + a_1 & & = 1 \\
-& 3x_1 - x_2   & -a_2 & = -3 \\
-& x_1, x_2, a_1, a_2 & & \geqslant 0.
-\end{aligned}
-\right.
-$$
-
-\item[(b)]
-Basic solutions (in the form of $(x_1, x_2, a_1, a_2)$): 
-$$
-\begin{aligned}
-&(-13/10, -9/10, 0, 0)   \\ 
-&(-1, 0, 3, 0)\\ 
-&(1/2, 0, 0, 9/2) \star\\
-& (0, 3, 13, 0)\star\\ 
- &(0, -1/4, 0, 13/4)\\
- & (0, 0, 1, 3)\star
-\end{aligned}
-$$
-
-\item[(c)]
-Basic feasible solutions are those basic solutions with "$\star$".
-
-\item[(d)]
-Let $V$ be the set of all extremal directions. 
-$$
-V = \{v \in\mathbb R^2| v = (1, d)^T, d\in [1/2, 3] \}.
-$$
-
-\item[(e)]
-From the figure, we can see that there are two moving directions to the adjacent points. $u_1$ is to point $(1/2, 0)^T$ and $u_2$ is to point $(0, 3)^T$.
+Those are true since
 
 $$
-\begin{aligned}
-&u_1 = (1, 0)^T \\
-&u_2 = (0, 1)^T 
-\end{aligned}
-$$
-\end{enumerate}
+W\overline M = \begin{bmatrix}
+B^{-1}B - B^{-1}N\textbf 0 & B^{-1}N - B^{-1}NI \\
+\textbf 0 B + I \textbf 0 & \textbf 0 N + I*I
+\end{bmatrix} \qquad = \begin{bmatrix}
+I & \textbf 0 \\
+\textbf 0 & I
+\end{bmatrix}
+$$. 
 
-\section*{Problem 7}
+Similarly, $\overline M W = I$. 
 
-We plot the region of $P_2$.
-%
-% \begin{figure}[htbp]
-%  \caption{Region $P_2$.}
-%  \centering
-%    \includegraphics[width=0.5\textwidth]{p7.pdf}
-% \end{figure}
+In conclusion, $\overline{M}^{-1} = W$.
 
-\FloatBarrier
+\end{proof}
 
-\begin{enumerate}
-\item [(a)]
-Convert $P_2$ to standard equality form.
-$$
-\left\{
-\begin{aligned}
-& 2x_1 - 2x_2^+ + 2x_2^- + a_1 & & = 3 \\
-& 8x_1 - x_2^+ + x_2^-   & -a_2 & = -4 \\
-& x_1, x_2^+, x_2^-, a_1, a_2 & & \geqslant 0.
-\end{aligned}
-\right.
-$$
+\section*{Problem 7 (3.13)}
 
-\item[(b)]
-Basic solutions (in the form of $(x_1, x_2^+, x_2^-, a_1, a_2)$): 
-$$
-\begin{aligned}
-&(-1/2, -1, 0, 0, 0)   \\ 
-&(-1/2, 1, 0, 0, 0) \\ 
-&(-1/2, 0, 0, 4, 0) \\
-& (3/2, 0, 0, 0, 16) \star \\ 
- &(0, 4, 0, 11, 0) \star \\
- & (0, -3/2, 0, 0, 11/2) \\
- & (0, 0, -4, 11, 0) \\
-& (0, 0, 3/2, 0, 11/2) \star \\
-& (0, 0, 0, 3, 4) \star
-\end{aligned}
-$$
+From point $x = [x_1, x_2, x_3, x_4]^T = [30, 0, 10, 0]^T$, we know that $B = [A_3, A_1]$ and $N = [A_2, A_4]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N = [-1/2, 3/2]$.
 
-\item[(c)]
-Basic feasible solutions are those basic solutions with "$\star$".
+Note that $r_2$ is negative, so $x_2$ enter the basis. Construct $M^{-1} = \begin{bmatrix}
+1 & -1/2 & -1/2 & 1/2 \\
+0 & 1/2 & -1/2 & -1/2 \\
+0 & 0 & 1 & 0  \\
+0 & 0 & 0 & 1 
+\end{bmatrix}$ to figure out $\textbf d^2 = [-1/2, 1, -1/2, 0]^T$  and the step length $\alpha_2 = 20$ . Hence, $x_{\text{new}} = x + \alpha_2\textbf{d}^2 = [20, 20, 0, 0]^T$. 
 
-\item[(d)]
-Let $V$ be the set of all extremal directions. 
-$$
-V = \{v \in\mathbb R^2| v = (1, d)^T, d\in [1, 8] \}.
-$$
+Next step:
 
-\item[(e)]
-From the figure, we can see that there is only one moving directions to the adjacent point $(0, -3/2)^T$. 
+From point $x = [x_1, x_2, x_3, x_4]^T = [20, 20, 0, 0]^T$, we know that $B = [A_1, A_2]$ and $N = [A_3, A_4]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N \geqslant 0$. Hence, this is the optimal solution. The optimal value $z^* = c^Tx^* = -100 $.
 
-$$
-u = (0, -1)^T
-$$
-\end{enumerate}
+
+
+\section*{Problem 8 (3.14)}
+
+From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [10, 0, 30, 0, 0]^T$, we know that $B = [A_3, A_2, A_1]$ and $N = [A_4, A_5]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N = [2, -3]$.
+
+Note that $r_5$ is negative, so $x_5$ enter the basis. Construct $M^{-1} = \begin{bmatrix}
+1 & -1 & 1 & 1 & -1 \\
+0 & 1 & -2 & -1 & 2 \\
+0 & 0 & 1 & 0 & -1 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{bmatrix}$ to figure out $\textbf d^5 = [-1, 2, -1, 0, 1]^T$  and the step length $\alpha_5 = 10$ . Hence, $x_{\text{new}} = x + \alpha_5\textbf{d}^5 = [0, 20, 20, 0, 10]^T$. 
+
+Next step:
+
+From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [0, 20, 20, 0, 10]^T$, we know that $B = [A_2, A_3, A_5]$ and $N = [A_1, A_4]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N \geqslant 0$. Hence, this is the optimal solution. The optimal value $z^* = c^Tx^* = -100 $.
+
+
 
 \end{document}
