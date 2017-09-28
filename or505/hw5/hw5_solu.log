@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  14 SEP 2017 11:48
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  27 SEP 2017 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**hw3.tex
-(./hw3.tex
+**hw5_solu.tex
+(./hw5_solu.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -133,6 +133,14 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen120
+\enit@toks=\toks27
+\enit@inbox=\box28
+\enitdp@description=\count102
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
@@ -141,16 +149,16 @@ Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count102
-\calc@Bcount=\count103
-\calc@Adimen=\dimen120
-\calc@Bdimen=\dimen121
-\calc@Askip=\skip49
-\calc@Bskip=\skip50
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen121
+\calc@Bdimen=\dimen122
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count104
-\calc@Cskip=\skip51
+\calc@Ccount=\count105
+\calc@Cskip=\skip52
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
@@ -159,15 +167,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count105
-\l_MT_multwidth_dim=\dimen122
-\origjot=\skip52
-\l_MT_shortvdotswithinadjustabove_dim=\dimen123
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen124
-\l_MT_above_intertext_sep=\dimen125
-\l_MT_below_intertext_sep=\dimen126
-\l_MT_above_shortintertext_sep=\dimen127
-\l_MT_below_shortintertext_sep=\dimen128
+\g_MT_multlinerow_int=\count106
+\l_MT_multwidth_dim=\dimen123
+\origjot=\skip53
+\l_MT_shortvdotswithinadjustabove_dim=\dimen124
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen125
+\l_MT_above_intertext_sep=\dimen126
+\l_MT_below_intertext_sep=\dimen127
+\l_MT_above_shortintertext_sep=\dimen128
+\l_MT_below_shortintertext_sep=\dimen129
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/eucal.sty
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
@@ -198,8 +206,8 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
+\Gin@req@height=\dimen130
+\Gin@req@width=\dimen131
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
@@ -209,21 +217,21 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 144.
 )
-(./hw3.aux)
-\openout1 = `hw3.aux'.
+(./hw5_solu.aux)
+\openout1 = `hw5_solu.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -259,39 +267,50 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \hbox (47.25893pt too wide) in paragraph at lines 92--111
+[]\OT1/cmr/m/n/12 The fun-da-men-tal ma-trix $\OML/cmm/m/it/12 M \OT1/cmr/m/n/1
+2 = [] = []$ and $\OML/cmm/m/it/12 M[] \OT1/cmr/m/n/12 = [] =
+ []
 
-] [2]
-[3] [4] [5]
-File: 2_8P.pdf Graphic file (type QTm)
- <use  "2_8P.pdf" >
-File: 2_8a.pdf Graphic file (type QTm)
- <use  "2_8a.pdf" >
-File: 2_8b.pdf Graphic file (type QTm)
- <use  "2_8b.pdf" >
-File: 2_8c.pdf Graphic file (type QTm)
+[1
 
-<use  "2_8c.pdf" >
-File: 2_8d.pdf Graphic file (type QTm)
- <use  "2_8d.pdf" >
-File: 2_8e.pdf Graphic file (type QTm)
- <use  "2_8e.pdf" > [6] [7] [8] [9]
-(./hw3.aux) ) 
+]
+File: problem3.pdf Graphic file (type QTm)
+ <use  "problem3.pdf" > [2]
+Overfull \hbox (10.60457pt too wide) detected at line 189
+\OML/cmm/m/it/12 r[] \OT1/cmr/m/n/12 = [\OML/cmm/m/it/12 c[]\OMS/cmsy/m/n/12 j\
+OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 ][][] = (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12
+ 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\O
+T1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1)[][] = 
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;  r[] \OT1/cmr/m/n/12 = 
+[\OML/cmm/m/it/12 c[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 ][][
+] = (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\
+OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OMS/
+cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1)[][] = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1
+ []
+
+[3] [4]
+File: problem3_j1.pdf Graphic file (type QTm)
+ <use  "problem3_j1.pdf" >
+File: problem3_j2.pdf Graphic file (type QTm)
+ <use  "problem3_j2.pdf" > [5] [6] [7]
+[8] [9] (./hw5_solu.aux) ) 
 Here is how much of TeX's memory you used:
- 2876 strings out of 493591
- 39369 string characters out of 6143546
- 106907 words of memory out of 5000000
- 6250 multiletter control sequences out of 15000+600000
- 12443 words of font info for 48 fonts, out of 8000000 for 9000
+ 3155 strings out of 493591
+ 44238 string characters out of 6143546
+ 121009 words of memory out of 5000000
+ 6526 multiletter control sequences out of 15000+600000
+ 13064 words of font info for 50 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 27i,9n,32p,661b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,10n,32p,476b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on hw3.pdf (9 pages).
+Output written on hw5_solu.pdf (9 pages).
