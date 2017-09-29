@@ -357,20 +357,20 @@ We can always express $n-2$ variables by using the rest $2$ variables. Then, the
 
 \section*{Problem 4 (3.4)}
 
-From point $x = [x_B | x_N]^T = [x_5, x_6, x_1| x_2, x_3, x_4]^T$, we know that $B = [A_5, A_6, A_1]$ and $N = [A_2, A_3, A_4]$. Construct matrix $M = \begin{bmatrix}
+From point $x = [1/2, 0, 0, 0, 1, 1]^T$, we know that $B = [A_5, A_6, A_1]$ and $N = [A_2, A_3, A_4]$. Construct matrix $M = \begin{bmatrix}
 B & N \\
 \textbf 0 & I
 \end{bmatrix}$ and reduced cost $r = c_N^T - c_B^TB^{-1}N = [-1, -1, 1/2]$.
 
-Note that $r_2, r_3$ are negative, and figure out the step length $\alpha_2 = \alpha_3 = 1/2$. Hence, we can pick either one from $\textbf d^2$ or $\textbf{d}^3$. Let's pick $\textbf d^2$. $x_{\text{new}} = x + \alpha_2\textbf{d}^2 = (0,1,1/2,1/2,0,0)^T$. 
+Note that $r_2, r_3$ are negative, and figure out the step length $\alpha_2 = \alpha_3 = 1/2$. Hence, we can pick either one from $\textbf d^2$ or $\textbf{d}^3$. Let's pick $\textbf d^2$. $x_{\text{new}} = x + \alpha_2\textbf{d}^2 = [1/2,1/2,0,0,0,1]^T$. 
 
 Next step:
 
-From point $x = [x_2, x_6, x_1 | x_5, x_3, x_4] = (1/2,1,1/2,0,0,0)^T$, we know $B = [A_2, A_6, A_1]$ and $N = [A_5, A_3, A_4]$. Construct matrix $M$ and reduced cost $r = c_N^T - c_B^TB^{-1}N = [-1/2, -1, -1/2]$. Find the most negative direction, pick $\textbf d^3$ with $\alpha_3 = 1/2$. $x_{\text{new}} = x + \alpha_3\textbf{d}^3 =  (1/2,0,1/2,1/2,0,0)^T$.
+From point $x =  [1/2,1/2,0,0,0,1]^T$, we know $B = [A_2, A_6, A_1]$ and $N = [A_5, A_3, A_4]$. Construct matrix $M$ and reduced cost $r = c_N^T - c_B^TB^{-1}N = [-1/2, -1, -1/2]$. Find the most negative direction, pick $\textbf d^3$ with $\alpha_3 = 1/2$. $x_{\text{new}} = x + \alpha_3\textbf{d}^3 =  [1/2, 1/2, 1/2, 0, 0, 0]^T$.
 
 Next step:
 
-From point $x = [x_1, x_2, x_3 | x_4, x_5, x_6] = (1/2,1,1/2,0,0,0)^T$, we know $B = [A_1, A_2, A_3]$ and $N = [A_4, A_5, A_6]$. Compute the reduced cost $r = c_N^T - c_B^TB^{-1}N = [1/2, 1/2, 1/2]  \geqslant 0$. Hence, $x = [x_1, x_2, x_3 | x_4, x_5, x_6] = (1/2,1,1/2,0,0,0)^T$ is the optimal solution.
+From point $x = [1/2, 1/2, 1/2, 0, 0, 0]^T$, we know $B = [A_1, A_2, A_3]$ and $N = [A_4, A_5, A_6]$. Compute the reduced cost $r = c_N^T - c_B^TB^{-1}N = [1/2, 1/2, 1/2]  \geqslant 0$. Hence, $x = [1/2, 1/2, 1/2, 0, 0, 0]^T$ is the optimal solution.
 
 
 
@@ -432,7 +432,7 @@ From point $x = [x_1, x_2, x_3, x_4]^T = [20, 20, 0, 0]^T$, we know that $B = [A
 
 \section*{Problem 8 (3.14)}
 
-From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [10, 0, 30, 0, 0]^T$, we know that $B = [A_3, A_2, A_1]$ and $N = [A_4, A_5]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N = [2, -3]$.
+From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [30, 0, 10, 0, 0]^T$, we know that $B = [A_3, A_2, A_1]$ and $N = [A_4, A_5]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N = [2, -3]$.
 
 Note that $r_5$ is negative, so $x_5$ enter the basis. Construct $M^{-1} = \begin{bmatrix}
 1 & -1 & 1 & 1 & -1 \\
@@ -440,11 +440,11 @@ Note that $r_5$ is negative, so $x_5$ enter the basis. Construct $M^{-1} = \begi
 0 & 0 & 1 & 0 & -1 \\
 0 & 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 0 & 1
-\end{bmatrix}$ to figure out $\textbf d^5 = [-1, 2, -1, 0, 1]^T$  and the step length $\alpha_5 = 10$ . Hence, $x_{\text{new}} = x + \alpha_5\textbf{d}^5 = [0, 20, 20, 0, 10]^T$. 
+\end{bmatrix}$ to figure out $\textbf d^5 = [-1, 2, -1, 0, 1]^T$  and the step length $\alpha_5 = 10$ . Hence, $x_{\text{new}} = x + \alpha_5\textbf{d}^5 = [20, 20, 0, 0, 10]^T$. 
 
 Next step:
 
-From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [0, 20, 20, 0, 10]^T$, we know that $B = [A_2, A_3, A_5]$ and $N = [A_1, A_4]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N \geqslant 0$. Hence, this is the optimal solution. The optimal value $z^* = c^Tx^* = -100 $.
+From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [20, 20, 0, 0,  10]^T$, we know that $B = [A_1, A_2, A_5]$ and $N = [A_3, A_4]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N \geqslant 0$. Hence, this is the optimal solution. The optimal value $z^* = c^Tx^* = -100 $.
 
 
 
