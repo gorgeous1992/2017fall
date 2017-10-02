@@ -75,14 +75,18 @@ Let $c^\prime = \frac{e}{4}c$ and note that $c^\prime \in (0, 1)$. Hence, $g$ is
 \item
 \begin{proof}
 
-Apply triangle inequality and the property of norm, we have
+If $\alpha_1 = \alpha_2 = 0$, then the claim is trivial. If not, then we only need to show that there exists a positive $\beta $ such that
+
 $$
-\begin{aligned}
-||\lambda_1e_1 + \lambda_2e_2|| & \leqslant |\lambda_1|\cdot||e_1|| + |\lambda_2|\cdot||e_2|| \leqslant \max \{ ||e_1||, ||e_2|| \}(|\lambda_1| + |\lambda_2|).
-\end{aligned}
+\frac{||\alpha_1e_1 + \alpha_2e_2||}{|\alpha_1|+|\alpha_2|} \geqslant \beta.
 $$
 
-holds for all $\lambda_1, \lambda_2 \in \mathbb{R}$. Let $\beta_2 = \max \{ ||e_1||, ||e_2|| \}$ and it is clear that $\beta_2 > 0$. and the claim was proved.
+Let function $f:\mathbb{R}^2 \rightarrow \mathbb{R}$ be $f(c_1, c_2) = ||c_1e_1 + c_2e_2||$ and $\text{dom}f = \{(c_1, c_2)\in\mathbb{R}^2 | |c_1| + |c_2| = 1 \}$. It is clear that $f$ is continuous on $\mathbb R^2$ and dom$f$ is compact. So $f$ reaches its minimum $K\geqslant 0$ on dom$f$. Also, $K > 0$, because if $K = 0$ then $c_1 = c_2 = 0$, which leads to a contradiction that $(c_1, c_2) \notin \text{dom} f$. Hence, we have 
+$$
+\frac{||\alpha_1e_1 + \alpha_2e_2||}{|\alpha_1|+|\alpha_2|} = \left\| \frac{\alpha_1}{|\alpha_1| + |\alpha_2|}e_1 + \frac{\alpha_2}{|\alpha_1| + |\alpha_2|}e_2 \right\| \geqslant K.
+$$
+
+And this proves the claim.
 
 \end{proof}
 
@@ -90,15 +94,18 @@ holds for all $\lambda_1, \lambda_2 \in \mathbb{R}$. Let $\beta_2 = \max \{ ||e_
 
 \begin{proof}
 
-Use the same idea in last proof. Let $\beta_n = \max_{1\leqslant i \leqslant n} \{ ||e_i|| \}$ and it is clear that $\beta_n > 0$. 
-
+Similar to the previous one, only need to show that there exists $\beta > 0$ such that
+ 
 $$
-\begin{aligned}
-||\sum_{i=1}^n \lambda_i\cdot e_i|| & \leqslant \sum_{i=1}^n|\lambda_i|\cdot||e_i|| \leqslant \max_{1\leqslant i \leqslant n} \{ ||e_i|| \} \sum_{i=1}^n|\lambda_i| = \beta_n \sum_{i=1}^n|\lambda_i|
-\end{aligned}, \quad \forall \lambda_1, \lambda_2 \in \mathbb{R}.
+\frac{||\sum_{i=1}^n \alpha_ix_i||}{\sum_{i=1}^n|\alpha_i|} \geqslant \beta.
 $$
 
-The claim was proved.
+Let function $g:\mathbb{R}^n \rightarrow \mathbb{R}$ be $g(c) = ||\sum_{i=1}^n c_ie_i||$ and $\text{dom} g = \{c \in\mathbb{R}^n | \sum_{i=1}^n|c_i| = 1 \}$. It is clear that $g$ is continuous on $\mathbb R^n$ and dom $g$ is compact. So $g$ reaches its minimum $\kappa \geqslant 0$ on dom $g$. Also, $\kappa \notin 0$ with the same reason above. Hence, we have 
+$$
+\frac{||\sum_{i=1}^n \alpha_ie_i||}{\sum_{i=1}^n|\alpha_i|} = \left\|  \frac{\sum_{i=1}^n\alpha_i}{\sum_{i=1}^n |\alpha_i|}e_i \right\| \geqslant \kappa.
+$$
+
+And this proves the claim.
 
 
 \end{proof}
