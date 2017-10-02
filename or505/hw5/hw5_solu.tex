@@ -194,9 +194,9 @@ From above, either direction leads to a potential reduction in the objective val
 
 \item
 \begin{enumerate}
-\item[1)] If we take $\textbf d^1$, then the new solution will be $\overline{x} = x + \alpha_1 \textbf d^1 = (9,7,0,2,0)^T \geqslant 0$. The basis now is $\overline{B} = [A_3, A_4, A_1]$ and $\overline{N} = [A_5, A_2]$. It is easy to check that $\overline{B}\overline x = b$. Hence $\overline{x}$ is a basic feasible solution(BFS). $\overline{x}$ is also an adjacent extreme point of $x$. (On fig.\ref{problem3}, $\overline{x}$ is the point $C$)
+\item[1)] If we take $\textbf d^1$, then the new solution will be $\overline{x} = x + \alpha_1 \textbf d^1 = (0,0,3,7,2)^T  + 2(1,0,3,0,-1)^T = (2,0,9,7,0)^T \geqslant 0$. The basis now is $\overline{B} = [A_3, A_4, A_1]$ and $\overline{N} = [A_5, A_2]$. It is easy to check that $\overline{B}\overline x = b$. Hence $\overline{x}$ is a basic feasible solution(BFS). $\overline{x}$ is also an adjacent extreme point of $x$. (On fig.\ref{problem3}, $\overline{x}$ is the point $C$)
 
-\item[2)] If we take $\textbf d^2$, then the new solution will be $\overline{x} = x + \alpha_2 \textbf d^2 = (0,4,5,0,3)^T \geqslant 0$. The basis now is $\overline{B} = [A_4, A_5, A_2]$ and $\overline{N} = [A_3, A_1]$. It is easy to check that $\overline{B}\overline x = b$. Hence $\overline{x}$ is a basic feasible solution(BFS). $\overline{x}$ is also an adjacent extreme point of $x$. (On fig.\ref{problem3}, $\overline{x}$ is the point $E$)
+\item[2)] If we take $\textbf d^2$, then the new solution will be $\overline{x} = x + \alpha_2 \textbf d^2 = (0,0,3,7,2)^T + 3(0,1,-1,-1,1)^T = (0,3,0,4,5)^T \geqslant 0$. The basis now is $\overline{B} = [A_4, A_5, A_2]$ and $\overline{N} = [A_3, A_1]$. It is easy to check that $\overline{B}\overline x = b$. Hence $\overline{x}$ is a basic feasible solution(BFS). $\overline{x}$ is also an adjacent extreme point of $x$. (On fig.\ref{problem3}, $\overline{x}$ is the point $E$)
 
 \end{enumerate}
 
@@ -366,7 +366,7 @@ Note that $r_2, r_3$ are negative, and figure out the step length $\alpha_2 = \a
 
 Next step:
 
-From point $x =  [1/2,1/2,0,0,0,1]^T$, we know $B = [A_2, A_6, A_1]$ and $N = [A_5, A_3, A_4]$. Construct matrix $M$ and reduced cost $r = c_N^T - c_B^TB^{-1}N = [-1/2, -1, -1/2]$. Find the most negative direction, pick $\textbf d^3$ with $\alpha_3 = 1/2$. $x_{\text{new}} = x + \alpha_3\textbf{d}^3 =  [1/2, 1/2, 1/2, 0, 0, 0]^T$.
+From point $x =  [1/2,1/2,0,0,0,1]^T$, we know $B = [A_2, A_6, A_1]$ and $N = [A_5, A_3, A_4]$. Construct matrix $M$ and reduced cost $r = c_N^T - c_B^TB^{-1}N = [1/2, -1, 1/2]$. Find the negative direction, pick $\textbf d^3$ with $\alpha_3 = 1/2$. $x_{\text{new}} = x + \alpha_3\textbf{d}^3 =  [1/2, 1/2, 1/2, 0, 0, 0]^T$.
 
 Next step:
 

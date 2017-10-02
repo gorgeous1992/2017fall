@@ -26,31 +26,171 @@
 \begin{enumerate}
 \item [(a)]
 
-It is not a norm. It violates 
+It is not a norm because it violates property (\romannum{2}). Let $a = -1, x = 1$. Then $||ax|| = ||-1|| = 2$. However, $|a|||x|| = 1$.
+
+\item [(b)]
+It is a norm.
+
+\begin{proof}
+
+Check the first one. If $||f|| = 0$, then $\sup_{t\geqslant 0} e^{\lambda t}|f(t)| = 0$. Since for any $t\geqslant 0$, $e^{\lambda t}|f(t)| \geqslant 0$ and $e^{\lambda t} > 0$, we have  $|f(t)| = 0, \forall t\geqslant 0$. This is to say $f \equiv 0$ on its domain. For the other direction, $||f|| = 0$ is true when $f = 0$.
+
+For (\romannum 2), $\forall \alpha \in \mathbb{R}$,
+
+$$
+||\alpha x|| = \sup_{t\geqslant 0} e^{\lambda t}|\alpha f(t)| = \sup_{t\geqslant 0} e^{\lambda t}|\alpha|\cdot|f(t)| = |\alpha| \sup_{t\geqslant 0} e^{\lambda t}|f(t)| = |\alpha|\cdot ||x||.
+$$
+
+To check the triangle inequality, we pick $f, g \in X$,
+
+$$
+\begin{aligned}
+||f + g|| = \sup_{t\geqslant 0} e^{\lambda t}|f(t) + g(t)| & \leqslant \sup_{t\geqslant 0} e^{\lambda t}\left(|f(t)| + |g(t)|\right)\\
+& \leqslant \sup_{t\geqslant 0} e^{\lambda t}|f(t)| + \sup_{t\geqslant 0} e^{\lambda t}|g(t)| = ||f|| + ||g||.
+\end{aligned}
+$$
+
+In conclusion, it is a norm.
+
+\end{proof}
+
+\item [(c)]
+
+It is a norm.
+
+\begin{proof}
+
+We have shown that for $\ell^p$ space, $||x||_p = (\sum_{i=1}^{+\infty} |x_i|^p)^{1/p} $ is a norm for $1\leqslant p \leqslant +\infty$. Then, truncate it for only first two entries. Consider set $S = \{ x \in \ell^p \| x = (x_1, x_2, 0, \dots),  x_1, x_2 \in \mathbb{R}\}$. We have $||x||_p = ||x||, \forall x\in S$. Since $||\cdot||_p$ is a norm on $\ell^p$, it must be a norm on $S\subset \ell^p$ as $0\in S$. Then we conclude that $||\cdot||$ is a norm on $\mathbb{R}^2$.
+
+\end{proof}
+
+\item [(d)]
+
+It is not a norm. Consider $x = (1, 0), y = (0, 1)$. Then $||x+y|| = ||(1,1)|| = 2^{1/p} > 2$. However, $||x|| + ||y|| = 2 < ||x + y||$. This breaks the triangle inequality.
+
+
+\end{enumerate}
+
+\section*{Problem 2}
+
+\begin{proof}
+\ 
+
+\begin{enumerate}
+\item [Step 1]
+
+We are going to show $||(\cdot, \cdot)||$ is a norm on $X\times Y$. 
+
+If $||(x, y)|| = 0$, then $\max \{ ||x||_X, ||y||_Y \} = 0$, which implies that $||x||_X = ||y||_Y = 0$. Hence, $x = y = 0$. The other direction is obvious. 
+
+To check the second property, take arbitrarily $\alpha \in \mathbb R$ and we have 
+
+$$
+\begin{aligned}
+||\alpha (x, y)|| = ||(\alpha x, \alpha y)|| & = \max \{ ||\alpha x||_X, ||\alpha y||_Y \}\\
+& = \max \{ |\alpha | \cdot ||x||_X, |\alpha | \cdot ||y||_Y \}\\ & = |\alpha|\max \{ ||x||_X, ||y||_Y \} = |\alpha| \cdot ||(x, y)||.
+\end{aligned}
+$$
+
+For triangle inequality, take arbitrarily $(x, y), (z, w) \in X\times Y$, we have 
+
+$$
+\begin{aligned}
+||(x, y) + (z, w)|| = ||(x+z, y+w)|| & = \max\{ ||x+z||_X, ||y+w||_Y \} \\
+& \leqslant \max\{ ||x||_X + ||z||_X, ||y||_Y + ||w||_Y \} \\
+& = \max\{ ||x+||_X, ||y||_Y \} + \max\{ ||z||_X, ||w||_Y \} \\
+& = ||(x, y)|| + ||(z, w)||.
+\end{aligned}
+$$
+
+Hence, $||(\cdot, \cdot)||$ is a norm on $X\times Y$. 
+
+\item [Step 2]
+
+We need to prove that $X\times Y$ is complete. Take any Cauchy sequence $\{z_n = (x_n, y_n)\}_{n\in\mathbb N} \subset X\times Y$. $\forall \epsilon >0$, there exists $N > 0$ such that 
+$$ 
+||z_n - z_m|| = ||(x_n, y_n) - (x_m, y_m)|| < \epsilon, \quad \forall n, m > N.
+$$
+
+This is equivalent to $\max\{||x_n - x_m||_X, ||y_n - y_m||_Y\} < \epsilon \forall n, m > N$ and also implies that 
+
+$$
+||x_n - x_m||_X < \epsilon, \quad ||y_n - y_m||_Y < \epsilon, 
+\forall n, m > N.
+$$
+
+Hence we conclude that $\{x_n\}$ and $\{y_n\}$ are both Cauchy sequences on $X$ and $Y$ respectively. Since $(X, ||\cdot||_X)$ and $(Y, ||\cdot||_Y)$ are Banach spaces, $\{x_n\}$ converges on $X$ and $\{y_n\}$ converges on $Y$. Let $\lim_{n\rightarrow +\infty} x_n = x$, $\lim_{n\rightarrow +\infty} y_n = y$, and $z = (x, y)\in X\times Y$. Then,
+$$ 
+||z_n - z|| = ||(x_n, y_n) - (x, y)|| = \max\{||x_n - x||_X, ||y_n - y||_Y\}< \epsilon, \quad \forall n > N.
+$$
+
+Hence, $\{z_n\}$ converges to on $z\in X\times Y$. This proves the claim.
 
 
 
 
+\end{enumerate}
 
 
+\end{proof}
 
-\vspace{60mm}
+
+\section*{Problem 3}
+
+\begin{enumerate}
+\item [(a)]
+
+\begin{proof}
+
+Firstly, we need to show that $d_f$ is a metric on $X$. $\forall x, y\in X$, $d_f(x, y) = f(||x - y||_X) \geqslant 0$ holds due to the property of $f$. And $d_f(x, x) = f(0) = 0$. Also, $d_f(x, y) = d_f(y, x)$ is obvious since $||x - y||_X = ||y - x||_X$. For triangle inequality, we need to use the facts that $f$ is increasing and \romannum 2,
+$$
+\begin{aligned}
+d_f(x, y) + d_f(y, z) & = f(||x-y||_X) + f(||y-z||_X)  \geqslant f(||x-y||_X + ||y-z||_X)\\
+& \geqslant f(||x-y + y-z||_X) = f(||x-z||_X) = d_f(x, z).
+\end{aligned}
+$$
+Hence, $d_f$ is a metric well-defined on $X$.
+
+Next, we need to show $(X, d_f)$ is complete. Take any Cauchy sequence $\{x_n\}_n\in\mathbb N$ from $(X, d_f)$ and it is enough to show it converges in $X$. $\forall \epsilon > 0$, there exists $N > 0$ such that $d_f(x_n, x_m) = f(||x_n - x_m||_X) < \epsilon$, for all $n, m > N$. Since $f$ is an incr easing continuous function from $\mathbb R_+$ to $\mathbb R_+$, then there exists an increasing continuous inverse function $f^{-1}$ of $f$ such that $f^{-1}(d_f(x, y)) = ||x - y||_X$. Hence,
+
+$$
+||x_m - x_n||_X = f^{-1}(d_f(x_m, x_n)) < f^{-1}(\epsilon) \rightarrow 0,\  \text{as} \quad \epsilon \rightarrow 0, \forall n, m > N
+$$
+
+Hence, $\{x_n\}$ is also a Cauchy sequence on $(X, ||\cdot||_X)$ and so it converges in $X$ in norm $||\cdot||_X$. Let $x_n\rightarrow x\in X$ in $||\cdot||_X$. Then we have $\lim_{n\rightarrow +\infty } ||x_n - x||_X = 0$. With the continuity of $f$, we know $\lim_{n\rightarrow +\infty } f(||x_n - x||_X) = 0$. And this improves that $x_n\rightarrow x$ in distance $d_f$. Hence $\{x_n\}$ is convergent on $(X, d_f)$.
+
+In conclusion, $(X, d_f)$ is a complete metric space.
+
+\end{proof}
 
 \item [(b)]
 
 \begin{proof}
 
-If $E$ is closed in X, then $X \setminus E$ is open in $X$. Use the result from (a), it is equivalent to say that there exists an open set $\mathcal{O} \subset Y$ such that $X\setminus E = \mathcal{O} \cap X$. And this implies,
+Take arbitrarily $x, y\in B_f(0, 1)$ and $\alpha\in(0, 1)$. Then $z = \alpha x + (1- \alpha)y\in X$. It is enough to show that $d_f(0, z) < 1$. Use property (\romannum 2) and the property given in (b), we have the following,
 
 $$
-E = X\setminus (O\cap X) = X \setminus \mathcal{O} \cup \phi = X \setminus \mathcal{O} = ( X \setminus \mathcal{O}) \cap Y = (Y\setminus \mathcal{O}) \cap X.
-$$
+\begin{aligned}
+d_f(0, z) = f(||z||_X) & \leqslant f(\alpha||x||_X + (1-\alpha)||y||_X) \\
+& \leqslant f(\alpha||x||_X) + f((1-\alpha)||y||_X) \\
+& \alpha f(||x||_X) + (1-\alpha)f(||y||_X)\\
+& = \alpha d_f(0, x) + (1-\alpha) d_f(0, y) < \alpha + 1 - \alpha = 1.
+\end{aligned}
+$$ 
 
-Let $F = Y\setminus \mathcal{O}$ and $F$ is closed in $Y$.
+This proves that $z \in B_f(0,1)$ and then $B_f(0, 1)$ is convex.
+
 
 \end{proof}
 
+
 \end{enumerate}
+
+
+\section*{Problem 4}
+
+
+\vspace{60mm}
 
 
 \section*{Problem 9}
@@ -115,254 +255,6 @@ And this proves the claim.
 
 
 
-
-\section*{Problem 2}
-
-\begin{enumerate}
-\item [(a)]
-
-\begin{proof}
-
-We want to show $\overline{U\cup V} \subset \overline U \cup \overline V$. Take $x \in \overline U$, by definition of closure, $\forall \epsilon >0$, $\exists y \in U\subset (U\cup V)$ such that  $d(x, y) < \epsilon$. This implies that $x \in \overline{U\cup V}$. Hence, $\overline U \subset \overline{U\cup V}$. Similarly, $\overline V \subset \overline{U\cup V}$. In all, $\overline U \cup \overline V \subset \overline{U\cup V}$.
-
-For the other direction, we prove it by contradiction. Suppose $\exists y \in \overline{U \cup V}$ such that $y \notin \overline U \cup \overline V$. This is to say that $y\notin \overline U$ and $y \notin \overline V$. Then there exists $\epsilon > 0$, such that, $d(x, y) \geqslant \epsilon$ and $d(x, z) \geqslant \epsilon$ for all $x\in U, z \in V$. i.e, $\forall w \in U\cup V$, $d(w, y) > \epsilon$, which is $y\notin \overline{U \cup V}$ (contradiction).
-
-In conclusion, $\overline{U\cup V} = \overline U \cup \overline V$.
-
-\end{proof}
-
-
-\item [(b)]
-
-Generally, $\overline{U\cap V} = \overline U \cap \overline V$ is not true. Here is a counterexample. Let $X = \mathbb R$, $U = (-1, 0)$ and $V = (0, 1)$. Then $\overline U = [-1, 0]$ and $\overline V = [0, 1]$, and it implies that $\overline U \cap \overline V = \{ 0 \} $. However, $\overline {U\cap V} = \phi$ since $U\cap V = \phi$.
-
-\item [(c)]
-
-\begin{proof}
-
-$\forall x \in \overline U$, there exists a sequence $\{x_n\}$ in $U$ such that $x_n \rightarrow x$. Since $U \subset V$, then $x_n$ also converges in $\overline V$. Hence, $x \in \overline V$. This proves that $\overline U \subset \overline V$.
-
-\end{proof}
-
-\end{enumerate}
-
-\section*{Problem 3}
-\begin{proof} 
-\ 
-\begin{enumerate}
-\item [Step 1]
-
-We would like to show that if $x\in K$, then $d_K(x) = 0$. By definition, $\forall x\in K$, $d_K(x) = \inf_{w\in K} d(x, w)$. Since $d(x, w) \geqslant 0$ and $d(x, w) = 0$ when $w = x$. Hence, $d_K (x) = \inf_{w\in K} d(x, w) = d(x, x) = 0$.
-
-\item [Step 2]
-
-Conversely, let's prove it by contradiction. When $d_K(x) = 0$, suppose $x \notin K$, which is to say that $x\in K^c$. Since $K$ is closed, $K^c$ is open. Then $\exists \delta > 0 $ such that $B(x, \delta) \in K^c$, which implies $B(x, \delta) \cap = \phi$.  Thus, $\forall w \in K$, $d(x, w) > \delta > 0$, and it implies $\inf_{w\in K} d(x, w) \geqslant \delta > 0$. This leads to a contradiction to the assumption.
-
-\end{enumerate}
-
-\end{proof}
-
-\section*{Problem 4}
-
-\begin{proof}
-
-Consider $f$ as a continuous map from $X$ to $Y$. $\forall F \subset Y$ closed, we have $Y \setminus F \subset Y$ is open in $Y$. Then $f^{-1} (Y\setminus F) = f^{-1}(Y)\setminus f^{-1}(F) = X\setminus f^{-1}(F)$ is open in $X$. This implies that $f^{-1}(F)$ is closed in $X$.
-
-Conversely, $\forall E \subset Y$ open subset in $Y$, $Y\setminus E$ is closed in $Y$. 
-
-$$
-f^{-1}(E) = f^{-1}(Y\setminus (Y\setminus E)) = f^{-1}(Y) \setminus f^{-1}(Y\setminus E) = X \setminus f^{-1}(Y\setminus E).
-$$
-
-Since $f^{-1}(Y\setminus E)$ is closed in $X$, $f^{-1}(E)$ is open in $X$. Hence, the preimage of any open set is also open and this satisfies the definition of continuous function. Thus, $f$ is continuous. 
-
-\end{proof}
-
-
-\section*{Problem 5}
-
-\begin{proof}
-
-For one direction, if $f$ is not continuous, then by definition, there exists $\epsilon_0 > 0$, for each $n$, $\exists x_n \in X$, such that $|x_n - x| < 1/n$, but $\sigma (f(x_n), f(x)) \geqslant \epsilon_0$. And this implies a contradiction, for then $x_n \rightarrow x$ but $f(x_n)$ doesn't converge to $f(x)$.
-
-For the other direction, we know $f$ is continuous, i.e.,  $\forall \epsilon > 0$, $\exists \delta > 0$, such that $\sigma (f(y) - f(x)) < \epsilon$ holds for all $d(x, y) < \delta$. With $x_n \rightarrow x$, there exists integer $N_\delta > 0$, such that $d(x_n , x) < \delta$ holds for all $n > N_\delta$.
-
-Hence, $\forall \epsilon > 0$, $\exists N_\delta > 0$ such that $\sigma (f(x_n) - f(x)) < \epsilon$ holds for all $n > N_\delta$. And this is equivalent to $f(x_n) \rightarrow f(x)$.
-
-\end{proof}
-
-
-\section*{Problem 6}
-
-\begin{proof}
-
-Prove by contradiction. Suppose a Cauchy sequence $\{x_n\}$ does not converges to $x$, though it has subsequence $\{x_{n_k}\}$ that converges to $x\in X$. Then $\exists \epsilon > 0$, for any $N > 0$, $d(x_n, x) \geqslant \epsilon$ for some $n > N$. Since $\{x_{n_k}\}$ converges to $x$, there exists $N_1 > 0$, such that $d(x_{n_k}, x) < \epsilon/2$, $\forall n_k > N_1$. Also, $\{x_n\}$ is Cauchy and it leads to $\exists N_2 > 0$, such that $d(x_m, x_n) <\epsilon/2$, $\forall m, n > N_2$. 
-
-Taking $N = \max\{N_1, N_2\}$ and for some $n, n_k > N$, we use triangle inequality and get,
-
-$$
-\epsilon \leqslant d(x_n, x) \leqslant d(x_n, x_{n_k}) + d(x_{n_k}, x) < \epsilon/2 + \epsilon/2 = \epsilon.
-$$
-
-which is obviously a contradiction.
-
-\end{proof}
-
-
-\section*{Problem 7}
-
-\begin{proof}
-
-To prove $l^2$ is complete, it is enough to show that all Cauchy sequences converge in $l^2$. We will show this step by step. Pick a Cauchy sequence $\{x_n\}_{n\in\mathbb N}\subset l^2$, we construct a point $x$, and we need to show that $x\in l^2$ and $x_n\rightarrow x$.
-
-\begin{enumerate}
-\item
-
-Take a Cauchy sequence $\{x^n\}_{n\in\mathbb N} \subset l^2$, where the $i^{th}$ element is $x^i := (x_1^i, x_2^i, \dots)$. Since $\{x^n\}$ is Cauchy, $\forall \epsilon > 0$, $\exists N > 0$, such that 
-
-$$
-|x_i^n - x_i^m| <= \left( \sum^{\infty}_{j=1} |x^n_j - x^m_j|^2\right)^{1/2} < \epsilon. \quad \forall n,m > N, \forall i
-$$
-
-Hence, $\{x_i^n\}_{n\in\mathbb N}$ is Cauchy in $\mathbb R$, which is a complete metric space. Hence, $x_i^n \rightarrow x_i$, $\forall i \geqslant 1$.
-
-Consider first $N$ entries of the point in $l^2$. Denote $y^i_N : = (x_1^i, x_2^i, \dots, x_N^i)$ and $y_N = (x_1, x_2, \dots, x_N)$. And it is clear that $\{y^n_N\}_{n\in\mathbb N}$ converges to $y_N$. This is obvious since this is in the finite dimensional case. $\forall 1\leqslant i\leqslant N$, there exists $N_i$ such that $|x_i^n - x_i| < \epsilon / \sqrt{N}$, $\forall n > N_i$. Take $\overline N = \max_{1\leqslant i \leqslant N}\{N_i\}$, we have 
-
-$$
-\left( \sum^{N}_{j=1} |x^n_j - x^m_j|^2\right)^{1/2} < \epsilon.
-$$
-
-Notice that $N$ is arbitrarily chosen, so we may take limit of $N$ on both sides of the inequality above and get
-
-$$
-d(x^n, x) = \left( \sum^{\infty}_{j=1} |x^n_j - x^m_j|^2\right)^{1/2} \leqslant \epsilon.
-$$
-
-And this proves that $x^n\rightarrow x$ in $l^2$. 
-
-\item
-
-Next we need to show that $x \in l^2$. This is proved by the following
-
-$$
-\sum_{i = 1}^\infty |x_i|^2 = \sum_{i = 1}^\infty \lim_{n\rightarrow\infty}|x_i^n|^2 = \lim_{n\rightarrow\infty}\sum_{i = 1}^\infty |x_i^n|^2 < +\infty.
-$$
-
-Infinite summation and limit can exchange due to dominate convergence theorem(DCT). Hence, $x\in l^2$.
-
-\end{enumerate}
-
-In conclusion, $\{x^n\}$ converges to $x$ in $l^2$, which proves that $l^2$ is complete.
-
-\end{proof}
-
-
-\section*{Problem 8}
-
-\begin{proof}
-
-Take a Cauchy sequence $\{x_n\}$ on $(X, \tilde{d})$. Then $\forall \epsilon > 0$, $\exists N > 0$, such that $\tilde d(x_m, x_n) < \epsilon $, for all $m, n > N$. Since $\tilde d(x, y) = d(x, y)/(1+d(x, y))$, we know $d(x, y) < \epsilon / (1-\epsilon)$. It is clear that $\epsilon / (1-\epsilon) \rightarrow 0$ as $\epsilon \rightarrow 0$. Hence, $\{x_n\}$ is also a Cauchy sequence on $(X, d)$. With the fact that $(X, d)$ is complete, $\{x_n\}$ is convergent and it leads to the completeness of $(x, \tilde{d})$.
-
-
-\end{proof}
-
-\section*{Problem 9}
-
-\begin{proof}
-
-Take a Cauchy sequence $\{z_n\}$ in $(Y, d_Y)$. Since $(Y, d_Y)$ is complete, we know that $\forall \epsilon > 0$, $\exists N$ such that $d_Y(z_m, z_n) < \epsilon$, $\forall m,n > N$. 
-
-With the fact that $T$ is isometric, $T$ is automatically injective, otherwise two distinct points will be mapped to the same point and it leads to a contradiction since the distance between two same points is $0$. Also, $T(X) = Y$, i.e. T is surjective. Hence, $T$ is a bijection from $X$ to $Y$. Therefore there exists a inverse mapping of $T$ such that $\forall y\in Y$, $\exists x\in X$ such that $T^{-1}(y) = x$. Apply this on the Cauchy sequence,  $\exists \{x_n\}$ such that $T(x_n) = z_n$, for all $n\in\mathbb{N}$. Hence, 
-$$
-d_Y(z_m, z_n)<\epsilon \Leftrightarrow d_Y(T(x_m), T(x_n))<\epsilon \Leftrightarrow d_X(x_m, x_n)< \epsilon.
-$$
-
-And this implies that $\{x_n\}$ is Cauchy on $(X, d_X)$ and so it converges. Let $x_n \rightarrow x\in(x, d_X)$, i.e, $\forall \epsilon > 0$, $\exists N$ such that $d_X(x_n, x) = d_Y(T(x_n), T(x))< \epsilon$ for all $n > N$. Hence, $\{T(x_n)\} = \{z_n\}$ converges to $T(x)$ in $(Y, d_Y)$. Thus, any Cauchy sequence on $(Y, d_Y)$ converges in itself, which leads to the completeness of $(Y, d_Y)$.
-
-\end{proof}
-
-
-\section*{Problem 10}
-
-{
-\color{red} I didn't figure the answer by myself. Actually, I discussed this problem with other students in class and got the ideas from them. 
-}
-\begin{proof}
-
-For $l^\infty$, the unit ball $B(0, 1)$ is not totally bounded. Let $\epsilon = 1/4$ and $x_1, x_2, \dots, x_n \in B(0,1)$ be arbitrarily finitely many points. Then define $v = \{v_n\}_{n\in\mathbb N}$ as:
-
-$$
-v_i \in (-1, 1) \setminus (x_i^{(i)} - 1/4, x_i^{(i)} + 1/4).
-$$
-
-where $x_i^{(i)}$ is ith entry of $x_i$, $i \geqslant 1$. 
-
-Hence, 
-
-$$
-\sup_{n \geqslant 1} |v_n -x_j^{(n)}| \geqslant |v_j - x_j^{(j)}| \geqslant 1/4 \qquad \forall j \in \mathbb N.
-$$
-
-Hence, $v \notin \cup _{i=1}^n B(x_i, 1/4)$.
-
-In conclusion, $B(0,1)$ is not totally bounded.
-
-\end{proof}
-
-
-
-
-
-\section*{Problem 11}
-
-\begin{proof}
-
-\begin{enumerate}
-\item Step 1
-
-We want to show that if $E$ is totally bounded, then $\bar E$ is totally bounded. By definition, $\forall \epsilon >0$, there exists finitely many points $a_1, a_2, \dots, a_{N_\epsilon} \in E$ such that $E \subset \cup_{i=1}^{N_\epsilon} B(a_i, \epsilon/2)$. Since $E$ is dense in $\bar E$, $\forall x \in \bar E$, $\exists y \in E$ such that $d(x, y)<\epsilon/2$. This is equivalent that $\exists a \in \{a_1, a_2, \dots, a_{N_\epsilon}\}$ such that $\exists y \in B(a, \epsilon/2)$, and $d(x, y) < \epsilon/2$. With triangle inequality, 
-
-$$
-d(a, x) \leqslant d(a, y) + d(y, x) < \epsilon/2 + \epsilon/2 = \epsilon.
-$$
-
-Hence, $x$ is in $B(a, \epsilon)$, which leads to $x \in \cup_{i=1}^{N_\epsilon} B(a_i, \epsilon/2)$. Since $x$ is arbitrarily chosen from $\bar E$, we conclude that $\bar E \subset \cup_{i=1}^{N_\epsilon} B(a_i, \epsilon/2)$. i.e, $\bar E$ is also totally bounded.
-
-\item Step 2
-
-Conversely, let $\bar E$ is totally bounded, then $\forall \epsilon > 0$, $\exists a_1, \dots, a_{N_\epsilon}$ such that $\bar E \subset \cup_{i=1}^{N_\epsilon} B(a_i, \epsilon/2)$. With the fact that $E$ is dense in $\bar E$, for any $a_i$, there exists $b_i \in E$ such that $d(b_i, a_i)<\epsilon$. Hence, by triangle inequality, $\forall y \in B(a_i, \epsilon)$, 
-
-$$
-d(y, b_i) \leqslant d(y, a_i) + d(a_i, b_i) < \epsilon/2 + \epsilon/2 = \epsilon.
-$$
-
-Hence, $y \in B(b_i, \epsilon)$, which implies $\bar E \in \cup_{i=1}^{N_\epsilon} B(b_i, \epsilon)$. Since $E\subset \bar E$ and $b_i \in E, \forall i$, we conclude that $E \subset \cup_{i=1}^{N_\epsilon} B(b_i, \epsilon)$, which is equivalent to that $E$ is totally bounded.
-
-
-\end{enumerate}
-
-\end{proof}
-
-\section*{Problem 12}
-
-\begin{proof}
-
-Since $K$ is compact and $f$ is continuous, then $f(K)$ is compact on $\mathbb R$. This implies that $f(K)$ is closed and bounded and the existence of $\max{f(K)}$ in $f(K)$. Let $f_{\text{max}} = \sup{f(K)} = \max {f(K)}$. Since $f_{\text{max}} \in f(K)$, then there exist $x_{\text{max}}\in K$ such that $f_{\text{max}} = f(x_{\text{max}})$. 
-
-\end{proof}
-
-\section*{Problem 13}
-
-\begin{proof}
-
-Define $V = \overline O \setminus O $ and let $\epsilon : = 1/2 \inf_{x\in K}{d_Y(x)}$. Since $K$ is compact, it is totally bounded. This is to say that $\exists a_1, a_2, \dots, a_{N_\epsilon}\in K$ such that $K \subset \cup_{i = 1}^{N_\epsilon} B(a_i, \epsilon)$. 
-
-Denote $U = \cup_{i = 1}^{N_\epsilon} B(a_i, \epsilon)$ and $U$ is open. We need to show $\overline U \subset O$. This is true since for any $a_i\in \{a_1, \dots, a_{N_\epsilon}\}$, $\overline B(a_i, \epsilon) \subset O$. With the results from problem 2, $\overline U \subset O$ is proved.
-
-In conclusion, $K\subset U\subset \overline U\subset O$.
-
-
-\end{proof}
 
 
 
