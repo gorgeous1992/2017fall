@@ -223,6 +223,31 @@ In conclusion, we proved the claim.
 \end{proof}
 
 
+\section*{Problem 5}
+
+\begin{proof}
+
+For any $\epsilon>0$, and $\forall x\in \ell^p$, we need to find $e \in V$ such that $||e-x||_p < \epsilon$.
+
+Since $x\in\ell^p$, we know $\sum_{i=1}^{+\infty} |x_i|^p < +\infty$ and this implies $\exists N$ such that $\sum_{i=N+1}^{+\infty} |x_i|^p < \epsilon^p$. Hence, we may let 
+
+$$
+e = \sum_{i=1}^{N} x_i e_i. 
+$$
+
+It is clear that $e\in V$ and check the distance between $e$ and $x$.
+
+$$
+||e-x||_p = \left( \sum_{i=1}^{N} |x_i -x_i|^p + \sum_{i=N+1}^{+\infty} |x_i|^p \right)^{1/p} = \left( \sum_{i=N+1}^{+\infty} |x_i|^p \right)^{1/p}<\epsilon.
+$$
+
+Hence, $V$ is dense in $\ell^p$.
+
+\end{proof}
+
+
+
+
 \vspace{60mm}
 
 
