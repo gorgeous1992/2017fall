@@ -189,6 +189,39 @@ This proves that $z \in B_f(0,1)$ and then $B_f(0, 1)$ is convex.
 
 \section*{Problem 4}
 
+\begin{proof}
+
+"$\Leftarrow$", if absolute convergence of any sequence $\{x_n\}$ implies the convergence of this sequence, then $(X, ||\cdot||)$ is complete. Take $\{x_n\}_{n\in\mathbb N}$ as a Cauchy sequence on $X$, then from the definition we can always find a subsequence  $\{x_{n_k}\}$ such that $||x_{n_k} - x_{n_{k+1}}|| < 2^{-k}$. Let $y_k = x_{n_k} - x_{n_{k+1}}$ and we know for each $N>0$, 
+
+$$
+\sum_{k=1}^N ||y_k|| = \sum_{k=1}^N ||x_{n_k} - x_{n_{k+1}}|| <  \sum_{k=1}^N \frac{1}{2^k}.
+$$
+
+Since $N$ is arbitrarily chosen, we take the limits on both sides such that $\sum_{k=1}^{+\infty} ||y_k|| < +\infty$. This implies the convergent of $\{y_k\}$, i.e, $\lim_{N\rightarrow +\infty} \sum_{k=1}^N y_k = \sum_{k=1}^{+\infty} y_k < +\infty$.
+
+Suppose $S_y = \lim_{N\rightarrow +\infty} \sum_{k=1}^N y_k$, then 
+$$
+S_y = \lim_{N\rightarrow +\infty} \sum_{k=1}^N y_k =\lim_{N\rightarrow +\infty} x_{n_1} - x_{n_{N+1}}.
+$$
+
+which implies that $\{x_{n_k}\}$ converges to $x_{n_1} - S_y$. Since it is a subsequence of Cauchy sequence $\{x_n\}$, $\{x_n\}$ also converges. This proves the completeness of $X$.
+
+\vspace{15mm}
+
+"$\Rightarrow$". Conversely, with Banach space $(X, ||\cdot||)$, and the absolutely convergent $\{x_n\}$ has sum $\sum_{n=1}^{+\infty} ||x_n|| < +\infty$, we need to prove the infinite sum of $\{x_n\}$ is also finite.
+
+Since $\sum_{n=1}^{+\infty} ||x_n|| < +\infty$, for any $\epsilon > 0$, there exists $N_0>0$ such that $\sum_{n=N_0 + 1}^{+\infty} ||x_n|| < \epsilon$. Let $z_k = \sum_{n=1}^{k} x_n \in X$, $\{z_k\}$ is a Cauchy sequence because for any $\epsilon > 0$, take $N = N_0$, then
+
+$$
+||z_p, z_q|| \leqslant ||\sum_{n=q+1}^p x_n|| \leqslant \sum_{n=q+1}^p||x_n|| \leqslant \sum_{n=N+1}^{+\infty}||x_n|| < \epsilon, \quad \forall p, q > N.
+$$
+
+Then $\{z_k\}$ converges in Banach space $(X, ||\cdot||)$. 
+
+In conclusion, we proved the claim.
+
+\end{proof}
+
 
 \vspace{60mm}
 
