@@ -49,7 +49,22 @@ True. The objective function $c^Tx$ is countinuous on $P$, which is a nonempty c
 
 \item[(f)]
 
-True. We may reform $P$ as a subset on $\mathbb R^2$. So the LP problem will have one equality constraint on $\mathbb R^2$ with nonnegativeness. Hence, it has at most two positive BFS.
+False. Counterexample:
+
+Let $P = \{x\in\mathbb{R}^3 | Ax=b, x\geqslant 0, A = \begin{bmatrix}
+1 & 1 & 1 \\
+2 & 2 & 2 
+\end{bmatrix}, b = [1,1]^T \}$. Then $P$ has 3 BFS at A, B and C respectively.
+
+\begin{figure}[htbp]
+  \caption{Problem 1(f)}
+  \centering
+    \includegraphics[width=0.5\textwidth]{p1f.jpg}
+\end{figure}
+
+\FloatBarrier
+
+
 
 \item[(g)]
 
@@ -148,6 +163,67 @@ Hence we take $\textbf d^1$. However, since $\textbf d^1 > 0$ and $[B|N]d = 0$ (
 \end{enumerate}
 
 \section*{Problem 3}
+
+\begin{enumerate}
+\item[(a)]
+
+We plot the figure and it is clear that the optimal value $z^* = 3$ is attained at $x^* = 3$.
+
+\begin{figure}[htbp]
+  \caption{Problem 3}
+  \centering
+    \includegraphics[width=0.5\textwidth]{p3.pdf}
+\end{figure}
+
+\FloatBarrier
+
+\item[(b)]
+
+Use the similar idea as in homework 2, let $x = x^+ - x^-$. The Standard LP problem is
+
+$$
+\begin{aligned}
+\text{Minimize} \quad & - x^+ - x^- \\
+\text{Subject to} \quad & - x^+ + x^- +  a_1 &  & = 1 \\
+& x^+ - x^- +  & a_2 &= 3\\
+& x^+ , x^-, a_1, a_2 \geqslant 0. 
+\end{aligned}
+$$
+
+(Actually, this problem is not equivalent to the original one since it is lacked of the cross term $x^+\cdot x^- = 0$).
+
+\item [(c)]
+
+Let's try to use Revised Simplex to solve it. Start from point $x = (x^+, x^-, a_1, a_2)^T = (0, 1, 0, 4)^T$. It is clear that our starting point $x$ is a BFS and $B = [A_2, A_4] = \begin{bmatrix}
+1 & 0 \\
+-1 & 1
+\end{bmatrix}$. Then $N = \begin{bmatrix}
+-1 & 1 \\
+1 & 0
+\end{bmatrix}$ and  The fundamental matrix $M = \begin{bmatrix}
+1 & 0 & -1 & 1 \\
+-1 & 1 & 1 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}$. Compute $M^{-1} = \begin{bmatrix}
+1 & 0 & 1 & -1 \\
+1 & 1 & 0 & -1 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}$
+
+$\textbf d^1 = [1, 1, 0, 0]^T$ and $\textbf d^3 = [0, -1, 1, -1]^T$. The reduced costs are $r^1 = c^T\textbf d^1 = [-1, -1, 0, 0]\begin{bmatrix}
+1\\1\\0\\0
+\end{bmatrix} = -2 < 0$, $r^3 = c^T\textbf d^3 = [-1, -1, 0, 0]\begin{bmatrix}
+0\\-1\\1\\-1 
+\end{bmatrix} = 1 > 0$.
+
+Take $\textbf d^1$. Since $\textbf d^1 >0$ and $A\textbf d^1 = 0$, we know that $\textbf d^1$ is an extremal direction and yields a contradiction that problem is unbounded.
+
+In conclusion, the Revised Simplex method is not a good choice in solving this problem.
+
+
+\end{enumerate}
 
 
 
