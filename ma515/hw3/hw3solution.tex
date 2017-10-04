@@ -245,8 +245,113 @@ Hence, $V$ is dense in $\ell^p$.
 
 \end{proof}
 
+\section*{Problem 6}
+
+\begin{proof}
+
+We need to show for any $x\in X$, $\forall \epsilon > 0$, there exists $\delta >0$ such that $|f_n(x) - f_n(y)| < \epsilon$ holds, $\forall y\in B(x, \delta), f_n\in \{f_k\}_{k\in\mathbb N}$. 
+
+Take arbitrary $x \in X$. Since $f$ is continuous on $X$, $\forall \epsilon > 0$, there exists $\delta_x > 0$ such that $|f(x) - f(y)| < \epsilon/3$ holds for any $y\in B(x, \delta_x)$. 
+
+Also, the sequence of functions $\{f_n\} \rightarrow f$ uniformly, there exists $N>0$ such that $|f_n(x) - f(x)| < \epsilon /3$ holds for all $n>N$. By triangle inequality, we have 
+
+$$
+\begin{aligned}
+|f_n(x) - f_n(y)| & \leqslant |f_n(x) - f(x)| + |f(x) - f(y)| + |f(y) - f_n(y)| \\
+& < \epsilon/3 + \epsilon/3 + \epsilon/3 = \epsilon, \qquad \forall n>N, \forall y\in B(x, \delta_x).
+\end{aligned}
+$$
+
+For each index  $i\in\{1, 2, \dots, N\}$, there exists $\delta_{i_x} > 0$ such that $|f_i(x) - f_i(y)|<\epsilon/3$ for any $y\in B(x, \delta_{i_x})$. We may let $\Delta_x = \min\{\delta_{1_x}, \dots, \delta_{N_x}, \delta_x\}$. Hence, for any $f_n \in \{f_k\}_{k\in\mathbb N}$, $|f_n(x) - f_n(x)|<\epsilon$ holds for all $y\in B(x, \Delta_x)$.
+
+Hence, $\{f_k\}_{k\in\mathbb N}$ is equicontinuous on $X$, since it is equicontinuous at each $x\in X$.
+
+\end{proof}
+
+\section*{Problem 7}
+
+\begin{enumerate}
+\item [(a)]
+
+\begin{proof}
+
+To prove it is a normed vector space, we need to show that $0 \in C^{\alpha} ([a, b])$, $C^{\alpha} ([a, b])$ is closed under linear operations and $||\cdot||_\alpha$ is properly defined.
+
+Firstly, $0\in C^\alpha([a, b])$ is obvious. For linearity, $\forall k\in \mathbb R$, $\forall f$ and $g\in C^\alpha([a, b])$,  we have 
+$$
+\frac{|kf(x) - kf(y)|}{|x-y|^\alpha} \leqslant |k|\cdot C.
+$$
+
+$$
+\frac{|(f+g)(x) - (f+g)(y)|}{|x-y|^\alpha} \leqslant \frac{|f(x)-f(y)|}{|x-y|^\alpha} + \frac{|g(x)-g(y)|}{|x-y|^\alpha} \leqslant  2C.
+$$
+
+Hence, $C^{\alpha} ([a, b])$ is a vector space. Next we need to show that the norm is properly defined.
+
+To begin with, $||f||_\alpha =0 \Rightarrow \max\left\{ |f(x)| + |f(x) - f(y)|/|x-y|^\alpha \right\} = 0, \forall x\neq y \in [a, b]$. And this implies that $|f(x)| = 0, \forall x\in[a, b]$, i.e. $f \equiv 0$. Conversely is obvious since $f = 0 \Rightarrow ||f||_\alpha = 0 $.
+
+For any $k \in \mathbb R$, 
+$$
+||kf||_\alpha = \max\left\{ |kf(x)| + |kf(x) - kf(y)|/|x-y|^\alpha \right\} = |k|\max\left\{ |f(x)| + |f(x) - f(y)|/|x-y|^\alpha \right\} = |k|\cdot ||f||_\alpha.
+$$ 
+
+To check the triangle inequality, take $f, g\in C^\alpha([a, b])$, 
+
+$$
+\begin{aligned}
+||f+g||_\alpha & = \max\left\{ |f(x) + g(x)| + |f(x) + g(x) - f(y) - g(y)|/|x-y|^\alpha \right\} \\
+& \leqslant \max\left\{ |f(x)| + |f(x) - f(y)|/|x-y|^\alpha + \max\left\{ |g(x)| + |g(x) - g(y)|/|x-y|^\alpha \right\}  \right\} \\
+& \leqslant \ ||f||_\alpha + ||g||_\alpha.
+\end{aligned}
+$$
+
+In conclusion, $\left(C^{\alpha} ([a, b]), ||\cdot||_\alpha\right)$ is a normed vector space.
+
+\end{proof}
 
 
+
+\item [(b)]
+
+\begin{proof}
+
+For any $f\in \overline{B}_\alpha(0, 1)$, $||f||_\alpha \leqslant 1$, and by definition, it implies $\sup_{x\in[a, b]}|f(x)| \leqslant 1$, which is uniformly bounded. And it also yields $|f(x) - f(y)| \leqslant |x-y|^\alpha, \forall x,y \in [a, b]$. Then, $f\in C([a, b])$ because $\forall \epsilon > 0$, we can let $\delta = \epsilon^{1/\alpha}$ such that $|f(x) - f(y)|< \delta^{\alpha} = \epsilon$, $\forall |x- y|<\delta$. Hence $\overline{B}_\alpha(0, 1) \subset C([a, b])$. This also yields that $\overline{B}_\alpha(0, 1)$ is equicontinuous.
+
+Next we would like to show that for any sequence $\{f_n\}\subset \overline{B}_\alpha(0, 1)$, it will converge in $\overline{B}_\alpha(0, 1)$. Note that $[a, b]$ is a compact set on $\mathbb R$ and $\{f_n\}\subset \overline{B}_\alpha(0, 1)\subset C([a,b])$ is uniformly bounded and $\{f_n\}$ is equicontinuous, by Azel\`a -Ascoli Theorem, we know $\exists \{f_{n_k}\}\subset \{f_n\}$ converges to $\bar f \in \overline{B}_\alpha(0, 1)$. Hence, $\overline{B}_\alpha(0, 1)$ is compact in $\left(C([a, b]), ||\cdot||_\infty  \right)$.
+
+
+
+
+
+
+
+\end{proof}
+
+
+
+\end{enumerate}
+
+
+
+
+\section*{Problem 8}
+
+\begin{proof}
+
+It is enough to show that $T$ is a contraction mapping. Then from Contraction Mapping principle, $T$ has a fixed point.
+
+Suppose $T: X \rightarrow X$ is not a contraction mapping. Hence, take two different elements $x, y\in X$, for any $0<c<1$, $d(T(x), T(y)) \geqslant c d(x, y)$. Take sequences $\{x_n\}$ and $\{y_n\}$ from $X$ and they both have convergent subsequences $\{x_{n_k}\} \rightarrow \bar x$ and $\{y_{n_k}\} \rightarrow \bar y$. Then $\forall n \in \mathbb N$, 
+
+
+\begin{equation}\label{p81}
+d(T(x_n), T(y_n)) \geqslant (1-\frac{1}{n}) d(x_n, y_n).
+\end{equation}
+
+Next ,we need to show that $\lim_{n\rightarrow +\infty} T(x_n) = T(\bar x)$. Indeed, $\forall \epsilon >0$, $\exists N>0$ such that $d(T(x_n), T(\bar x)) < d(x_n, \bar x) < \epsilon$. Hence, take limits on both sides of (\ref{p81}) and we get $d(T(\bar x), T(\bar y)) \geqslant d(\bar x, \bar y)$. This yields a contradiction to the statement.
+
+In conclusion, the claim is proved.
+
+\end{proof}
 
 \vspace{60mm}
 
