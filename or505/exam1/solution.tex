@@ -41,38 +41,35 @@ Let $P = \mathbb R_+^2$, i.e. the first quadrant. It is a unbounded polyhedron, 
 
 \item[(d)]
 
-False. We have shown in homework that $P$ is a convex set. So if it has two points, then any convex combination of them will be in $P$.
+False. We have shown in homework that the set of optimal solutions $P_0$ is a convex set. So if $P_0$ has two points, then any convex combination of them will be in $P_0$. Hence it won't have exactly two points in it.
 
 \item[(e)]
 
-True. The objective function $c^Tx$ is countinuous on $P$, which is a nonempty closed convex set. So $P$ is a nonempty compact set and $c^Tx$ will reach its maximum and minimum. This is supported by Weierstrass theorem.
+True. The objective function $c^Tx$ is countinuous on $P$, which is a nonempty closed bounded set. So $P$ is a nonempty compact set and $c^Tx$ will reach its maximum and minimum. This is supported by Weierstrass theorem.
 
 \item[(f)]
 
-False. Counterexample:
-
-Let $P = \{x\in\mathbb{R}^3 | Ax=b, x\geqslant 0, A = \begin{bmatrix}
-1 & 1 & 1 \\
-2 & 2 & 2 
-\end{bmatrix}, b = [1,1]^T \}$. Then $P$ has 3 BFS at A, B and C respectively.
-
-\begin{figure}[htbp]
-  \caption{Problem 1(f)}
-  \centering
-    \includegraphics[width=0.5\textwidth]{p1f.jpg}
-\end{figure}
-
-\FloatBarrier
-
-
+True. Since $n = m + 1$, the solution space of $Ax=b$ is of Rank$(1)$, which is a one-dimensional subspace. Hence, it has at most two vertices. In conclusion, there are at most two BFS of (LP).
 
 \item[(g)]
 
-True. If $x$ is an optimal solution, it must be a BFS, so its nonbasic variables must be zeros. Since it has $n-m$ nonbasic variables, it has at least $n-m$ zero entries. Thus, it has at most m positive components.
+False. Consider an LP problem with a constant objective function. Then its optimal solutions are basic solutions but not basic.
+
+For example, 
+
+$$
+\begin{aligned}
+\text{Minimize} \quad & 0 \\
+\text{Subject to} \quad & x_1 + x_2 =1 \\
+& x_1, x_2 \geqslant 0. 
+\end{aligned}
+$$
+
+$m = 1$, but $x = (1/2, 1/2)^T$ is an optimal solution.
 
 \item [(h)]
 
-False. A BS has $n-m$ nonbasic variables so it has at least $n-m$ zeros components.
+False. A BS has $n-m$ nonbasic variables so it has at least $n-m$ zero components. Hence, a degenerate BS has more than $n-m$ zero components.
 
 
 
