@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color}
+\usepackage{mathtools, eucal}
+\usepackage{xparse}
+\usepackage{romannum}
+ 
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{MA 515 Homework 4}
+\author{Zheming Gao}
+\maketitle
+
+\section*{Problem 1}
+
+\begin{proof}
+
+$\{T_n\}_{n\in\mathbb N}$ is a sequence of uniformly bounded linear operators and it satisfies 
+$$
+\lim_{n\rightarrow +\infty} T_n(x) : = T(x)
+$$ 
+for any $x\in X$. Now we want to show $T$ is a bounded linear operator. First, $T$ is linear because the limit operation on $T_n$ preserves the linearity of $T_n$. Also, $\mathcal{D}(T)$ is  $X$, which yields that $T$ is a linear operator from $X$ to $Y$.
+
+Next we need to show $T$ is bounded, or more precisely, $||T||_\infty \leqslant M$. Since $||T_n||_\infty < M$, we know for any $||x||_X = 1$, $||T_n(x)||_Y < M$. Hence, 
+
+$$
+\lim_{n\rightarrow +\infty} \left \|T_n(x)\right\|  = ||T(x)|| \leqslant M.
+$$
+
+which implies $\sup_{||x||_X = 1} ||T(x)|| \leqslant M$, i.e., $||T||_\infty \leqslant M$.
+
+\end{proof}
+
+
+\section*{Problem 2}
+
+\begin{proof}
+
+First we need to show that $\Lambda$ is bounded. Take arbitrarily $x = \{ x_n \}_{n\in\mathbb N}\in\ell^\infty$, and there exists $M>0$ such that $|x_i| \leqslant M$ for any $i \geqslant 0$. Therefore, 
+
+$$
+\begin{aligned}
+||\Lambda(x)||_{\ell^\infty} = ||y||_{\ell^\infty} & = \sup_{i\geqslant 1} |y_i| \\
+& = \sup_{i\geqslant 1} \left|\frac{x_1 + \cdots + x_i}{i}\right| \\
+& \leqslant \sup_{i\geqslant 1} \left|\frac{\sum_{j=1}^i|x_j|}{i}\right| \leqslant M.
+\end{aligned}
+$$ 
+
+Hence, $||\Lambda||_\infty = \sup_{||x||_{\ell^\infty} = 1} ||\Lambda(x)||_{\ell^\infty} \leqslant M$.
+
+Next we need to find the value of $||\Lambda||_\infty$. From the definition, 
+$$
+||\Lambda||_\infty = \sup_{||x||_{\ell^\infty} = 1} ||\Lambda(x)||_{\ell^\infty} = \sup_{||x||_{\ell^\infty} = 1}\sup_{i\geqslant 1}\left| \frac{x_1 + \cdots + x_i}{i} \right|.
+$$
+
+Also, $||x||_{\ell^\infty} = 1$ implies $|x_j| \leqslant 1, \forall j\geqslant 1$. Hence, 
+
+$$
+\sup_{||x||_{\ell^\infty} = 1}\sup_{i\geqslant 1}\left| \frac{x_1 + \cdots + x_i}{i} \right| = \sup_{i\geqslant 1} \frac{i\cdot 1}{i} = 1.
+$$
+
+Hence, $||\Lambda||_\infty = 1$.
+
+\end{proof}
+
+\section*{Problem 3}
+
+
+
+
+\section*{Problem 4}
+
+\begin{proof}
+
+We want to show $\| T_n(x_n) - T(x) \|_Y \rightarrow 0$ as $n \rightarrow +\infty$. By triangle inequality,
+$$
+\|T_n(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T\|_\infty \|x_n - x\|_X.
+$$
+
+and we know $\|x_n - x\| \rightarrow 0$ as $n\rightarrow +\infty$. Hence, it is enough to show that $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ as $n\rightarrow +\infty$. 
+
+$\forall x_m\in X, m = 1, 2, \cdots$, $\lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0$ since $\{T_n\}$ converges to $T$. Hence, we have 
+
+$$
+\lim_{m\rightarrow +\infty} \lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0.
+$$
+
+This implies $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ because $\{\|T_n(x_n) - T(x_n)\|\}_{n\in\mathbb{N}}$ is a subsequence of $\{\|T_n(x_m) - T(x_m)\|\}_{m, n\in\mathbb{N}}$.
+
+In conclusion, $\lim_{n\rightarrow +\infty} ||T_n(x_n) - T(x_n)|| = 0$.
+
+\end{proof}
+
+
+\end{document}
