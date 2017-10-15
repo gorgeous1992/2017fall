@@ -1,0 +1,1067 @@
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. dobc=22FEB1732 dayc=22 monthc=FEB yearc=1732 dobc2=02-22-1732 dayn=22 monthn=2
+yearn=1732 _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. dobc=13APR1742 dayc=13 monthc=APR yearc=1742 dobc2=04-13-1742 dayn=13 monthn=4
+yearn=1742 _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. dobc=28APR1758 dayc=28 monthc=APR yearc=1758 dobc2=04-28-1758 dayn=28 monthn=4
+yearn=1758 _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. dobc=29MAR1790 dayc=29 monthc=MAR yearc=1790 dobc2=03-29-1790 dayn=29 monthn=3
+yearn=1790 _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. dobc=07JAN1800 dayc=07 monthc=JAN yearc=1800 dobc2=01-07-1800 dayn=7 monthn=1
+yearn=1800 _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+ 
+ 
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. dobc=29DEC1808 dayc=29 monthc=DEC yearc=1808 dobc2=12-29-1808 dayn=29 monthn=12
+yearn=1808 _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. dobc=05OCT1829 dayc=05 monthc=OCT yearc=1829 dobc2=10-05-1829 dayn=5 monthn=10
+yearn=1829 _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+dobc=13JUL1913 dayc=13 monthc=JUL yearc=1913 dobc2=07-13-1913 dayn=13 monthn=7 yearn=1913
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES1 has 36 observations and 16 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.18 seconds
+      cpu time            0.01 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES2 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.03 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+ 
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES3 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. dobc=22FEB1732 dayc=22 monthc=FEB yearc=1732 dobc2=02-22-1732 dayn=22 monthn=2
+yearn=1732 _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. dobc=13APR1742 dayc=13 monthc=APR yearc=1742 dobc2=04-13-1742 dayn=13 monthn=4
+yearn=1742 _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. dobc=28APR1758 dayc=28 monthc=APR yearc=1758 dobc2=04-28-1758 dayn=28 monthn=4
+yearn=1758 _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. dobc=29MAR1790 dayc=29 monthc=MAR yearc=1790 dobc2=03-29-1790 dayn=29 monthn=3
+yearn=1790 _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. dobc=07JAN1800 dayc=07 monthc=JAN yearc=1800 dobc2=01-07-1800 dayn=7 monthn=1
+yearn=1800 _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. dobc=29DEC1808 dayc=29 monthc=DEC yearc=1808 dobc2=12-29-1808 dayn=29 monthn=12
+yearn=1808 _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. dobc=05OCT1829 dayc=05 monthc=OCT yearc=1829 dobc2=10-05-1829 dayn=5 monthn=10
+yearn=1829 _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+dobc=13JUL1913 dayc=13 monthc=JUL yearc=1913 dobc2=07-13-1913 dayn=13 monthn=7 yearn=1913
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES1 has 36 observations and 16 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.01 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES2 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+ 
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES3 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.01 seconds
+      
+
+
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. dobc=22FEB1732 dayc=22 monthc=FEB yearc=1732 dobc2=02-22-1732 dayn=22 monthn=2
+yearn=1732 _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. dobc=13APR1742 dayc=13 monthc=APR yearc=1742 dobc2=04-13-1742 dayn=13 monthn=4
+yearn=1742 _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. dobc=28APR1758 dayc=28 monthc=APR yearc=1758 dobc2=04-28-1758 dayn=28 monthn=4
+yearn=1758 _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. dobc=29MAR1790 dayc=29 monthc=MAR yearc=1790 dobc2=03-29-1790 dayn=29 monthn=3
+yearn=1790 _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. dobc=07JAN1800 dayc=07 monthc=JAN yearc=1800 dobc2=01-07-1800 dayn=7 monthn=1
+yearn=1800 _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. dobc=29DEC1808 dayc=29 monthc=DEC yearc=1808 dobc2=12-29-1808 dayn=29 monthn=12
+yearn=1808 _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. dobc=05OCT1829 dayc=05 monthc=OCT yearc=1829 dobc2=10-05-1829 dayn=5 monthn=10
+yearn=1829 _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+dobc=13JUL1913 dayc=13 monthc=JUL yearc=1913 dobc2=07-13-1913 dayn=13 monthn=7 yearn=1913
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES1 has 36 observations and 16 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES2 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+ 
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES3 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.01 seconds
+      
+
+
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. dobc=22FEB1732 dayc=22 monthc=FEB yearc=1732 dobc2=02-22-1732 dayn=22 monthn=2
+yearn=1732 _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. dobc=13APR1742 dayc=13 monthc=APR yearc=1742 dobc2=04-13-1742 dayn=13 monthn=4
+yearn=1742 _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. dobc=28APR1758 dayc=28 monthc=APR yearc=1758 dobc2=04-28-1758 dayn=28 monthn=4
+yearn=1758 _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. dobc=29MAR1790 dayc=29 monthc=MAR yearc=1790 dobc2=03-29-1790 dayn=29 monthn=3
+yearn=1790 _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+ 
+ 
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. dobc=07JAN1800 dayc=07 monthc=JAN yearc=1800 dobc2=01-07-1800 dayn=7 monthn=1
+yearn=1800 _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. dobc=29DEC1808 dayc=29 monthc=DEC yearc=1808 dobc2=12-29-1808 dayn=29 monthn=12
+yearn=1808 _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. dobc=05OCT1829 dayc=05 monthc=OCT yearc=1829 dobc2=10-05-1829 dayn=5 monthn=10
+yearn=1829 _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+dobc=13JUL1913 dayc=13 monthc=JUL yearc=1913 dobc2=07-13-1913 dayn=13 monthn=7 yearn=1913
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES1 has 36 observations and 16 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.01 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES2 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.00 seconds
+      
+
+
+NOTE: The infile PRES1 is:
+      Filename=L:\president_v1.txt,
+      RECFM=V,LRECL=32767,File Size (bytes)=3229,
+      Last Modified=14Sep2016:08:13:11,
+      Create Time=14Jun2017:13:36:14
+
+NOTE: Invalid data for Votes in line 2 1-10.
+NOTE: Invalid data for PercVote in line 2 13-24.
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+2   CHAR  John Adams..Braintree   ..Massachusetts.61.10/30/1735.1796 58
+    ZONE  4666246667004766677662220046776667767770330332332333303333
+    NUMR  AF8E0141D3992219E425500099D133138535443961910F30F173591796
+Fullname=George Washington City=Pope's Creek State=Virginia ASP=57 DOB=-83223 Term=1789 Votes=.
+PercVote=. _ERROR_=1 _N_=1
+NOTE: Invalid data for Votes in line 4 1-13.
+NOTE: Invalid data for PercVote in line 4 16-29.
+
+4   CHAR  James Madison..Port Conway   ..Virginia.57.3/16/1751.1808 57
+    ZONE  466672466676600567724667672220056766666033032332333303333
+    NUMR  A1D530D1493FE990F2403FE7190009969279E9195793F16F175191808
+Fullname=Thomas Jefferson City=Goochland County State=Virginia ASP=57 DOB=-79520 Term=1800 Votes=.
+PercVote=. _ERROR_=1 _N_=2
+NOTE: Invalid data for Votes in line 6 1-17.
+NOTE: Invalid data for PercVote in line 6 19-30.
+
+6   CHAR  John Quincy Adams.Braintree   ..Massachusetts.57.7/11/1767.1824.113,142.30.92% 78
+    ZONE  466625766672466670476667766222004677666776777033032332333303333033323330332332
+    NUMR  AF8E0159E390141D392219E425500099D13313853544395797F11F1767918249113C142930E925
+Fullname=James Monroe City=Monroe Hall State=Virginia ASP=58 DOB=-73661 Term=1816 Votes=.
+PercVote=. _ERROR_=1 _N_=3
+NOTE: Invalid data for Votes in line 11 1-13.
+NOTE: Invalid data for PercVote in line 11 16-26.
+ 
+ 
+ 
+ 
+RULE:     ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+---
+
+11  CHAR  James K. Polk..Pineville  ..North Carolina.49.11/2/1795.1844.1,339,570.49.54% 77
+    ZONE  46667242256660056667666622004677624676666603303323233330333303233323330332332
+    NUMR  A1D530BE00FCB9909E569CC50099EF2480312FC9E1949911F2F17959184491C339C570949E545
+Fullname=John Tyler City=Charles City County State=Virginia ASP=51 DOB=-62003 Term=1841 Votes=.
+PercVote=. _ERROR_=1 _N_=7
+NOTE: Invalid data for Votes in line 14 1-15.
+NOTE: Invalid data for PercVote in line 14 18-32.
+
+14  CHAR  Franklin Pierce..Hillsborough   ..New Hampshire.48.11/23/1804.1852.1,605,943.50.83% 83
+    ZONE  47666666256676600466676676766222004672466776676033033233233330333303233323330332332
+    NUMR  621EBC9E00952359989CC32F2F57800099E57081D038925948911F23F18049185291C605C943950E835
+Fullname=Millard Fillmore City=Moravia State=New York ASP=50 DOB=-58432 Term=1850 Votes=.
+PercVote=. _ERROR_=1 _N_=9
+NOTE: Invalid data for Votes in line 18 1-16.
+NOTE: Invalid data for PercVote in line 18 18-34.
+
+18  CHAR  Ulysses S. Grant.Point Pleasant   .Ohio..46.4/27/1822.1868.3,013,790.52.66% 75
+    ZONE  567776725224766705666725666766722204666003303233233330333303233323330332332
+    NUMR  5C9335303E0721E490F9E400C5131E40009F89F994694F27F18229186893C013C790952E665
+Fullname=Andrew Johnson City=Raleigh State=North Carolina ASP=56 DOB=-55154 Term=1865 Votes=.
+PercVote=. _ERROR_=1 _N_=12
+NOTE: Invalid data for Votes in line 22 1-16.
+NOTE: Invalid data for PercVote in line 22 18-28.
+
+22  CHAR  Grover Cleveland.Caldwell   ..New Jersey.47.3/18/1837.1884.4,914,482.48.85% 75
+    ZONE  476767246676666604666766622200467246776703303233233330333303233323330332332
+    NUMR  72F65203C565C1E4931C475CC00099E570A5235994793F18F18379188494C914C482948E855
+Fullname=Chester A. Arthur City=Fairfield State=Vermont ASP=51 DOB=-47569 Term=1881 Votes=.
+PercVote=. _ERROR_=1 _N_=15
+NOTE: Invalid data for Votes in line 39 1-12.
+NOTE: Invalid data for PercVote in line 39 15-23.
+
+39  CHAR  Jimmy Carter..Plains   ..Georgia..52.10/1/1924.1976.40,831,881.50.08% 69
+    ZONE  466672467767005666672220046676660033033232333303333033233323330332332
+    NUMR  A9DD90312452990C19E30009975F27919952910F1F192491976940C831C881950E085
+Fullname=Gerald Ford City=Omaha State=Nebraska ASP=61 DOB=-16973 Term=1974 Votes=. PercVote=.
+_ERROR_=1 _N_=31
+NOTE: 44 records were read from the infile PRES1.
+      The minimum record length was 49.
+      The maximum record length was 88.
+NOTE: SAS went to a new line when INPUT statement reached past the end of a line.
+NOTE: The data set HW2.PRES3 has 36 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.00 seconds
+      
+
+

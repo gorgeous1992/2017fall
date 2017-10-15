@@ -1,0 +1,28 @@
+data ordinal_format;
+    length label $8.;
+  do number=1 to 300;
+    numstring = put(number, 16. -l);
+    if prxmatch('/(?<!1)1\s*$/',numstring) then ending='st';
+    else if prxmatch('/(?<!1)2\s*$/',numstring) then ending='nd';
+    else if prxmatch('/(?<!1)3\s*$/',numstring) then ending='rd';
+    else ending = 'th';
+    ordstring =catt(numstring, ending);
+      start=number;
+      label=ordstring;
+      fmtname="ordinal_fmt";
+      type="N";
+      output;
+  end;
+    keep start label fmtname type;
+run;
+proc format cntlin=ordinal_format;
+run;
+data want;
+do i =1 to 100;
+    j=i;
+    output;
+end;
+format j ordinal_fmt.;
+run;
+
+quit;
