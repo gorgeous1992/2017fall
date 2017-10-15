@@ -101,5 +101,93 @@ In conclusion, $\lim_{n\rightarrow +\infty} ||T_n(x_n) - T(x_n)|| = 0$.
 
 \end{proof}
 
+\section*{Problem 5}
+
+\begin{proof}
+
+$S\circ T$ is a linear operator. Indeed, the domain of $S\circ T$ is $X$, which is a subspace of itself. Also, function composition preserves linearity.
+
+Next we need to show $S\circ T$ is bounded. Consider norm $\|S\circ T\|_\infty$,
+
+$$
+\begin{aligned}
+\|S\circ T\|_\infty = \sup_{\|x\|_X = 1} \|(S\circ T)(x)\|_Z & = 
+\sup_{\|x\|_X = 1} \|S(T(x))\|_Z \\
+& \leqslant \sup_{\|x\|_X = 1} \|S\|_\infty \|T(x)\|_Y \\
+& = \|S\|_\infty \sup_{\|x\|_X = 1} \|T(x)\|_Y \\
+& = \|S\|_\infty \|T\|_\infty.
+\end{aligned}
+$$
+
+Since both $S$ and $T$ are bounded linear operators, $\|S\|_\infty$ and $\|T\|_\infty$ are less than positive infinity and this leads to the conclusion that $\|S\circ T|_\infty < +\infty$. 
+
+In conclusion, $S\circ T$ is a bounded linear operator.
+
+\end{proof}
+
+\section*{Problem 6}
+
+\begin{proof}
+
+\begin{enumerate}
+
+\item [(a)]
+
+$T$ is a contraction mapping. Indeed, let $ c = \|T\|_\infty < 1$. Hence, for any $x_1, x_2 \in X (x_1 \neq x_2)$, 
+$$
+\|T(x_1) - T(x_2)\| = \|T(x_1 - x_2)\| \leqslant \|T\|_\infty\|x_1 - x_2\| = c\|x_1 - x_2\|.
+$$
+
+where $0<c<1$. Hence, there exists a unique $x_0\in X$ such that $T(x_0) = x_0$. And this is equivalent to say that linear operator (which is easy to check) $ \mathcal N (I-T) = \{x_0\}$. However, $\{0\}\in \mathcal N (I-T)$ always holds. Thus, $x_0 = 0$. 
+
+Next we need to show that $I-T$ is a one-to-one mapping. Suppose not, then there exists $y\in X$ and distinct $y_1, y_2 \in X$ such that $(I-T)(y_1) = (I-T)(y_2) = y $. By linearity, $(I-T)(y_1 - y_2) = 0$ and it yields that $y_1 = y_2$, which is a contradiction. 
+
+What's more, $I-T$ is surjective. (............)
+
+\item [(b)]
+
+Let $S = \sum_{n=0}^\infty T^n$ and consider $\|S\|_\infty$.
+
+$$
+\begin{aligned}
+\|S\|_\infty & \leqslant \|\lim_{m\rightarrow +\infty}\sum_{n=0}^mT^n\|_\infty \\
+& =  \lim_{m\rightarrow +\infty}\|\sum_{n=0}^mT^n\|_\infty \\
+& \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m \|T^n\|_\infty \\
+& \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m\|T\|^n_\infty \\
+& = \lim_{m\rightarrow +\infty}\sum_{n=0}^m c^n \\
+& = \frac{1}{1-c} < +\infty.
+\end{aligned}
+$$
+
+We use triangle inequality above. Also, the limit and norm can exchange due to the continuity of norm. 
+
+Hence, $S$ is bounded in $\|\cdot\|_\infty$. And it is obvious that $S$ is a linear operator, so $S\in (B(X, X), \|\cdot\|_\infty)$.
+
+\item [(c)]
+
+It is enough to check that $S\circ (I-T) = (I-T)\circ S = I$.
+
+$$
+\begin{aligned}
+S\circ(I-T) = S - S\circ T & = \sum_{n=0}^\infty T^n - \sum_{n=1}^\infty T^n \\
+& = T^0 = I
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+(I-T)\circ S =  S- T\circ S  & = \sum_{n=0}^\infty T^n - \sum_{n=1}^\infty T^n \\
+& = T^0 = I
+\end{aligned}
+$$
+
+Hence, $S = (I -T)^{-1}$.
+
+\end{enumerate}
+\end{proof}
+
+\section*{Problem 7}
+
+
 
 \end{document}
