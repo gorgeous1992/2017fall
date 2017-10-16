@@ -15,19 +15,10 @@ data HW1.Bank1;
 	input FNAME $ LNAME $ ACCTNUM $ BALANCE $ RATE;
 	
 run;
-/**/
-/*data HW1.Bank2;*/
-/*  infile Bank;*/
-/*  input FNAME $ LNAME $ ACCTNUM $ BALANCE $ RATE;*/
-/*  NAME = catx(" ", of FNAME LNAME);*/
-/*  * LENGTH NAME $ 16;*/
-/*run;*/
 
-data HW1.Bank2_1;
-  set HW1.Bank1;
-  NAME = catx(" ", of FNAME LNAME);
-  length NAME $ 16;
-  drop FNAME LNAME;
-  retain NAME $ ACCTNUM $ BALANCE $ RATE;
-  set HW1.Bank1;
+data HW1.Bank2;
+  infile Bank;
+  input NAME & $ ACCTNUM $ BALANCE $ RATE;
+
 run;
+

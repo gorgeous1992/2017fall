@@ -75,7 +75,19 @@ Hence, $||\Lambda||_\infty = 1$.
 
 \section*{Problem 3}
 
+\begin{proof}
 
+It is enough to show that $\mathcal N(T) = \{0\}$. If so, then $T$ is invertible and is a linear operator. Indeed, supposed there exists $x\neq 0, x\in \mathcal N(T)$, then $0 = \|T(x)\| \geqslant \|x\| >0$, which yields a contradiction.
+
+Next we need to show $T^{-1}$ is bounded. Since $T$ is surjective and invertible, we know $T$ must be a bijection. If so, for any $y\in Y$, we have $\|y\|\geqslant b\|T^{-1}(y)\|$. Hence, 
+
+$$
+\sup_{\|y\|\neq 0} \frac{\|T^{-1}(y)\|}{\|y\|} \leqslant \frac{1}{b} < +\infty.
+$$
+
+i.e., $T^{-1}$ is a bounded linear operator.
+
+\end{proof}
 
 
 \section*{Problem 4}
