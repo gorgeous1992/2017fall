@@ -185,36 +185,36 @@ We reform the primal problem into a standard form.
 \text{subject\  to} \quad & A\textbf x = \textbf b \\
 & \textbf x - \textbf s = \textbf l \\
 & \textbf x + \textbf t = \textbf u \\
-& \textbf x, \textbf s, \textbf t \geqslant \textbf 0.
+& \textbf s, \textbf t \geqslant \textbf 0.
 \end{aligned}
 \end{equation}
 
-We can rewrite (\ref{p5c_primal}) as
+Consider $\textbf x = \textbf x^+ - \textbf x^-$. We can rewrite (\ref{p5c_primal}) as
 
 \begin{equation}\label{p5c_primal_std}
 \begin{aligned}
 \quad \text{Minimize} \quad & \begin{bmatrix}
-\textbf c^T & \textbf 0 & \textbf 0
+\textbf c^T & -\textbf c^T & \textbf 0 & \textbf 0
 \end{bmatrix}\begin{bmatrix}
-\textbf x \\ \textbf s \\ \textbf t
+\textbf x^+ \\ \textbf x^- \\ \textbf s \\ \textbf t
 \end{bmatrix}\\
 \text{subject\  to} \quad &\begin{bmatrix}
-A & 0 & 0 \\
-A & -I & 0 \\
-A & 0 & I
+A & -A & 0 & 0 \\
+I & -I & -I & 0 \\
+I & -I & 0 & I
 \end{bmatrix}
 \begin{bmatrix}
-\textbf x \\ \textbf s \\ \textbf t
+\textbf x^+ \\ \textbf x^- \\ \textbf s \\ \textbf t
 \end{bmatrix} = \begin{bmatrix}
 \textbf b \\ \textbf l \\ \textbf u
 \end{bmatrix} \\
 &  \begin{bmatrix}
-\textbf x \\ \textbf s \\ \textbf t
+\textbf x^+ \\ \textbf x^- \\ \textbf s \\ \textbf t
 \end{bmatrix}\geqslant \textbf 0.
 \end{aligned}
 \end{equation}
 
-where $A$ is $m$ by $n$, $\textbf x, \textbf s, \textbf t \in\mathbb R^n, c\in\mathbb R^n $ and $\textbf b, \textbf l, \textbf u\in \mathbb R^m$.
+where $A$ is $m$ by $n$, $\textbf x^+, \textbf x^-, \textbf s, \textbf t \in\mathbb R^n, c\in\mathbb R^n $ and $\textbf b, \textbf l, \textbf u\in \mathbb R^m$.
 Hence, the dual is 
 
 \begin{equation}\label{p5c_dual}
@@ -225,14 +225,15 @@ Hence, the dual is
 \textbf w \\ \textbf y \\ \textbf z
 \end{bmatrix}\\
 \text{subject\  to} \quad &\begin{bmatrix}
-A^T & A^T & A^T \\
+A^T & I & I \\
+-A^T & -I & -I \\
 0 & -I & 0 \\
 0 & 0 & I
 \end{bmatrix}
 \begin{bmatrix}
 \textbf w \\ \textbf y \\ \textbf z
 \end{bmatrix} \leqslant \begin{bmatrix}
-\textbf c \\ \textbf 0 \\ \textbf 0
+\textbf c \\ -\textbf c \\ \textbf 0 \\ \textbf 0
 \end{bmatrix}.
 \end{aligned}
 \end{equation}
@@ -244,7 +245,7 @@ Simplify it and get
 \begin{equation}\label{p5c_dual_simple}
 \begin{aligned}
  \quad \text{Maximize} \quad & \textbf b^T\textbf w + \textbf l^T\textbf y + \textbf u^T\textbf z\\
-\text{subject\  to} \quad & A^T(\textbf w + \textbf y + \textbf z ) \leqslant \textbf c \\
+\text{subject\  to} \quad & A^T\textbf w + \textbf y + \textbf z  = \textbf c \\
 & \textbf y \geqslant \textbf 0, \textbf z \leqslant \textbf 0.
 \end{aligned}
 \end{equation}

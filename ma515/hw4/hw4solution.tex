@@ -154,7 +154,7 @@ where $0<c<1$. Hence, there exists a unique $x_0\in X$ such that $T(x_0) = x_0$.
 
 Next we need to show that $I-T$ is a one-to-one mapping. Suppose not, then there exists $y\in X$ and distinct $y_1, y_2 \in X$ such that $(I-T)(y_1) = (I-T)(y_2) = y $. By linearity, $(I-T)(y_1 - y_2) = 0$ and it yields that $y_1 = y_2$, which is a contradiction. 
 
-What's more, $I-T$ is surjective. (............)
+What's more, $I-T$ is surjective. Indeed, $I - T$ maps from $X$ to $X$. For any element $x\in X$, $\exists$ unique $y\in X$ such that $y = (I-T)(x)$. Hence, volume of the range of $I-T$ equals to the volume of domain. i.e., $|\mathcal R(I-T)| = |\mathcal D(I-T)| = |X|$. Also, $\mathcal R(I-T) \subset X$, which yields that $\mathcal R(I-T) = X$. In conclusion, $I-T$ is bijective. 
 
 \item [(b)]
 
@@ -200,6 +200,15 @@ Hence, $S = (I -T)^{-1}$.
 
 \section*{Problem 7}
 
+\begin{proof}
+
+For each $n\in\mathbb N$, $\|T^n\|_\infty \leqslant \|T\|^n_\infty$. Since $T$ is a bounded linear operator, $\|T\|_\infty < +\infty$. By triangle inequality and Taylor theorem, 
+
+$$
+\|S\|_\infty \leqslant \sum_{n=0}^{+\infty}\frac{\|T^n\|_\infty}{n!} \leqslant \sum_{n=0}^{+\infty}\frac{\|T\|^n_\infty}{n!} = e^{\| T\|_\infty}.
+$$
+
+\end{proof}
 
 
 \end{document}
