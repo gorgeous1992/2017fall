@@ -371,10 +371,14 @@ A & ${[}A_2, A_4{]}$ & $[0, 40, 0, 20]^T$     \\
  \hline
 B  &  $[A_1, A_2]$   & $ [20, 20, 0, 0]^T $  \ *  \\
  \hline
-C  &  $[A_1, A_3]$   & $ [30, 0, 10, 0]^T $    \\
+C  &  $[A_1, A_3]$   & $ [30, 0, 10, 0]^T $   \\
  \hline
 D  &  $[A_3, A_4]$   & $ [0, 0, 40, 60]^T $    \\
 \hline
+F & $[A_2, A_3]$   & $ [0, 60, -20, 0]^T $    \\
+\hline 
+G & $[A_1, A_4]$   & $ [40, 0, 0, -20]^T $    \\
+\hline 
 \end{tabular}
 \end{table}
 
@@ -397,17 +401,21 @@ $$
 \centering
 \caption{Figure \ref{fig_dual}}
 \label{BStable_dual}
-\begin{tabular}{||c|c|c||}
+\begin{tabular}{||c|c|c|c||}
 \hline
- Point & Basis        & BS of (\ref{p7_dual_std}) $[z_1, z_2, z_3, z_4]^T$    \\
+ Point & Basis        & BS of (\ref{p7_dual_std}) $[z_1, z_2, z_3, z_4]^T$  & Related to Primal   \\
  \hline
-A & ${[}A_1, A_3{]}$ & $[30, 0, -10, 0]^T$      \\
+A & ${[}A_1, A_3{]}$ & $[30, 0, -10, 0]^T$     &  C \\
  \hline
-B  &  $[A_3, A_4]$   & $ [0, 0, -40, -30]^T $    \\
+B  &  $[A_3, A_4]$   & $ [0, 0, -40, -30]^T $  &  D \\
  \hline
-C  &  $[A_2, A_4]$   & $ [0, 20, 0, -10]^T $    \\
+C  &  $[A_2, A_4]$   & $ [0, 20, 0, -10]^T $   &   A \\
  \hline
-D  &  $[A_1, A_2]$   & $ [20, 10, 0, 0]^T $  \ $\Delta$  \\
+D  &  $[A_1, A_2]$   & $ [20, 10, 0, 0]^T $  \ $\Delta$  & B  \\
+\hline 
+F  &  $[A_1, A_4]$   & $ [40, 0, 0, 10]^T $  \ $\Delta$  &  G \\
+\hline
+G  &  $[A_2, A_3]$   & $ [0, 30, 20, 0]^T $  \ $\Delta$  & F \\
 \hline
 \end{tabular}
 \end{table}

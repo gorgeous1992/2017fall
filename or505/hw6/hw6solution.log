@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  18 OCT 2017 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  19 OCT 2017 15:03
 entering extended mode
 **./hw6solution.tex
 (hw6solution.tex
@@ -358,17 +358,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-<p7_primal.pdf, id=23, 2008.50375pt x 1530.71875pt>
+<p7_primal.pdf, id=23, 2365.83875pt x 1805.74625pt>
 File: p7_primal.pdf Graphic file (type pdf)
  <use p7_primal.pdf>
 Package pdftex.def Info: p7_primal.pdf used on input line 333.
-(pdftex.def)             Requested size: 234.8775pt x 178.9836pt.
+(pdftex.def)             Requested size: 234.8775pt x 179.26263pt.
 
-<p7_dual.pdf, id=24, 1348.03625pt x 1079.03125pt>
+<p7_dual.pdf, id=24, 2211.26125pt x 1685.29625pt>
 File: p7_dual.pdf Graphic file (type pdf)
  <use p7_dual.pdf>
 Package pdftex.def Info: p7_dual.pdf used on input line 340.
-(pdftex.def)             Requested size: 234.8775pt x 187.99359pt.
+(pdftex.def)             Requested size: 234.8775pt x 179.0057pt.
  [4]
 [5 <./p7_primal.pdf> <./p7_dual.pdf>] [6] (hw6solution.aux) ) 
 Here is how much of TeX's memory you used:
@@ -392,7 +392,7 @@ am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 .9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw6solution.pdf (6 pages, 242578 bytes).
+Output written on hw6solution.pdf (6 pages, 280790 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
