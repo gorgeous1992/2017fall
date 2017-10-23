@@ -37,4 +37,64 @@ Suppose that the dual is feasible and bounded. Then, it has a finite optimum. By
 
 
 
+\section*{Problem 4 (4.11)}
+
+
+\begin{proof}
+
+If $Ax = b, x\geqslant 0$ has a solution $x_0$ and $A^Tw \geqslant 0$, then $x_0^TA^Tw \geqslant$. This implies that $b^Tw\geqslant 0$.
+
+Conversely, we need to show that if $Ax = b, x\geqslant 0$ has no solution, then $b^Tw <0$ as $A^w \geqslant 0$. Indeed, this is true due to Farkas Lemma.
+
+\end{proof}
+
+\section*{Problem 5 (4.13)}
+
+\begin{proof}
+
+If $Ax \leqslant b, x\geqslant 0$ has a solution $x_0$ and $A^Tw \geqslant 0, w\geqslant 0$, then $x_0^TA^T\leqslant b^T$. Multiply $w$ on both sides and we have 
+
+$$
+0 = x_0^TA^Tw \leqslant b^Tw.
+$$
+
+which is $b^Tw \geqslant 0$.
+
+
+Conversely, we need to show that if $b^Tw\geqslant 0$ when $A^Tw \geqslant 0, w\geqslant 0$, then $Ax \leqslant b, x\geqslant 0$ has a solution. Consider the following primal dual problem,
+
+\begin{equation}\label{4.13primal}
+\begin{aligned}
+\text{Min} \quad  & 0^Tx \\
+\text{Subject to} \quad & Ax \leqslant b \\
+& x\geqslant 0
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{4.13dual}
+\begin{aligned}
+\text{Max} \quad  & b^Ty \\
+\text{Subject to} \quad & A^Ty \leqslant 0 \\
+& y\leqslant 0
+\end{aligned}
+\end{equation}
+
+(\ref{4.13dual}) is equivalent to (\ref{4.13dual2})
+
+\begin{equation}\label{4.13dual2}
+\begin{aligned}
+\text{Max} \quad  & -b^Tw \\
+\text{Subject to} \quad & A^Tw \geqslant 0 \\
+& w\geqslant 0
+\end{aligned}
+\end{equation}
+
+In (\ref{4.13dual2}), it is obvious that $w=0$ is a feasible solution. What's more, it is also an optimal solution due to the assumption that $b^Tw \geqslant 0$ when $A^Tw \geqslant 0, w\geqslant 0$. Hence, $\max -b^Tw = 0$. By strong duality theorem, we know (\ref{4.13primal}) is also feasible.
+
+
+\end{proof}
+
+
+
+
 \end{document}

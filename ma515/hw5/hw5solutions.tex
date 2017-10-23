@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color}
+\usepackage{mathtools, eucal}
+\usepackage{xparse}
+\usepackage{romannum}
+ 
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{MA 515 Homework 5}
+\author{Zheming Gao}
+\maketitle
+
+\section*{Problem 1}
+
+\begin{proof}
+
+Let $V = \text{span}\{v_1, \dots, v_n\}$, where $v_1, \dots, v_n$ are linearly independent elements in $V$. Then there exists $n$ linearly independent elements $x_1, \dots, x_n \in X$ such that $T(x_i) = v_i, i = 1, \dots, n$. The existence promised by the fact that $T$ is a linear operator. Let $Y_0 = \text{span}\{x_1, \dots, x_n\}$. Hence, $\dim(Y_0) = \dim(V) = n$.
+
+Also, $\ker(T) \cap Y_0 = \{0\}$. Indeed, if $\exists y\neq 0, y\in Y_0$ such that $T(y)=0$. Let $y = \sum_{i=1}^n \beta_i x_i$. Then there exists $\beta_i \neq 0$. By linearity of $T$, $T(y) = \sum_{i=1}^n \beta_i T(x_i) = \sum_{i=1}^n \beta_i v_i \neq 0$ and it yields a contradiction.
+
+Next, we will show $\ker(T) + Y_0 = X$. For any $x\in X$, let $x = \left[x-\frac{T(x)}{T(x_1)}x_1\right] + \frac{T(x)}{T(x_1)}x_1$. Then notice that 
+
+
+
+................................
+.....................
+
+.........................
+\end{proof}
+
+
+\section*{Problem 2}
+
+\begin{proof}
+
+First we need to show that $\Lambda$ is bounded. Take arbitrarily $x = \{ x_n \}_{n\in\mathbb N}\in\ell^\infty$, and there exists $M>0$ such that $|x_i| \leqslant M$ for any $i \geqslant 0$. Therefore, 
+
+$$
+\begin{aligned}
+||\Lambda(x)||_{\ell^\infty} = ||y||_{\ell^\infty} & = \sup_{i\geqslant 1} |y_i| \\
+& = \sup_{i\geqslant 1} \left|\frac{x_1 + \cdots + x_i}{i}\right| \\
+& \leqslant \sup_{i\geqslant 1} \left|\frac{\sum_{j=1}^i|x_j|}{i}\right| \leqslant M.
+\end{aligned}
+$$ 
+
+Hence, $||\Lambda||_\infty = \sup_{||x||_{\ell^\infty} = 1} ||\Lambda(x)||_{\ell^\infty} \leqslant M$.
+
+Next we need to find the value of $||\Lambda||_\infty$. From the definition, 
+$$
+||\Lambda||_\infty = \sup_{||x||_{\ell^\infty} = 1} ||\Lambda(x)||_{\ell^\infty} = \sup_{||x||_{\ell^\infty} = 1}\sup_{i\geqslant 1}\left| \frac{x_1 + \cdots + x_i}{i} \right|.
+$$
+
+Also, $||x||_{\ell^\infty} = 1$ implies $|x_j| \leqslant 1, \forall j\geqslant 1$. Hence, 
+
+$$
+\sup_{||x||_{\ell^\infty} = 1}\sup_{i\geqslant 1}\left| \frac{x_1 + \cdots + x_i}{i} \right| = \sup_{i\geqslant 1} \frac{i\cdot 1}{i} = 1.
+$$
+
+Hence, $||\Lambda||_\infty = 1$.
+
+\end{proof}
+
+\section*{Problem 3}
+
+\begin{proof}
+
+It is enough to show that $\mathcal N(T) = \{0\}$. If so, then $T$ is invertible and is a linear operator. Indeed, supposed there exists $x\neq 0, x\in \mathcal N(T)$, then $0 = \|T(x)\| \geqslant \|x\| >0$, which yields a contradiction.
+
+Next we need to show $T^{-1}$ is bounded. Since $T$ is surjective and invertible, we know $T$ must be a bijection. If so, for any $y\in Y$, we have $\|y\|\geqslant b\|T^{-1}(y)\|$. Hence, 
+
+$$
+\sup_{\|y\|\neq 0} \frac{\|T^{-1}(y)\|}{\|y\|} \leqslant \frac{1}{b} < +\infty.
+$$
+
+i.e., $T^{-1}$ is a bounded linear operator.
+
+\end{proof}
+
+
+\section*{Problem 4}
+
+\begin{proof}
+
+We want to show $\| T_n(x_n) - T(x) \|_Y \rightarrow 0$ as $n \rightarrow +\infty$. By triangle inequality,
+$$
+\|T_n(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T\|_\infty \|x_n - x\|_X.
+$$
+
+and we know $\|x_n - x\| \rightarrow 0$ as $n\rightarrow +\infty$. Hence, it is enough to show that $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ as $n\rightarrow +\infty$. 
+
+$\forall x_m\in X, m = 1, 2, \cdots$, $\lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0$ since $\{T_n\}$ converges to $T$. Hence, we have 
+
+$$
+\lim_{m\rightarrow +\infty} \lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0.
+$$
+
+This implies $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ because $\{\|T_n(x_n) - T(x_n)\|\}_{n\in\mathbb{N}}$ is a subsequence of $\{\|T_n(x_m) - T(x_m)\|\}_{m, n\in\mathbb{N}}$.
+
+In conclusion, $\lim_{n\rightarrow +\infty} ||T_n(x_n) - T(x_n)|| = 0$.
+
+\end{proof}
+
+\section*{Problem 5}
+
+\begin{proof}
+
+$S\circ T$ is a linear operator. Indeed, the domain of $S\circ T$ is $X$, which is a subspace of itself. Also, function composition preserves linearity.
+
+Next we need to show $S\circ T$ is bounded. Consider norm $\|S\circ T\|_\infty$,
+
+$$
+\begin{aligned}
+\|S\circ T\|_\infty = \sup_{\|x\|_X = 1} \|(S\circ T)(x)\|_Z & = 
+\sup_{\|x\|_X = 1} \|S(T(x))\|_Z \\
+& \leqslant \sup_{\|x\|_X = 1} \|S\|_\infty \|T(x)\|_Y \\
+& = \|S\|_\infty \sup_{\|x\|_X = 1} \|T(x)\|_Y \\
+& = \|S\|_\infty \|T\|_\infty.
+\end{aligned}
+$$
+
+Since both $S$ and $T$ are bounded linear operators, $\|S\|_\infty$ and $\|T\|_\infty$ are less than positive infinity and this leads to the conclusion that $\|S\circ T|_\infty < +\infty$. 
+
+In conclusion, $S\circ T$ is a bounded linear operator.
+
+\end{proof}
+
+\section*{Problem 6}
+
+\begin{proof}
+
+\begin{enumerate}
+
+\item [(a)]
+
+$T$ is a contraction mapping. Indeed, let $ c = \|T\|_\infty < 1$. Hence, for any $x_1, x_2 \in X (x_1 \neq x_2)$, 
+$$
+\|T(x_1) - T(x_2)\| = \|T(x_1 - x_2)\| \leqslant \|T\|_\infty\|x_1 - x_2\| = c\|x_1 - x_2\|.
+$$
+
+where $0<c<1$. Hence, there exists a unique $x_0\in X$ such that $T(x_0) = x_0$. And this is equivalent to say that linear operator (which is easy to check) $ \mathcal N (I-T) = \{x_0\}$. However, $\{0\}\in \mathcal N (I-T)$ always holds. Thus, $x_0 = 0$. 
+
+Next we need to show that $I-T$ is a one-to-one mapping. Suppose not, then there exists $y\in X$ and distinct $y_1, y_2 \in X$ such that $(I-T)(y_1) = (I-T)(y_2) = y $. By linearity, $(I-T)(y_1 - y_2) = 0$ and it yields that $y_1 = y_2$, which is a contradiction. 
+
+What's more, $I-T$ is surjective. Indeed, $I - T$ maps from $X$ to $X$. For any element $x\in X$, $\exists$ unique $y\in X$ such that $y = (I-T)(x)$. Hence, volume of the range of $I-T$ equals to the volume of domain. i.e., $|\mathcal R(I-T)| = |\mathcal D(I-T)| = |X|$. Also, $\mathcal R(I-T) \subset X$, which yields that $\mathcal R(I-T) = X$. In conclusion, $I-T$ is bijective. 
+
+\item [(b)]
+
+Let $S = \sum_{n=0}^\infty T^n$ and consider $\|S\|_\infty$.
+
+$$
+\begin{aligned}
+\|S\|_\infty & \leqslant \|\lim_{m\rightarrow +\infty}\sum_{n=0}^mT^n\|_\infty \\
+& =  \lim_{m\rightarrow +\infty}\|\sum_{n=0}^mT^n\|_\infty \\
+& \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m \|T^n\|_\infty \\
+& \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m\|T\|^n_\infty \\
+& = \lim_{m\rightarrow +\infty}\sum_{n=0}^m c^n \\
+& = \frac{1}{1-c} < +\infty.
+\end{aligned}
+$$
+
+We use triangle inequality above. Also, the limit and norm can exchange due to the continuity of norm. 
+
+Hence, $S$ is bounded in $\|\cdot\|_\infty$. And it is obvious that $S$ is a linear operator, so $S\in (B(X, X), \|\cdot\|_\infty)$.
+
+\item [(c)]
+
+It is enough to check that $S\circ (I-T) = (I-T)\circ S = I$.
+
+$$
+\begin{aligned}
+S\circ(I-T) = S - S\circ T & = \sum_{n=0}^\infty T^n - \sum_{n=1}^\infty T^n \\
+& = T^0 = I
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+(I-T)\circ S =  S- T\circ S  & = \sum_{n=0}^\infty T^n - \sum_{n=1}^\infty T^n \\
+& = T^0 = I
+\end{aligned}
+$$
+
+Hence, $S = (I -T)^{-1}$.
+
+\end{enumerate}
+\end{proof}
+
+\section*{Problem 7}
+
+\begin{proof}
+
+For each $n\in\mathbb N$, $\|T^n\|_\infty \leqslant \|T\|^n_\infty$. Since $T$ is a bounded linear operator, $\|T\|_\infty < +\infty$. By triangle inequality and Taylor theorem, 
+
+$$
+\|S\|_\infty \leqslant \sum_{n=0}^{+\infty}\frac{\|T^n\|_\infty}{n!} \leqslant \sum_{n=0}^{+\infty}\frac{\|T\|^n_\infty}{n!} = e^{\| T\|_\infty}.
+$$
+
+\end{proof}
+
+
+\end{document}
