@@ -29,14 +29,16 @@ Let $V = \text{span}\{v_1, \dots, v_n\}$, where $v_1, \dots, v_n$ are linearly i
 
 Also, $\ker(T) \cap Y_0 = \{0\}$. Indeed, if $\exists y\neq 0, y\in Y_0$ such that $T(y)=0$. Let $y = \sum_{i=1}^n \beta_i x_i$. Then there exists $\beta_i \neq 0$. By linearity of $T$, $T(y) = \sum_{i=1}^n \beta_i T(x_i) = \sum_{i=1}^n \beta_i v_i \neq 0$ and it yields a contradiction.
 
-Next, we will show $\ker(T) + Y_0 = X$. For any $x\in X$, let $x = \left[x-\frac{T(x)}{T(x_1)}x_1\right] + \frac{T(x)}{T(x_1)}x_1$. Then notice that 
+Next, we will show $\ker(T) + Y_0 = X$. Suppose not, for any $x\in X$, there exists $z \notin \ker(T) + Y_0, w\in \ker(T), r\in Y_0$ such that $x = z + w + r$. Let $r = \sum_{i=1}^n t_i x_i$, and $T(x) = \sum_{i=1}^n \alpha v_i$.  Hence, 
 
+$$
+\sum_{i=1}^n \alpha_i v_i = T(x) = T(z) + T(w) + T(r) = T(z) + \sum_{i=1}^n t_i v_i.
+$$, which implies that $T(z) = \sum_{i=1}^n (\alpha_i - t_i) v_i$.
 
+However, $z\notin \ker(T) + Y_0$ and so $T(z)\notin \text{span}\{ v_1, \dots, v_n \}\subset (\ker(T) + Y_0)$. Hence, it is a contradiction.
 
-................................
-.....................
+In conclusion, $\ker(T)+Y_0 = X$ and $\ker(T)\cap Y_0 = \{0\}$, and it implies that $X = \ker(T) \oplus Y_0$.
 
-.........................
 \end{proof}
 
 
@@ -44,30 +46,27 @@ Next, we will show $\ker(T) + Y_0 = X$. For any $x\in X$, let $x = \left[x-\frac
 
 \begin{proof}
 
-First we need to show that $\Lambda$ is bounded. Take arbitrarily $x = \{ x_n \}_{n\in\mathbb N}\in\ell^\infty$, and there exists $M>0$ such that $|x_i| \leqslant M$ for any $i \geqslant 0$. Therefore, 
 
-$$
-\begin{aligned}
-||\Lambda(x)||_{\ell^\infty} = ||y||_{\ell^\infty} & = \sup_{i\geqslant 1} |y_i| \\
-& = \sup_{i\geqslant 1} \left|\frac{x_1 + \cdots + x_i}{i}\right| \\
-& \leqslant \sup_{i\geqslant 1} \left|\frac{\sum_{j=1}^i|x_j|}{i}\right| \leqslant M.
-\end{aligned}
-$$ 
 
-Hence, $||\Lambda||_\infty = \sup_{||x||_{\ell^\infty} = 1} ||\Lambda(x)||_{\ell^\infty} \leqslant M$.
 
-Next we need to find the value of $||\Lambda||_\infty$. From the definition, 
-$$
-||\Lambda||_\infty = \sup_{||x||_{\ell^\infty} = 1} ||\Lambda(x)||_{\ell^\infty} = \sup_{||x||_{\ell^\infty} = 1}\sup_{i\geqslant 1}\left| \frac{x_1 + \cdots + x_i}{i} \right|.
-$$
 
-Also, $||x||_{\ell^\infty} = 1$ implies $|x_j| \leqslant 1, \forall j\geqslant 1$. Hence, 
 
-$$
-\sup_{||x||_{\ell^\infty} = 1}\sup_{i\geqslant 1}\left| \frac{x_1 + \cdots + x_i}{i} \right| = \sup_{i\geqslant 1} \frac{i\cdot 1}{i} = 1.
-$$
 
-Hence, $||\Lambda||_\infty = 1$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{proof}
 
