@@ -46,21 +46,23 @@ In conclusion, $\ker(T)+Y_0 = X$ and $\ker(T)\cap Y_0 = \{0\}$, and it implies t
 
 \begin{proof}
 
+If $T$ is continuous, then the preimage(i.e., $\ker(T)$) of $\{0\}$ is closed since $\{0\}$ is closed. Also, $\ker(T)$ is a subspace due to the linearity of $T$.
+
+If $\ker(T)$ is a closed subspace in $X$, we need to show that $T$ is continuous, or equivalently, bounded. Since $Y$ is a finite-dimensional space, from the result of problem 1, we know there exists a finite-dimensional subspace $Y_0\subset X$ such that $X = \ker(T)\oplus Y_0 $. Hence, for any $x\in X$, there exists $y\in \ker(T), z\in Y_0$ such that $x = y + z$.
+
+Consider the norm of $T$, 
+
+$$
+\|T\|_\infty = \sup_{\|x\|\leqslant  1}\|T(x)\| \leqslant\sup_{\|x\|\leqslant  1 \\ y\in \ker} .
+$$
 
 
 
+...............
 
+................
 
-
-
-
-
-
-
-
-
-
-
+.................
 
 
 
@@ -74,41 +76,45 @@ In conclusion, $\ker(T)+Y_0 = X$ and $\ker(T)\cap Y_0 = \{0\}$, and it implies t
 
 \begin{proof}
 
-It is enough to show that $\mathcal N(T) = \{0\}$. If so, then $T$ is invertible and is a linear operator. Indeed, supposed there exists $x\neq 0, x\in \mathcal N(T)$, then $0 = \|T(x)\| \geqslant \|x\| >0$, which yields a contradiction.
+Denote the graph of $f$ as $G(f):= \{ (x, f(x)) | x\in X \} \subset X\times Y$. Let $\{z_n\}_{n\in\mathbb N} = \{ (x_n, f(x_n)) \}_{n\in\mathbb N} \subset G(f)$ that converges to $z = (x, y)$. It is enough to show that $y = f(x)$.
 
-Next we need to show $T^{-1}$ is bounded. Since $T$ is surjective and invertible, we know $T$ must be a bijection. If so, for any $y\in Y$, we have $\|y\|\geqslant b\|T^{-1}(y)\|$. Hence, 
-
-$$
-\sup_{\|y\|\neq 0} \frac{\|T^{-1}(y)\|}{\|y\|} \leqslant \frac{1}{b} < +\infty.
-$$
-
-i.e., $T^{-1}$ is a bounded linear operator.
+Indeed, $x = \lim_{n\rightarrow +\infty} x_n$ and so $\lim_{n\rightarrow +\infty} f(x_n) = f(x)$ due to the continuity of $f$. Also, $y = \lim_{n\rightarrow +\infty} f(x_n)$. Hence, $y = f(x)$.
 
 \end{proof}
+
+{\color{red}Question:} Here we only need $X, Y$ to be metric spaces. We didn't really need completeness. Is it correct?
 
 
 \section*{Problem 4}
 
+\begin{enumerate}
+
+\item [(a)]
+
 \begin{proof}
 
-We want to show $\| T_n(x_n) - T(x) \|_Y \rightarrow 0$ as $n \rightarrow +\infty$. By triangle inequality,
-$$
-\|T_n(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T\|_\infty \|x_n - x\|_X.
-$$
+ 
 
-and we know $\|x_n - x\| \rightarrow 0$ as $n\rightarrow +\infty$. Hence, it is enough to show that $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ as $n\rightarrow +\infty$. 
 
-$\forall x_m\in X, m = 1, 2, \cdots$, $\lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0$ since $\{T_n\}$ converges to $T$. Hence, we have 
-
-$$
-\lim_{m\rightarrow +\infty} \lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0.
-$$
-
-This implies $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ because $\{\|T_n(x_n) - T(x_n)\|\}_{n\in\mathbb{N}}$ is a subsequence of $\{\|T_n(x_m) - T(x_m)\|\}_{m, n\in\mathbb{N}}$.
-
-In conclusion, $\lim_{n\rightarrow +\infty} ||T_n(x_n) - T(x_n)|| = 0$.
 
 \end{proof}
+
+\item [(b)]
+
+Let $f$ be the following function,
+
+$$
+f(x) = \left\{
+\begin{aligned}
+\frac{1}{x}\qquad x \neq 0\\
+0 \qquad x = 0.
+\end{aligned}
+\right.
+$$
+
+\end{enumerate}
+
+
 
 \section*{Problem 5}
 

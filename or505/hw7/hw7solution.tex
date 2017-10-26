@@ -39,6 +39,7 @@ Suppose that the dual is feasible and bounded. Then, it has a finite optimum. By
 
 \section*{Problem 2 (4.8)}
 
+<<<<<<< HEAD
 (Thanks to Dr. Tiantian Nie for the solution to this problem.)
 
 \begin{itemize}
@@ -198,6 +199,11 @@ Both the primal and dual problems have degenerate basic feasible solutions.
 	From the column player's point of view, the complementary slackness conditions mean that at the optimal pair of $x$ and $y$, if the row player has possibility to choose strategy $i$ ($y_i>0$), then the minimal loss of the column player is the expected payoff of strategy $i$ of
 	the row player ($u = \sum_{j}^{n} A_{ij}x_{j}$). On the other hand, for a strategy $j$ of the column player, if the row player can let the column player get less than the minimal loss of the row player ($t > \sum_{i}^{m} -A_{ij}y_{i}$), then the column player will never choose this strategy ($x_j=0$).
 \end{itemize}
+=======
+
+
+
+>>>>>>> 7feb942abffc307f099311d5c904333f6f513986
 
 \section*{Problem 4 (4.11)}
 
@@ -258,6 +264,7 @@ In (\ref{4.13dual2}), it is obvious that $w=0$ is a feasible solution. What's mo
 
 \section*{Problem 6 (4.18)}
 
+<<<<<<< HEAD
 (Thanks to Dr. Tiantian Nie for the solution to this problem.)
 
 \begin{equation*}
@@ -309,6 +316,91 @@ Convert the primal problem into standard form:
 
 
 
+=======
+Standard form of the primal:
+
+$$
+\begin{aligned}
+\text{Minimize} \qquad & 2x_1 + x_2 - x_3 &  \\
+\text{subject\  to} \qquad & x_1 + 2x_2 + x_3 + a_1 & = 8\\
+ & -x_1 + x_2 -2x_3 + a_2 & = 4 \\
+ & x_1, x_2, x_3, a_1, a_2 & \geqslant 0
+\end{aligned}
+$$ 
+
+
+
+From point $x = [x_1, x_2, x_3, a_1, a_2]^T = [0, 0, 0, 8, 4]^T$, we know that $B = [A_4, A_5]$ and $N = [A_1, A_2, A_3]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N = [2, 1, -1]$.
+
+Note that $r_3$ is negative, so $x_3$ enter the basis. Construct $$
+M^{-1} = \begin{bmatrix}
+B^{-1} & -B^{-1}N \\
+ 0 & I
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & -1 & -2 & -1 \\
+0 & 1 & 1 & -1 & 2 \\
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1
+\end{bmatrix}
+$$ 
+
+to figure out $\textbf d^3 = [-1, 1, 1, 0, 0]^T$  and the step length $\alpha_3 = 8$ . Hence, $x_{\text{new}} = x + \alpha_3\textbf{d}^3 = [0, 0, 8, 0, 20]^T$. 
+
+Next step:
+
+From point $x = [x_1, x_2, x_3, x_4, x_5]^T = [0, 0, 8, 0, 20]^T$, we know that $B = [A_3, A_5]$ and $N = [A_1, A_2, A_4]$. Compute reduced cost $r = c_N^T - c_B^TB^{-1}N = [3,3,1]^T \geqslant 0$. Hence, this is the optimal solution. The optimal solution is $x^* = [0, 0, 8, 0, 20]^T$ and the optimal value $z^* = c^Tx^* = -8 $. The optimal dual is $w^{*T} = c^T_BB^{-1} = (-1, 0)$.
+
+\begin{enumerate}
+
+\item [(a)]
+
+$x_2$ is not a basic variable, so $c_B^TB^{-1}$ doesn't change. Also, to check optimality, consider 
+
+$$
+r^T = c_N^T - c_B^TB^{-1}N = [2, c_2, 0] - [-1, -2, -1] = [3, c_2 + 2, 1]. 
+$$
+
+where $c_2$ now is $6$. Hence, $r^T \geqslant 0$ so that the solution remains optimal.
+
+\item [(b)]
+
+$A_2$ changed, but $B$ and $c_B^T$ don't change. So,
+
+$$
+r^T = c_N^T - c_B^TB^{-1}N = [2, 1, 0] - [-1, 0] \begin{bmatrix}
+1 & 0 \\ 2 & 1
+\end{bmatrix} \begin{bmatrix}
+1 & a_{12} & 1 \\
+-1 & 1 & 0
+\end{bmatrix} = [3, 1+ a_{12}, 1]. 
+$$
+
+where $a_{12} = 0.25$, $1+ a_{12} = 1.25 >0$. Hence, the solution remains optimal.
+
+\item [(c)]
+
+If we add new constraint $x_2 + x_3 = 3$, then substitute $x_2$ with $x_2 = 3-x_3$ and we have a LP problem,
+
+$$
+\begin{aligned}
+\text{Minimize} \qquad & 2x_1  - 2x_3 + 3 &  \\
+\text{subject\  to} \qquad & x_1 - x_3 & \leqslant 2\\
+ & -x_1 - 3x_3 & \leqslant 1 \\
+ & x_3 & \leqslant 3 \\
+ & x_1, x_3 & \geqslant 0
+\end{aligned}
+$$ 
+
+Solve it and we get infinitely many optimal solutions. $x^* = [x_1, x_3]^T$ lies on the segment ($x_1-x_3$ plane) between $[2, 0]^T$ and $[5,3]^T$. Hence the optimal value is $z^* = 1$.
+
+\item [(d)]
+
+
+
+
+\end{enumerate}
+>>>>>>> 7feb942abffc307f099311d5c904333f6f513986
 
 
 

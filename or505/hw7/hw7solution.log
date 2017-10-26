@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  26 OCT 2017 12:46
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  25 OCT 2017 17:12
+>>>>>>> 7feb942abffc307f099311d5c904333f6f513986
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,6 +489,7 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
 [1
 
+<<<<<<< HEAD
 ] [2] [3] [4] [5] [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
  [7]
@@ -502,5 +507,32 @@ Here is how much of TeX's memory you used:
  14581 words of font info for 54 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  42i,10n,40p,753b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] (hw7solution.aux)
+ ) 
+Here is how much of TeX's memory you used:
+ 4956 strings out of 493323
+ 74878 string characters out of 3139066
+ 153762 words of memory out of 3000000
+ 8417 multiletter control sequences out of 15000+200000
+ 13064 words of font info for 50 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,9n,40p,403b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on hw7solution.pdf (3 pages, 120015 bytes).
+PDF statistics:
+ 56 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 7feb942abffc307f099311d5c904333f6f513986
 
 Output written on hw7solution.pdf (7 pages).
