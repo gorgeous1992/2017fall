@@ -1,0 +1,327 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, }
+\usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{mathtools, eucal}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{subcaption}
+
+\usepackage{amsmath,amsgen,amstext,amsbsy,amsopn,amsfonts,amsthm}
+% standard AMS packages for symbols, formats, etc.
+\usepackage{graphicx,tabularx,array,geometry,float}
+%\usepackage{hyperref}
+% packages for web interface, graphics, etc,
+
+ 
+\newtheorem{remark}{Remark}
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{Homework 7 Solutions}
+\author{Fangroup}
+\maketitle
+
+\section*{Problem 1 (4.7)}
+
+\begin{proof}
+
+Suppose that the dual is feasible and bounded. Then, it has a finite optimum. By strong duality theorem, the dual of dual, which is the primal, also has a finite optimum. But this is a contradiction to the infeasibility of primal problem.
+
+\end{proof}
+
+\section*{Problem 2 (4.8)}
+
+
+(Thanks to Dr. Tiantian Nie for the solution to this problem.)
+
+\begin{itemize}
+	\item[(a)] Not always. If $B$ corresponds to a basic feasible primal solution but not optimal, i.e., $r_q=c_q-c^T_BB^{-1}A_q<0$ for some $q$, then $w^T(B)=c^T_BB^{-1}$ does not satisfy the constraint $w^TA_q\leq c_q$ and thus infeasible to the dual problem.
+	\item[(b)] No. Note that at least $m$ inequality constraints of the dual problem are active at $c^T_BB^{-1}$ for some basis $B$. However, any interior feasible solution must satisfy $A^Tw<c$, i.e., none of the inequality constraints is active. 
+	\item[(b)] No. Consider the following example:
+\begin{equation*}
+\begin{array}{lllll}
+x_1 &+ x_2 &+x_3 &  & = 1 \\
+x_1 & & & +x_4&=1 \\
+x_1, & x_2, & x_3, & x_4 & \geq 0.
+\end{array}
+\end{equation*}
+This feasible domain in standard form has a degenerate basic feasible solution $x=(1, 0, 0, 0)^T$ and at the same time $A$ has full row rank.
+\begin{remark}
+	Suppose that the the standard form LP problem is consistent. 
+	\begin{itemize}
+		\item When $A$ does not have full row rank, there exist redundant constraints in $Ax=b$ and thus the problem is degenerate (make sure you know how to prove it); 
+		\item When $A$ has full row rank, it is still possible that the problem is degenerate. In this case, the problem is degenerate if and only if some nonnegative constraint $x_i\geq 0$ is redundant in the system of $Ax=b, x\geq 0$, such as in the above example $x_4\geq0$ is redundant.
+	\end{itemize}
+\end{remark}
+
+\item[(d)] No. Consider the following example:
+\begin{equation*}
+\begin{array}{rl}
+\text{(Primal):} & \\
+\min & x_1 \\\text{s.t.} & x_1 + x_2 +x_3=1 \\
+& x_1, x_2, x_3 \geq 0
+\end{array} \qquad \qquad \qquad
+\begin{array}{rl}
+\text{(Dual):} & \\
+\max & w \\
+\text{s.t.} & w\leq 1 \\ & w\leq0 \\ & w\leq 0
+\end{array}
+\end{equation*}
+In this case, the primal is nondegenerate but the dual is degenerate. 
+\begin{remark}
+	
+	\underline{Intuitively}, a linear programming is degenerate if it has redundant constraints. Remark 1 has discussed about the primal problem. As to the dual problem, it only has {inequality} constraints associated with the columns of $A$. When $A$ does not have full column rank (which is guaranteed in the case of $m<n$), it is still possible that there does not exist any redundant constraint (the key is that the constraints are \textbf{inequalities}; the right hand side value matters as well.). If you accidentally start with a dual problem without any redundant constraint, it is easy to adjust the value of some $c_i$ to make the corresponding inequality redundant and you then get a degenerate dual problem. 
+	
+	In fact, you may have noticed that the dual degeneracy has nothing to do with primal degeneracy in general.
+\end{remark}
+\begin{remark}[A different angle of view]
+	
+\underline{By definition}, a linear programming problem is nondegenerate if all basic feasible solutions are nondegenerate. Note that given a basis $B$, the primal b.s.f is determined by $B^{-1}b$, while the dual b.s.f is determined by $c_B^TB^{-1}$. Since $\textbf{b}$ and $\textbf{c}$ have nothing to do with each other, the primal b.s.f degenerate is not related to the degeneracy of dual b.f.s in general. 
+
+However, for an optimal basis B of the primal problem, it makes use of the information from both $b$ and $c$: feasibility ($B^{-1}b\geq 0$) and optimality ($r^T_N=c_N^T-c_B^TB^{-1}N\geq 0$). \textbf{Hence, there may exists some relation between degeneracies of the primal optimal solution and dual optimal solution}. Checking the dual constraints, you may find the dual optimal solution $w^T(B)=c_B^TB^{-1}$ is degenerate if and only if some element in $r_N$ is zero, which means there exist multiple optimal basis in the primal problem. This further implies either the corresponding primal optimal solution $x=(x_B, 0)$ is degenerate or there exists a different primal optimal solution.   
+
+Then, you may graphically generate an example for (d) by considering a nondegenerate primal problem (draw you feasible domain first; make sure no redundant constraint exists) with multiple optimal solutions (decide your objective $c$ using graphic method). In this way, you can be 100\% sure that the corresponding dual problem has a degenerate basic feasible solution. 
+\end{remark}
+
+\item[(e)] Yes. Consider the following example:
+\begin{equation*}
+\begin{array}{rl}
+\text{(Primal):} & \\
+\min & x_1 \\\text{s.t.} & x_1 + x_2 +x_3=1 \\
+& x_1+x_4=1\\
+& x_1, x_2, x_3, x_4 \geq 0
+\end{array} \qquad \qquad \qquad
+\begin{array}{rl}
+\text{(Dual):} & \\
+\max & w_1+w_2 \\
+\text{s.t.} & w_1+w_2\leq 1 \\ & w_1\leq 0 \\ & w_1\leq 0\\ & w_2\leq 0.
+\end{array}
+\end{equation*}
+Both the primal and dual problems have degenerate basic feasible solutions. 
+
+\item[(f)] No. According to Theorem 4.2 (the strong duality theorem) in textbook.
+\item[(g)] No. According to Corollary 4.1.2 or Corollary 4.1.3 in textbook.
+\item[(h)] When (P) and its dual are both feasible, neither of them has an unbounded optimal value. Then from the fundamental theorem, at least one basic feasible solution is an finite optimal solution to the primal problem. Checking the first part of Theorem 4.2, we know that the duality gap vanishes. 
+\end{itemize}
+
+\section*{Problem 3 (4.9)}
+
+
+(Thanks to Dr. Tiantian Nie for the solution to this problem.)
+
+
+\begin{itemize}
+	\item[(a)] Each player wants to maximize his/her payoff (or equivalently, to minimize his/her loss, or to minimize his/her opponent's payoff). The column player wants to determine the probability he/she takes each of the three strategies. Remember the column player knows nothing about the row player's decision. So the column player needs to consider every possible outcome. That means, the column player minimizes the row player's maximal expected payoff. The ``maximal" means the column player considers every possible strategy of the row player. The ``minimal" means the column player searches for a best probability combination (mixed strategy). Therefore, the column player faces the following problem:
+	\begin{equation*}
+	\begin{array}{rl}
+	\min & \max \{\begin{array}{l}2x_1-x_2+0x_3,\\-3x_1+x_2+x_3 \end{array}\} \\
+	\text{s.t.} & x_1+x_2+x_3 = 1 \\
+	& x_1,x_2,x_3 \geq 0
+	\end{array}
+	\end{equation*}
+	To convert the problem above into a linear program, we introduce another variable $u$ to replace the ``max" operator.
+	\begin{equation*}
+	\begin{array}{rl}
+	\min & u \\
+	\text{s.t.} & 2x_1-x_2+0x_3 \leq u \\
+	& -3x_1+x_2+x_3 \leq u \\
+	& x_1+x_2+x_3 = 1 \\
+	& x_1,x_2,x_3 \geq 0
+	\end{array}
+	\end{equation*}
+	After organization of the terms, it becomes
+	\begin{equation*}
+	\begin{array}{rl}
+	\min & u \\
+	\text{s.t.} & 2x_1-x_2 - u \leq 0 \\
+	& -3x_1+x_2+x_3 - u \leq 0 \\
+	& x_1+x_2+x_3 = 1 \\
+	& x_1,x_2,x_3 \geq 0
+	\end{array}
+	\end{equation*}
+	\item[(b)] The dual program is
+	\begin{equation*}
+	\begin{array}{rl}
+	\max & v \\
+	\text{s.t.} & 2w_1 - 3w_2 + v \leq 0 \\
+	& -w_1 + w_2 + v \leq 0 \\
+	& w_2 + v \leq 0 \\
+	& -w_1 - w_2 = 1 \\
+	& w_1 \leq 0, w_2 \leq 0
+	\end{array}
+	\end{equation*}
+	Let $y_1 = -w_1$, $y_2 = -w_2$ and $t=-v$. The dual program is reformulated as
+	\begin{equation*}
+	\begin{array}{rl}
+	\min & t \\
+	\text{s.t.} & -2y_1 + 3y_2 -t \leq 0 \\
+	& y_1 -y_2 -t \leq 0 \\
+	& -y_2 - t \leq 0 \\
+	& y_1 + y_2 = 1 \\
+	& y_1, y_2 \geq 0
+	\end{array}
+	\end{equation*}
+	\item[(c)] The dual program is the row player's problem of choosing his/her best probabilities of the two strategies.
+	\item[(d)] Use the constraint $y_1+y_2=1$ to replace $y_1$ by $1-y_2$ and add $y_2\leq 1$. The dual problem can be converted into
+	\begin{equation*}
+	\begin{array}{rl}
+	\min & t \\
+	\text{s.t.} & 5y_2 - t\leq 2 \\
+	& 2y_2 + t \geq 1 \\
+	& y_2 + t \geq 0 \\
+	& 0\leq y_2 \leq 1
+	\end{array}
+	\end{equation*}
+	It's easy to solve this problem graphically. The optimal solution is $y_2 = \frac{3}{7}$ and $t=\frac{1}{7}$. Therefore, the optimal solution to the dual problem is $(y_1,y_2,t)=(\frac{4}{7},\frac{3}{7},\frac{1}{7})$. (or $(w_1,w_2,v)=(-\frac{4}{7},-\frac{3}{7},-\frac{1}{7})$.
+	
+	\item[(e)] We check the dual slackness and dual variables. For positive dual slackness, the corresponding primal variable should be zero. For positive dual variable, the corresponding primal slackness should be zero. In the dual problem,
+	\[w_2 + v = -\frac{4}{7} <0.\]
+	So $x_3 = 0$.
+	\[w_1 =-\frac{4}{7}< 0\]
+	and \[w_2 =-\frac{3}{7}< 0\]
+	So \[2x_1-x_2-u=0\]
+	and \[-3x_1+x_2+x_3-u=0.\]
+	Don't forget that $x_1+x_2+x_3=1$. So we can solve for $x_1=\frac{2}{7}$, $x_2=\frac{5}{7}$ and $u=-\frac{1}{7}$. Therefore, the primal optimal solution is $(x_1,x_2,x_3,u)=(\frac{2}{7},\frac{5}{7},0,-\frac{1}{7})$.
+	
+	\item[(f)] In a general two-person zero-sum game, we suppose the column player has $n$ strategies and the row player has $m$ strategies. Let $A$ denote the payoff matrix of the row player. The complementary slackness conditions are
+	\[\begin{cases}
+	(u - \sum_{j}^{n} A_{ij}x_{j})\cdot y_i = 0 & \text{ for all } i=1,2,\ldots,m\\
+	(t + \sum_{i}^{m} A_{ij}y_{i})\cdot x_j = 0 & \text{ for all } j=1,2,\ldots,n
+	\end{cases}\]
+	From the column player's point of view, the complementary slackness conditions mean that at the optimal pair of $x$ and $y$, if the row player has possibility to choose strategy $i$ ($y_i>0$), then the minimal loss of the column player is the expected payoff of strategy $i$ of
+	the row player ($u = \sum_{j}^{n} A_{ij}x_{j}$). On the other hand, for a strategy $j$ of the column player, if the row player can let the column player get less than the minimal loss of the row player ($t > \sum_{i}^{m} -A_{ij}y_{i}$), then the column player will never choose this strategy ($x_j=0$).
+\end{itemize}
+
+
+
+\section*{Problem 4 (4.11)}
+
+
+\begin{proof}
+
+If $Ax = b, x\geqslant 0$ has a solution $x_0$ and $A^Tw \geqslant 0$, then $x_0^TA^Tw \geqslant$. This implies that $b^Tw\geqslant 0$.
+
+Conversely, we need to show that if $Ax = b, x\geqslant 0$ has no solution, then $b^Tw <0$ as $A^w \geqslant 0$. Indeed, this is true due to Farkas Lemma.
+
+\end{proof}
+
+\section*{Problem 5 (4.13)}
+
+\begin{proof}
+
+If $Ax \leqslant b, x\geqslant 0$ has a solution $x_0$ and $A^Tw \geqslant 0, w\geqslant 0$, then $x_0^TA^T\leqslant b^T$. Multiply $w$ on both sides and we have 
+
+$$
+0 = x_0^TA^Tw \leqslant b^Tw.
+$$
+
+which is $b^Tw \geqslant 0$.
+
+
+Conversely, we need to show that if $b^Tw\geqslant 0$ when $A^Tw \geqslant 0, w\geqslant 0$, then $Ax \leqslant b, x\geqslant 0$ has a solution. Consider the following primal dual problem,
+
+\begin{equation}\label{4.13primal}
+\begin{aligned}
+\text{Min} \quad  & 0^Tx \\
+\text{Subject to} \quad & Ax \leqslant b \\
+& x\geqslant 0
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{4.13dual}
+\begin{aligned}
+\text{Max} \quad  & b^Ty \\
+\text{Subject to} \quad & A^Ty \leqslant 0 \\
+& y\leqslant 0
+\end{aligned}
+\end{equation}
+
+(\ref{4.13dual}) is equivalent to (\ref{4.13dual2})
+
+\begin{equation}\label{4.13dual2}
+\begin{aligned}
+\text{Max} \quad  & -b^Tw \\
+\text{Subject to} \quad & A^Tw \geqslant 0 \\
+& w\geqslant 0
+\end{aligned}
+\end{equation}
+
+In (\ref{4.13dual2}), it is obvious that $w=0$ is a feasible solution. What's more, it is also an optimal solution due to the assumption that $b^Tw \geqslant 0$ when $A^Tw \geqslant 0, w\geqslant 0$. Hence, $\max -b^Tw = 0$. By strong duality theorem, we know (\ref{4.13primal}) is also feasible.
+
+
+\end{proof}
+
+\section*{Problem 6 (4.18)}
+
+
+(Thanks to Dr. Tiantian Nie for the solution to this problem.)
+
+\begin{equation*}
+  \begin{array}{rl}
+    \min & 2x_1+x_2-x_3 \\
+    \text{s.t.} & x_1+2x_2+x_3\leq 8 \\
+    & -x_1 + x_2 - 2x_3 \leq 4 \\
+    & x_1,x_2,x_3 \geq 0
+  \end{array}
+\end{equation*}
+Convert the primal problem into standard form:
+  \begin{equation*}
+  \begin{array}{rl}
+    \min & 2x_1+x_2-x_3 \\
+    \text{s.t.} & x_1+2x_2+x_3 + x_4 = 8 \\
+    & -x_1 + x_2 - 2x_3 + x_5 = 4 \\
+    & x_1,x_2,x_3,x_4,x_5 \geq 0
+  \end{array}
+  \end{equation*}
+  The optimal solution is $x=(x_1,x_2,x_3,x_4,x_5)=(0,0,8,0,20)$. Basic variables are $x_3,x_5$. Basis $B=\begin{bmatrix}1& 0 \\-2& 1\end{bmatrix}$. $B^{-1}=\begin{bmatrix}1& 0 \\2& 1\end{bmatrix}$. The dual optimal solution is $w^T=(w_1,w_2)=c_B^TB^{-1}=(-1,0)$.
+\begin{itemize}
+  \item[(a)] If $c_2$ is changed from $1$ to $6$, then the reduced cost $r_2$ is changed to $8$. It is still greater than or equal to zero. So $x=(x_1,x_2,x_3,x_4,x_5)=(0,0,8,0,20)$ remains optimal.
+  \item[(b)] If $A_{12}$ is changed from $2$ to $0.25$, then the reduced cost $r_2$ is changed to $1.25$. It is still greater than or equal to zero. So $x=(x_1,x_2,x_3,x_4,x_5)=(0,0,8,0,20)$ remains optimal.
+  \item[(c)] If we add one more constraint $x_2+x_3=3$, we first want to check whether $x=(x_1,x_2,x_3,x_4,x_5)=(0,0,8,0,20)$ remains feasible. Actually, $8>3$ and then it is infeasible. We need to find a new basic feasible solution to restart the simplex algorithm. That means, we need to find a basis for the following problem:
+      \begin{equation*}
+  \begin{array}{rl}
+    \min & 2x_1+x_2-x_3 \\
+    \text{s.t.} & x_1+2x_2+x_3 + x_4 = 8 \\
+    & -x_1 + x_2 - 2x_3 + x_5 = 4 \\
+    & x_2 + x_3 = 3 \\
+    & x_1,x_2,x_3,x_4,x_5 \geq 0
+  \end{array}
+  \end{equation*}
+  Since we know $A_3$ and $A_5$ are linearly independent, we only need to find a third column that is linear independent with them. It's easy to see that $[A_3,A_4,A_5]$ forms a basis. So let the basic variables be $x_3,x_4,x_5$. Use the simplex method to find a new optimal solution $x=(x_1,x_2,x_3,x_4,x_5)=(0,0,3,5,10)$.
+  \item[(d)] If we were to choose between increasing $b_1$ and $b_2$, we look at the dual optimal variables (shadow prices). $w_1=-1<0$ and $w_2=0$. Thus, if we increase $b_1$, the optimal value can be decreased. So increasing $b_1$ is a good choice. The effect of adding $\Delta b_i$ to $b_i$ will be to add $w_i\Delta b_i$ to the optimal value, as long as $B^{-1}(b+\Delta b_i)\geq 0$, i.e., the new basic solution remains feasible.
+  \item[(e)] The new problem is
+  \begin{equation*}
+  \begin{array}{rl}
+    \min & 2x_1+x_2-x_3+4x_6 \\
+    \text{s.t.} & x_1+2x_2+x_3 + x_4 +x_6 = 8 \\
+    & -x_1 + x_2 - 2x_3 + x_5 +2x_6= 4 \\
+    & x_1,x_2,x_3,x_4,x_5,x_6 \geq 0
+  \end{array}
+  \end{equation*}
+  Remember we have the optimal solution for the original problem. So first we check $r_6$. $r_6=c_6-c_BB^{-1}A_6=5\geq 0$. Therefore, $x=(0,0,8,0,20,0)$ remains optimal.
+\end{itemize}
+
+\textbf{Attention:}
+
+Here we consider $x_6$ as a nonnegative variable. However, $x_6$ can be unrestricted. If so, we may let $y_6 = -x_6$ so that $y_6 \geqslant 0$. And add $y_6$ in the system as
+
+\begin{equation*}
+  \begin{array}{rl}
+    \min & 2x_1+x_2-x_3 -4y_6 \\
+    \text{s.t.} & x_1+2x_2+x_3 + x_4 -y_6 = 8 \\
+    & -x_1 + x_2 - 2x_3 + x_5 -2y_6= 4 \\
+    & x_1,x_2,x_3,x_4,x_5,y_6 \geq 0
+  \end{array}
+  \end{equation*}
+  
+Check the optimal solution from the original problem. $r_6 = c_6^T - c_B^TB^{-1}A_6 = -5 <0$. Hence, $x = [0,0,8,0,20,0]^T$ is not optimal now and $y_6$ enter the basis. You will easily find that now this system is unbounded. 
+
+\end{document}
