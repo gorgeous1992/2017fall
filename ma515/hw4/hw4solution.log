@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  16 OCT 2017 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  30 OCT 2017 16:27
 entering extended mode
 **./hw4solution.tex
 (hw4solution.tex
@@ -451,25 +451,15 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 32.
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (17.05783pt too wide) detected at line 100
-\OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1
-/cmr/m/n/12 ) \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/
-it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 k[] \U/msa/m/n/12 6 \OMS/cmsy/m/n/12 k
-\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) \OMS
-/cmsy/m/n/12   \OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/
-m/n/12 )\OMS/cmsy/m/n/12 k[] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 k\OML/cmm/m/it/
-12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12   \
-OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/
-m/n/12 k[] \U/msa/m/n/12 6 \OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/1
-2 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 T\
-OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 k[] \OT1/
-cmr/m/n/12 + \OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 k[]k\OML/cmm/
-m/it/12 x[] \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 x\OMS/cmsy/m/n/12 k[]\OML/cmm/m
-/it/12 :
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (19.76454pt too wide) in paragraph at lines 170--171
+[]\OT1/cmr/m/n/12 Hence, $\OML/cmm/m/it/12 S \OT1/cmr/m/n/12 = [][] [][] \OML/c
+mm/m/it/12 T[]$ \OT1/cmr/m/n/12 ex-ists and so it is bounded be-cause $\OMS/cms
+y/m/n/12 k\OML/cmm/m/it/12 S\OMS/cmsy/m/n/12 k[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/
+n/12 k [][] \OML/cmm/m/it/12 T[]\OMS/cmsy/m/n/12 k[] \U/msa/m/n/12 6
  []
 
-[2] [3] [4] (hw4solution.aux) ) 
+[3] [4] (hw4solution.aux) ) 
 Here is how much of TeX's memory you used:
  11310 strings out of 493323
  213083 string characters out of 3139066
@@ -478,21 +468,21 @@ Here is how much of TeX's memory you used:
  539368 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,9n,32p,10385b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw4solution.pdf (4 pages, 149284 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on hw4solution.pdf (4 pages, 149178 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -95,21 +95,18 @@ i.e., $T^{-1}$ is a bounded linear operator.
 \begin{proof}
 
 We want to show $\| T_n(x_n) - T(x) \|_Y \rightarrow 0$ as $n \rightarrow +\infty$. By triangle inequality,
-$$
-\|T_n(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T(x_n) - T(x)\|_Y \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T\|_\infty \|x_n - x\|_X.
-$$
 
-and we know $\|x_n - x\| \rightarrow 0$ as $n\rightarrow +\infty$. Hence, it is enough to show that $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ as $n\rightarrow +\infty$. 
-
-$\forall x_m\in X, m = 1, 2, \cdots$, $\lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0$ since $\{T_n\}$ converges to $T$. Hence, we have 
 
 $$
-\lim_{m\rightarrow +\infty} \lim_{n\rightarrow +\infty} ||T_n(x_m) - T(x_m)|| = 0.
+\begin{aligned}
+\|T_n(x_n) - T(x)\|_Y & \leqslant \|T_n(x_n) - T(x_n)\|_Y + \|T(x_n) - T(x)\|_Y \\ 
+& \leqslant \|T_n- T\|_\infty \|(x_n)\|_X + \|T\|_\infty \|x_n - x\|_X 
+\end{aligned}
 $$
 
-This implies $\|T_n(x_n) - T(x_n)\|_Y\rightarrow 0$ because $\{\|T_n(x_n) - T(x_n)\|\}_{n\in\mathbb{N}}$ is a subsequence of $\{\|T_n(x_m) - T(x_m)\|\}_{m, n\in\mathbb{N}}$.
+and we know $\|x_n - x\| \rightarrow 0$ as $n\rightarrow +\infty$. Hence, $\|x_n\|_X$ is bounded. What's more, $\lim_{n\rightarrow +\infty} \|T_n - T\|_\infty = 0$.
 
-In conclusion, $\lim_{n\rightarrow +\infty} ||T_n(x_n) - T(x_n)|| = 0$.
+In conclusion, $\lim_{n\rightarrow +\infty} ||T_n(x_n) - T(x)|| = 0$.
 
 \end{proof}
 
@@ -158,42 +155,33 @@ What's more, $I-T$ is surjective. Indeed, $I - T$ maps from $X$ to $X$. For any 
 
 \item [(b)]
 
-Let $S = \sum_{n=0}^\infty T^n$ and consider $\|S\|_\infty$.
+Let $S = \sum_{n=0}^\infty T^n$ and consider $\sum_{n=0}^\infty\|T^n\|_\infty$. Since $X$ is a Banach space, by the theorem, $B(X, X)$ is also a Banach space. Hence, absolutely convergence implies convergence. It is enough to show that $\sum_{n=0}^\infty\|T^n\|_\infty$ exists.
 
 $$
 \begin{aligned}
-\|S\|_\infty & \leqslant \|\lim_{m\rightarrow +\infty}\sum_{n=0}^mT^n\|_\infty \\
-& =  \lim_{m\rightarrow +\infty}\|\sum_{n=0}^mT^n\|_\infty \\
-& \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m \|T^n\|_\infty \\
-& \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m\|T\|^n_\infty \\
+\lim_{m\rightarrow +\infty}\sum_{n=0}^m \|T^n\|_\infty & \leqslant \lim_{m\rightarrow +\infty}\sum_{n=0}^m\|T\|^n_\infty \\
 & = \lim_{m\rightarrow +\infty}\sum_{n=0}^m c^n \\
 & = \frac{1}{1-c} < +\infty.
 \end{aligned}
 $$
 
-We use triangle inequality above. Also, the limit and norm can exchange due to the continuity of norm. 
+We use triangle inequality above. Also, the limit and norm can exchange due to the continuity of norm. Hence, $\sum_{n=0}^\infty\|T^n\|_\infty$ exists.
 
-Hence, $S$ is bounded in $\|\cdot\|_\infty$. And it is obvious that $S$ is a linear operator, so $S\in (B(X, X), \|\cdot\|_\infty)$.
+Hence, $S = \lim_{m\rightarrow +\infty} \sum_{n=0}^m T^n$ exists and so it is bounded because $\|S\|_\infty = \|\sum_{n=0}^\infty T^n \|_\infty \leqslant 1/(1-c)$. S is also linear.
 
 \item [(c)]
 
-It is enough to check that $S\circ (I-T) = (I-T)\circ S = I$.
+It is enough to check that $S\circ (I-T) = (I-T)\circ S = I$. Since $S$ exists, we have $\lim_{N\rightarrow +\infty} T^{N} = 0$.
 
 $$
 \begin{aligned}
-S\circ(I-T) = S - S\circ T & = \sum_{n=0}^\infty T^n - \sum_{n=1}^\infty T^n \\
-& = T^0 = I
+S\circ(I-T) = S - S\circ T & = \lim_{N\rightarrow +\infty}\sum_{n=0}^N T^n - \sum_{n=1}^{N+1} T^n \\
+& = \lim_{N\rightarrow +\infty} I - T^{N+1} = I.
 \end{aligned}
 $$
 
-$$
-\begin{aligned}
-(I-T)\circ S =  S- T\circ S  & = \sum_{n=0}^\infty T^n - \sum_{n=1}^\infty T^n \\
-& = T^0 = I
-\end{aligned}
-$$
 
-Hence, $S = (I -T)^{-1}$.
+$(I - T)\circ S$ is the same. Hence, $S = (I - T)^{-1}$.
 
 \end{enumerate}
 \end{proof}
