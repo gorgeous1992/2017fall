@@ -193,7 +193,7 @@ $(I - T)\circ S$ is the same. Hence, $S = (I - T)^{-1}$.
 For each $n\in\mathbb N$, $\|T^n\|_\infty \leqslant \|T\|^n_\infty$. Since $T$ is a bounded linear operator, $\|T\|_\infty < +\infty$. By triangle inequality and Taylor theorem, 
 
 $$
-\|S\|_\infty \leqslant \sum_{n=0}^{+\infty}\frac{\|T^n\|_\infty}{n!} \leqslant \sum_{n=0}^{+\infty}\frac{\|T\|^n_\infty}{n!} = e^{\| T\|_\infty}.
+\|S\|_\infty \leqslant \lim_{N\rightarrow +\infty} \sum_{n=0}^{N}\frac{\|T^n\|_\infty}{n!} \leqslant \lim_{N\rightarrow +\infty} \sum_{n=0}^{N} \frac{\|T\|^n_\infty}{n!} = \sum_{n=0}^{+\infty}\frac{\|T\|^n_\infty}{n!} =  e^{\| T\|_\infty}.
 $$
 
 \end{proof}
