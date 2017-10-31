@@ -48,27 +48,25 @@ In conclusion, $\ker(T)+Y_0 = X$ and $\ker(T)\cap Y_0 = \{0\}$, and it implies t
 
 If $T$ is continuous, then the preimage(i.e., $\ker(T)$) of $\{0\}$ is closed since $\{0\}$ is closed. Also, $\ker(T)$ is a subspace due to the linearity of $T$.
 
-If $\ker(T)$ is a closed subspace in $X$, we need to show that $T$ is continuous, or equivalently, bounded. Since $Y$ is a finite-dimensional space, from the result of problem 1, we know there exists a finite-dimensional subspace $Y_0\subset X$ such that $X = \ker(T)\oplus Y_0 $. Hence, for any $x\in X$, there exists $y\in \ker(T), z\in Y_0$ such that $x = y + z$.
+If $\ker(T)$ is a closed subspace in $X$, we need to show that $T$ is continuous, or equivalently, bounded. Since $Y$ is a finite-dimensional space, from the result of problem 1, we know there exists a finite-dimensional subspace $Y_0\subset X$ such that $X = \ker(T)\oplus Y_0 $. Hence, for any $x\in X$, there exists $y\in \ker(T), z\in Y_0$ such that $x = y + z$. 
 
-Consider the norm of $T$, 
+Also, from $X = \ker(T)\oplus Y_0 $, $\dim (Y_0)$ is finite and $\ker(T)$ is closed, we know that both projection maps $\Pi_{\ker}$ and $\Pi_{Y_0}$ are bounded. $y = \Pi_{\ker}(x)$, $z = \Pi_{Y_0}(x)$.
+
+Consider the norm of $T$. For any $x\in X$, by linearity, $T(x) = T(y) + T(z) = T(z) = T\circ \Pi_{Y_0}(x)$.
 
 $$
-\|T\|_\infty = \sup_{\|x\|\leqslant  1}\|T(x)\| \leqslant\sup_{\|x\|\leqslant  1 \\ y\in \ker} .
+\begin{aligned}
+\|T\|_\infty = \sup_{x\in X\backslash \{0\}}\frac{\|T(x)\|_Y}{\|x\|_X} & =  \sup_{x\in X\backslash \{0\}}\frac{\|T\circ \Pi_{Y_0}(x)\|_Y}{\|\Pi_{Y_0}(x)\|_X} \frac{\|\Pi_{Y_0}(x)\|_X}{\|x\|_X} 
+\end{aligned}
 $$
 
+Since $\Pi_{Y_0}$ is bounded, $\frac{\|\Pi_{Y_0}(x)\|_X}{\|x\|_X}<+\infty$ for any $x\in X\backslash\{0\}$. Consider linear operator $T|_{Y_0}: Y_0 \rightarrow Y $ and it is bounded since $\dim(Y_0)<+\infty$. 
 
+$$
+\sup_{x\in X\backslash \{0\}}\frac{\|T\circ \Pi_{Y_0}(x)\|_Y}{\|\Pi_{Y_0}(x)\|_X} \leqslant \sup_{y\in Y_0\backslash \{0\}}\frac{\|T|_{Y_0}(y)\|_Y}{\|y\|_X} < +\infty.
+$$
 
-...............
-
-................
-
-.................
-
-
-
-
-
-
+Hence, $\|T\|_\infty < +\infty$ and so $T$ is continuous.
 
 \end{proof}
 
@@ -121,7 +119,20 @@ $$
 
 \section*{Problem 5}
 
+\begin{proof}
 
+\begin{enumerate}
+\item [$\Rightarrow$]
+
+If $T_1$ is compact and $T_2$ is continuous, then, for any bounded sequence $\{x_n\}_{n\in \mathbb N} \subset X$, there exists a subsequence $\{x_{n_k}\} \subset \{x_n\}$ such that $\{y_{n_k}\} := \{T_1(x_{n_k})\}$ converges in $Y$. Denote $\lim_{k\rightarrow +\infty} y_{n_k} = y$. Since $T_2$ is continuous, $T_2(y_{n_k}) \rightarrow T_2(y)\in Z$. i.e., for any bounded sequence $\{x_n\}_{n\in \mathbb N} \subset X$, there exists a subsequence $\{x_{n_k}\} \subset \{x_n\}$ such that $\{T_2\circ T_1(x_{n_k})\}$ converges in $Z$. In conclusion, $T_2\circ T_1$ is compact.
+
+\item [$\Leftarrow$]
+
+Conversely, suppose $T_2$ is compact and $T_1$ is continuous. Then, for any bounded set $U\in X$, $T_1(U) = V$ is also a bounded set in $Y$ since $T_1$ is bounded. By compactness, $\overline{T_2(V)}$ is compact. Hence, for any bounded set $U\in X$, $T_2\circ T_1(U)$ is compact in $Z$. Hence, $T_2\circ T_1$ is compact.
+
+\end{enumerate}
+
+\end{proof}
 
 
 \end{document}
