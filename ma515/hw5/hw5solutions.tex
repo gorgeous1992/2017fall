@@ -135,4 +135,53 @@ Conversely, suppose $T_2$ is compact and $T_1$ is continuous. Then, for any boun
 \end{proof}
 
 
+\section*{Problem 6}
+
+\begin{enumerate}
+
+\item [(i)]
+
+\begin{proof}
+
+T is linear, bounded and bijective so that $T^{-1}$ exists and bounded. Note that $\|x\| = \|T^{-1}\circ T(x)\|$. Hence, there exists $M>0$, such that
+
+$$
+\frac{\| x \|}{\| T(x) \|} = \frac{\|T^{-1}\circ T(x)\|}{\| T(x) \|} \leqslant \sup_{y\in X\backslash \{ 0 \} } \frac{\| T^{-1} (y) \|}{\| y \|} \leqslant M.
+$$
+
+Let $\beta = 1/M$, then $\|T(x)\| \geqslant \beta \|x\|, \forall x \in X$.
+
+\end{proof}
+
+\item [(ii)]
+
+\begin{proof}
+
+From (i) we know that $T^{-1}$ exists as a linear bounded operator. $\|T^{-1}\| \leqslant M = 1/\beta$. 
+
+For each $y\in Y$, we define a map $Q_y: X\rightarrow X$ such that $Q_y(x) : = T^{-1}(y - \Psi(x))$, where $\Psi$ is a bounded linear operator with norm $\|\Psi\|_\infty < \beta$. It is enough to show that $Q_y$ is a contraction mapping.
+
+Indeed, for any $x_1, x_2\in X$, we have
+
+$$
+\begin{aligned}
+\| Q_y(x_1) - Q_y(x_2) \| = \|T^{-1}(y - \Psi(x_1)) - T^{-1}(y - \Psi(x_2))\| & \leqslant \|T^{-1}\|_\infty \|y - \Psi(x_1) - (y - \Psi(x_2))\| \\
+& = \|T^{-1}\| \|\Psi(x_1) - \Psi(x_2)\| \\
+& \leqslant \|T^{-1}\|_\infty \|\Psi\|_\infty \|x_1 - x_2\| \\
+& = c \|x_1 - x_2\|.
+\end{aligned}
+$$
+
+where $c = \|T^{-1}\|_\infty \|\Psi\|_\infty \in (0, 1)$. This yields that $Q_y$ is a contraction mapping for each $y \in Y$.
+
+Hence, equation $x = Q_y(x)$ has a unique solution for each $y\in Y$.
+
+\end{proof}
+
+
+\end{enumerate}
+
+
+
+
 \end{document}
