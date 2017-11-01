@@ -191,14 +191,17 @@ Hence, equation $x = Q_y(x)$ has a unique solution for each $y\in Y$.
 
 For given $y\in Y$, define $f_y: X \rightarrow G(B)\cap (X\times\{y\}) \subset (X\times Y)$, $f_y(x) = B(x, y)$. Hence, $f_y$ is linear since $B$ is bilinear. Also, we know that $X\times Y$ is a Banach space since both $X$ and $Y$ are Banach. By closed graph theorem, it is enough to show that $G(f_y)$ is closed.
 
-Take a convergent sequence $\{a_n\}:= \{(x_n, f_y(x_n))\} \subset G(f_y)$ and $a_n \rightarrow a = (a_1, a_2)$. i.e., $\lim_{n\rightarrow +\infty} x_n = a_1, \lim_{n\rightarrow +\infty} f_y(x_n) = a_2$. We want to show that $f_y(a_1) = a_2$. Indeed, since $B$ is continuous at the origin, with bilinearity, $B$ is continuous on $X\times Y$. Let $y_n = y, \forall n\in \mathbb N$, then the sequence $\{(x_n, y_n)\}\rightarrow (a_1, y)$. Hence, $B(x_n, y_n) = B(x_n, y) = f_y(x_n)$ converges to $B(a_1, y)$, which is $f_y(a_1)$. Hence, $a_2 = f_y(a_1)$, and so $G(f_y)$ is closed.
+Take a convergent sequence $\{a_n\}:= \{(x_n, f_y(x_n))\} \subset G(f_y)$ and $a_n \rightarrow a = (a_1, a_2)$. i.e., $\lim_{n\rightarrow +\infty} x_n = a_1, \lim_{n\rightarrow +\infty} f_y(x_n) = a_2$. We want to show that $f_y(a_1) = a_2$. Indeed, since $B$ is continuous at the origin, $f_y$ is continuous at $0$. Also, with the linearity of $f_y$, $f_y$ is continuous on $X$.
 
-In conclusion, $f_y$ is bounded. 
+then the sequence $\{(x_n, y)\}\rightarrow (a_1, y)$. Hence, $B(x_n, y) = f_y(x_n)$ converges to $B(a_1, y)$, which is $f_y(a_1)$. Hence, $a_2 = f_y(a_1)$, and so $G(f_y)$ is closed.
+
+In conclusion, $f_y$ is bounded for each $y\in Y$. Similarly, $g_x: y \mapsto B(x, y)$ is also bounded for each $x \in X$.
 
 \end{proof}
 
-
 \item[(ii)]
+
+
 
 
 
