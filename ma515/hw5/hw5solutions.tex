@@ -208,4 +208,56 @@ In conclusion, $f_y$ is bounded for each $y\in Y$. Similarly, $g_x: y \mapsto B(
 \end{enumerate}
 
 
+\section*{Problem 8}
+
+\begin{enumerate}
+
+\item [(i)]
+
+\begin{proof}
+
+We need to show that $T$ is bounded. Consider norm $\|T\|_\infty$.
+
+$$
+\begin{aligned}
+\|T\|_\infty = \sup_{\|f\|_\infty = 1} \|T[f]\|_\infty = \max \{  \sup_{\|f\|_\infty = 1,\atop t\in(0, 1]}|T[f](t)|, \sup_{\|f\|_\infty = 1} |f(0)| \}.
+\end{aligned}
+$$
+
+It is clear that $|\sup_{\|f\|_\infty = 1}f(0)| <+\infty$. For the other one, 
+
+$$
+\begin{aligned}
+\sup_{\|f\|_\infty = 1,\atop t\in(0, 1]}|T[f](t)| & = \sup_{\|f\|_\infty = 1,\atop t\in(0, 1]} \left|\frac{1}{t}\int_0^t f(s) ds\right|\\
+& \leqslant \sup_{\|f\|_\infty = 1,\atop t\in(0, 1]} \frac{\|f\|_\infty}{t}\int_0^t ds = 1 < +\infty.
+\end{aligned}
+$$
+
+Hence, $\|T\|_\infty < +\infty$. 
+
+\end{proof}
+
+\item [(ii)]
+
+\begin{proof}
+
+$T$ is a one-to-one map. Take arbitrarily $f_1, f_2\in X, f_1 \neq f_2$, and suppose that $T[f_1] = T[f_2]$, i.e., $\forall t\in[0, 1]$, $T[f_1](t) = T[f_2](t)$. Then,
+
+$$
+T[f_1](t) - T[f_2](t) = \left\{
+\begin{aligned}
+f_1(0) - f_2(0).......................................
+\end{aligned}
+\right.
+$$ 
+
+\end{proof}
+
+
+
+\end{enumerate}
+
+
+
+
 \end{document}
