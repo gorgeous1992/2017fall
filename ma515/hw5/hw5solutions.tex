@@ -260,9 +260,22 @@ and this yields a contradiction to the assumption that $f_1 \neq f_2$. Hence, $T
 
 Next, we will show that $T$ is not an onto map.
 
-````````````
+Let $g = T[f], \forall f\in X = C([0,1])$. Since $T: X \rightarrow X$, $g\in X$. We compute $\frac{d}{dt} g(t)$,
 
-```````````````````
+$$
+\frac{d}{dt} g(t) = -\frac{1}{t^2} \int_0^t f(s)ds + \frac{1}{t}f(t) = \frac{f(t)-g(t)}{t}. \forall t\in (0, 1).
+$$
+
+Since $f, g$ are well-defined on $[0, 1]$, we know $\frac{d}{dt} g(t)$ exists on $(0, 1)$. Also, notice that $\frac{f(t)-g(t)}{t}$ is continuous on $(0, 1)$. If we take $g(t) = |t-1/2|, t\in [0, 1]$. $g \in X$, but $\frac{d g}{dt}$ doesn't exist at $t = 1/2$, so there won't be any $ f \in X $ such that $T[f] = g$. 
+
+Hence, $T$ is not a onto map.
+
+\end{proof}
+
+\item [(iii)]
+
+\begin{proof}
+
 
 
 \end{proof}
