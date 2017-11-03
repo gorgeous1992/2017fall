@@ -241,15 +241,29 @@ Hence, $\|T\|_\infty < +\infty$.
 
 \begin{proof}
 
-$T$ is a one-to-one map. Take arbitrarily $f_1, f_2\in X, f_1 \neq f_2$, and suppose that $T[f_1] = T[f_2]$, i.e., $\forall t\in[0, 1]$, $T[f_1](t) = T[f_2](t)$. Then,
+First, we will show $T$ is a one-to-one map. Suppose there exists $f_1\neq f_2$, $f_1, f_2 \in X$ such that $T[f_1] = T[f_2]$. This is to say that $\exists \|f_1 - f_2\|_\infty > 0$ such that $\|T[f_1] - T[f_2]\|_\infty = 0$. However, 
 
 $$
-T[f_1](t) - T[f_2](t) = \left\{
 \begin{aligned}
-f_1(0) - f_2(0).......................................
+\|T[f_1] - T[f_2]\|_\infty & =   \sup_{ t\in[0, 1]}\left|T[f_1](t) - T[f_2](t)\right| \\
+& = \max \left\{  \left|f_1(0) - f_2(0)\right|, \sup_{t\in(0, 1]}\left| \frac{1}{t} \int_0^t f_1(s) - f_2(s) ds \right| \right\} = 0. 
 \end{aligned}
-\right.
-$$ 
+$$
+
+which implies that $\left|f_1(0)-f_2(0)\right| = 0 $, i.e. $f_1(0) = f_2(0)$. It also yields that $\forall t \in (0, 1], \left| \frac{1}{t} \int_0^t f_1(s) - f_2(s) ds \right| = 0$, i.e., $ \forall t \in (0, 1], \int_0^t f_1(s) ds = \int_0^t f_2(s) ds$. Take derivative of $t$ on both sides and get 
+
+$$
+\frac{d}{dt} \int_0^t f_1(s) ds = \frac{d}{dt} \int_0^t f_2(s) ds \quad \Rightarrow \quad f_1(t) = f_2(t), \forall t\in (0, 1].
+$$
+
+and this yields a contradiction to the assumption that $f_1 \neq f_2$. Hence, $T$ is a one-to-one map.
+
+Next, we will show that $T$ is not an onto map.
+
+````````````
+
+```````````````````
+
 
 \end{proof}
 
