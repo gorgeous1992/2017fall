@@ -201,7 +201,44 @@ In conclusion, $f_y$ is bounded for each $y\in Y$. Similarly, $g_x: y \mapsto B(
 
 \item[(ii)]
 
+\begin{proof}
 
+We will show that $\exists C > 0$ such that 
+
+$$
+\|B(x, y)\|_Z \leqslant C, \qquad \forall \|x\|_X, \|y\|_Y \leqslant1.
+$$
+
+If this is true, then 
+
+$$
+\|B(x, y)\|_Z = \|x\|_X\cdot\|y\|_Y\cdot \left\|B(\frac{x}{\|x\|_X}, \frac{y}{\|y\|_Y})\right\| \leqslant C \|x\|_X\cdot\|y\|_Y
+$$
+
+Indeed, consider a collection of linear operators: $\mathcal X := \{B(x, \cdot): Y\rightarrow Z \ | \ \|x\|_X \leqslant 1 \}$.
+
+Since for any $y\in Y$, $B(\cdot, y)$ is a linear bounded operator, there exists $C_y >0$ such that 
+
+$$
+\sup_{\|x\|_X \leqslant 1} \|B(x, y)\|_Z \leqslant C_y.
+$$
+
+Since $\sup_{\|x\|_X \leqslant 1} \|B(x, y)\|_Z = \sup_{h_x\in \mathcal X} \|h_x(y)\|_Z$, we apply Banach-Steihaus theorem so that there exists $C> 0$ such that 
+
+$$
+\sup_{\|x\|_X \leqslant 1} \|B(x, y)\|_Z = \sup_{h_x\in \mathcal X} \|h_x(y)\|_Z \leqslant C, \qquad \forall y\in Y.
+$$
+
+Hence, 
+
+$$
+\sup_{\|x\|_X \leqslant 1, \|y\|_Y\leqslant 1} \|B(x, y)\|_Z \leqslant \sup_{\|x\|_X \leqslant 1, y\in Y} \|B(x, y)\|_Z \leqslant C.
+$$
+
+which is $\|B(x, y)\|_Z \leqslant C, \forall \|x\|_X, \|y\|_Y \leqslant1.$
+
+
+\end{proof}
 
 
 
@@ -276,7 +313,30 @@ Hence, $T$ is not a onto map.
 
 \begin{proof}
 
+To show that $T$ is not compact, we only need to find a sequence of function $\{f_n\}_{n\mathbb N} \subset X$ such that $\exists \epsilon >0$, such that 
 
+$$
+\|T[f_m] - f[f_n]\|_\infty > \epsilon. \quad \forall m, n > 0.
+$$
+
+Let us consider $f_n = -nx + n$ and it it obvious that $f_n \in C([0, 1]), \forall n\in \mathbb N$. 
+
+$$
+T[f](t) = \left\{
+\begin{aligned}
+n \qquad & t = 0\\
+-\frac{n}{2}t + n \ \  & t \in (0, 1]
+\end{aligned}
+\right.
+$$
+
+Without generality, assume that $m >n > 0$. Then we may let $\epsilon = 1/3$, then we have
+
+$$
+\|T[f_m] - f[f_n]\|_\infty = \frac{m-n}{2} \geqslant \frac{1}{2} > \epsilon.
+$$
+
+Since $m, n$ are arbitrarily chosen from $\mathbb N$, it yields that $T$ is not compact.
 
 \end{proof}
 
