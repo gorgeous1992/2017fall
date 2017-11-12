@@ -25,10 +25,14 @@ while IDX>0
     M = 1/rho * A(:,:,IDX);
     sum_M = sum_M + M;
     %update date distribution matrix
-    X = expm(-ita*sum_M);
+    W = expm(-ita*sum_M);
+    X = 1/trace(W)*W
     %check feasibility
     %continue loop if IDX >0, otherwise stop
-    IDX = findexample_matrix(A, X);
+    IDX = findexample_matrix(A, X)
+end
+
+Solu = X;
 end
 
 
