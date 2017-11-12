@@ -22,20 +22,23 @@ sum_M = zeros(m);
 
 T=0;
 cost = 0;
-fac2_upbd_cost = 0;
+fac2_lbd_cost = 0;
 while IDX>0
     %Obeserve gain matrix
     M = -1/rho * A(:,:,IDX);
     sum_M = sum_M + M;
     
-    %cost so far
+    %Gain so far
     cost = cost + trace(M*X);
     %second term in Upper bound of cost:
-    fac2_upbd_cost = fac2_upbd_cost + trace(M*M*X);
+    fac2_lbd_cost = fac2_lbd_cost + trace(M*M*X);
     %update date distribution matrix
     W = expm(-ita*sum_M);
     X = 1/trace(W)*W;
-  
+    
+    eig(X)
+    
+    
     %Count # of rounds
     T = T + 1;
     
@@ -45,7 +48,7 @@ while IDX>0
 end
 
 bestcost = min(eig(sum_M));
-upbd_cost = min(eig(sum_M)) + ita*fac2_upbd_cost + log(n)/ita;
+upbd_cost = min(eig(sum_M)) + ita*fac2_lbd_cost + log(n)/ita;
 
 
 Solu = X;
