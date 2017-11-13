@@ -5,7 +5,7 @@
 clc
 clear all
 
-m = 50;
+m = 10;
 n = 100;
 
 %Generate optimal density matrix X_opt
@@ -54,6 +54,7 @@ if feas>=0
     fprintf('--Yes--\n')
 else 
     fprintf('No\n')
+    pause;  
 end
 
 %% Compare # of rounds with theoretical upper bound of rounds

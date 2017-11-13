@@ -47,7 +47,6 @@ end
 bestcost = min(eig(sum_M));
 upbd_cost = min(eig(sum_M)) + ita*fac2_upbd_cost + log(n)/ita;
 
-
 Solu = X;
 end
 

@@ -9,8 +9,8 @@ function A = Artificial_randomA(m,n,X_opt)
 A = zeros(m, m, n);
 for j = 1 : n
     % M is just a temporary variable matrix
-    % element of M is random number in [-1, 1]
-    M = 2*rand(m)-ones(m);
+    % element of M is random number in [-10, 10]
+    M = 20*rand(m)-10*ones(m);
     % Make M a symmetrical matrix.
     M = 0.5 * (M + M');
     
