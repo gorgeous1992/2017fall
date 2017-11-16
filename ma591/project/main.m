@@ -6,7 +6,7 @@ clc
 clear all
 
 m = 10;
-n = 100;
+n = 50;
 
 %Generate optimal density matrix X_opt
 X_opt = Artificial_randomX_opt(m);
@@ -38,7 +38,7 @@ ita = epsilon/(2*rho);
 X = 1/m*eye(m);
 
 %Run Matrix MW algorithm
-[Solu, T, cost, bestcost, upbd_cost] = Matrix_MW(A, X, rho, epsilon, ita);
+[Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(A, X, rho, epsilon, ita);
 
 %% Print the solution
 fprintf('\nSolution:\n')
@@ -65,7 +65,8 @@ fprintf('Total: %d\nUpperbound: %f\n', T, upbd_rounds);
 
 %% Compare the total gain with best gain
 fprintf('\nCompare the total cost with best cost and upperbound cost:\n')
-cost
-bestcost = 0
-upbd_cost
-cost_gap = abs(cost - bestcost)
+
+bestgain
+gain
+lbd_gain
+gain_gap = abs(gain - bestgain)

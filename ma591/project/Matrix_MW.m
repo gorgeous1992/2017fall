@@ -1,4 +1,4 @@
-% Matrix Multiplicated Weights function
+% Matrix Multiplicated Weights function (Gain version)
 % for sovling specific SDP.
 
 % Input: X:    Initial Distribution Matrix  (m by m)
@@ -8,7 +8,7 @@
 %        A:    Coefficient 3-d Matrix (m by m by n)
 
 % Output: Good solution, # of rounds, total gain, best gain
-function [Solu, T, cost, bestcost, upbd_cost] = Matrix_MW(A, X, rho, epsilon, ita)
+function [Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(A, X, rho, epsilon, ita)
 
 %record # of example n and the matrix size m.
 [m, ~, n] = size(A);
@@ -17,23 +17,23 @@ function [Solu, T, cost, bestcost, upbd_cost] = Matrix_MW(A, X, rho, epsilon, it
 IDX = findexample_matrix(A, X);
 
 %Initialize sum. 
-%sum_M: sum of gain matrix from beginning to current round.
+%sum_M: sum of cost matrix from beginning to current round.
 sum_M = zeros(m);
 
 T=0;
-cost = 0;
-fac2_upbd_cost = 0;
+gain = 0;
+fac2_lbd_gain = 0;
 while IDX>0
     %Obeserve gain matrix
-    M = -1/rho * A(:,:,IDX);
+    M = 1/rho * A(:,:,IDX);
     sum_M = sum_M + M;
     
-    %cost so far
-    cost = cost + trace(M*X);
-    %second term in Upper bound of cost:
-    fac2_upbd_cost = fac2_upbd_cost + trace(M*M*X);
+    %gain so far
+    gain = gain + trace(M*X);
+    %second term in lower bound of gain:
+    fac2_lbd_gain = fac2_lbd_gain + trace(M*M*X);
     %update date distribution matrix
-    W = expm(-ita*sum_M);
+    W = expm(ita*sum_M);
     X = 1/trace(W)*W;
   
     %Count # of rounds
@@ -44,8 +44,8 @@ while IDX>0
     IDX = findexample_matrix(A, X);
 end
 
-bestcost = min(eig(sum_M));
-upbd_cost = min(eig(sum_M)) + ita*fac2_upbd_cost + log(n)/ita;
+bestgain = max(eig(sum_M));
+lbd_gain = max(eig(sum_M)) - ita*fac2_lbd_gain - log(n)/ita;
 
 Solu = X;
 end
