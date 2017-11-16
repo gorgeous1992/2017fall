@@ -1,0 +1,151 @@
+
+% Header, contains document class declaration, imports required packages, a place to define
+% local commands.  Usually you don't have to mess around with any of this, provided
+% you can find the template which suits your needs.
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsgen,amstext,amsbsy,amsopn,amsfonts,amsthm}
+% standard AMS packages for symbols, formats, etc.
+\usepackage{url,graphicx,tabularx,array,geometry,float}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{epstopdf}
+% packages for web interface, graphics, etc,
+
+\pagestyle{plain}
+
+
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+\newtheorem{remark}{Remark}
+%\linespread{2} %-- Uncomment for Double Space
+
+
+% Main text/body.  Notice \begin{document} and \end{document}.  Many environments
+% in LaTeX are set up like this.
+
+\begin{document}
+
+\title{ISE/OR/MA 505 Solution \#10}
+\line
+\leftright{\today}{Tiantian Nie} %-- left and right positions in the header
+
+\section*{Textbook Chapter 5}
+\subsection*{Problem 5.1}
+Figure \ref{Problem5-1} shows the graphs of the five functions.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Problem5-1.eps}
+  \caption{Problem 5.1}
+  \label{Problem5-1}
+\end{figure}
+\begin{itemize}
+  \item[(a)] A quadratic algorithm does not necessarily always perform better than a cubic algorithm. It depends the problem size and the coefficient in the complexity. For example, $f_4$ is not always less than $f_2$.
+  \item[(b)] A polynomial algorithm does not always perform better than an exponential algorithm for the same reason. For example, $f_4$ is not always less than $f_3$.
+\end{itemize}
+
+\subsection*{Problem 5.2}
+Note that $C(n,m)$ is monotonically increasing as $n$ increases. So we only need to prove $C(2m,m)\geq 2^m$ for any nonnegative integer $m$.
+When $m=0$, $C(0,0)=1=2^0$.
+When $m\geq 1$, we have
+\begin{equation*}
+  C(2m,m) = \frac{(2m)!}{m!m!} = \frac{(2\cdot4\cdots 2m)\cdot(1\cdot3\cdots (2m-1))}{(1\cdot2\cdots m)\cdot(1\cdot2\cdots m)} = 2^m\cdot\frac{1\cdot3\cdots (2m-1)}{1\cdot2\cdots m}\geq 2^m.
+\end{equation*}
+
+\section*{Textbook Chapter 7}
+\subsection*{Problem 7.1}
+\begin{itemize}
+	\item[(a)] W.l.o.g, we assume that the linear programming problem is in the standard form \begin{align*}
+	\min ~c^Tx~\quad\text{s.t.} ~Ax=b, ~x\geq 0,
+	\end{align*}where $A\in\mathbb{R}^{m\times n}$, $c\in\mathbb{R}^n$ and $b\in\mathbb{R}^m$. Given a basis $B$, the corresponding basic solution can be obtained by solving the following system of linear equations: 
+	\begin{align*}
+	\left( \begin{array}{ll} B & N \\ 0 & I \end{array}\right) \left( \begin{array}{l}x_B\\x_N\end{array}\right) =\left( \begin{array}{l}b\\0\end{array}\right)
+	\end{align*}
+	Therefore, using Algorithm A, we are able to list all the basic solutions to this LP problem. Then, the LP problem can be solved by finding the basic feasible solution with minimal objective value.
+	
+	\item[(b)] Given a system of linear equations, we construct a linear programming problem whose objective function is constant and feasible domain is defined by those linear equations. Using Algorithm B, we are able to solve the LP problem, i.e., obtain an optimal solution. This optimal solution is feasible, and thus solves the system of linear equations. 
+	\item[(c)] From (a) and (b), it is of the same difficulty (computational complexity) to solve systems of linear equations and linear programming problems, respectively. Since the systems of linear equations can be solved in polynomial time, we know that linear programming problems are polynomial-time solvable. 
+\end{itemize}
+
+\section*{Other problems}
+\subsection*{Exercise 4}
+Given an interior point $x^k$ of $\mathbb{R}^n_+$, the affine scaling transformation $T_k$ is defined by 
+\begin{align*}
+T_k(x)=X^{-1}_kx,
+\end{align*}
+where $X_k=diag(x^k)\in\mathbb{R}^{n\times n}$.
+\begin{itemize}
+	\item[(1)] Since $x^k$ is an interior point of $\mathbb{R}^n_+$, $x^k_i>0$ holds for $i=1,\ldots,n$ and thus the matrix $X^{-1}_k$ exists. From the definition of $T_k$, we have $T_k(x)\in \mathbb{R}^n_+$ as long as $x\in\mathbb{R}^n_+$. Moreover, if $y=T_k(x)$, $\bar{y}=T_k(\bar{x})$ and $y=\bar{y}$, then $x=\bar{x}$ is guaranteed. Therefore, $T_k$ is a well-defined mapping from $\mathbb{R}^n_+$ to $\mathbb{R}^n_+$.
+	
+	\item[(2)] $T_k(x^k)=X^{-1}_kx^k=e$.
+	\item[(3)] If $x$ is a vertex of $\mathbb{R}^n_+$, then $x=0$. Hence $T_k(x)=0$ is a vertex of $\mathbb{R}^n_+$.
+	\item[(4)] If $x$ is on the boundary of $\mathbb{R}^n_+$, then $x_i=0$ for some $i$. Then $y=T_k(x)$ satisfies $y_i=x_i/x^k_i=0$. Hence, $T_k(x)$ is on the boundary.
+	\item[(5)] If $x$ is in the interior of $\mathbb{R}^n_+$, then $x_i>0$ for $i=1,\ldots,n$. Then $y=T_k(x)$ satisfies $y_i=x_i/x^k_i>0$ for $i=1,\ldots,n$. Hence, $T_k(x)$ is in the interior.
+	\item[(6)] \begin{itemize}
+		\item Since $T_k$ is well defined, it is a one-to-one mapping.
+		\item For each $y\in\mathbb{R}^n_+$, $x=X_ky$ satisfies $x\in\mathbb{R}^n_+$ and $T_k(x)=y$. Hence, $T_k$ is an onto mapping (every $y$ can be mapped onto).
+		\item $T^{-1}_k$ is a well-defined mapping. 
+		\item $T^{-1}_k\circ T_k$ is the identity mapping from $\mathbb{R}^n_+$ to $\mathbb{R}^n_+$: $T^{-1}_k(T_k(x))=T^{-1}_k(X^{-1}_kx)=X_kX^{-1}_kx=x$ for each $x\in\mathbb{R}^n_+$. 
+	\end{itemize} 
+\end{itemize}
+
+\subsection*{Exercise 5}
+\begin{itemize}
+	\item[(a)] $x=(1,2)^T$. $X=\begin{bmatrix}1 & 0 \\ 0 & 2\end{bmatrix}$. $X^{-1}=\begin{bmatrix}1 & 0 \\ 0 &  \frac{1}{2} \end{bmatrix}$ The affine scaling mapping is $y=X^{-1}x$ while the inverse mapping is $x=Xy$. Then the transformed linear program is
+	\begin{equation*}
+	\begin{array}{rl}
+	\min & y_1+4y_2 \\
+	\text{s.t.} & 2y_1 + 2y_2 = 4 \\
+	& y_1,y_2 \geq 0
+	\end{array}
+	\end{equation*}
+	\item[(b)] 
+	\begin{align*}
+	d_y=\left[  \left( \begin{array}{ll} 1& 0 \\ 0 & 1 \end{array}\right) - \left( \begin{array}{l} 2 \\ 2 \end{array}\right)\left[ (2, 2)\left( \begin{array}{l} 2 \\ 2 \end{array}\right)\right] ^{-1}(2, 2)\right]  \left( \begin{array}{c} -1 \\ -4 \end{array}\right)=\left( \begin{array}{c} \frac{3}{2} \\ -\frac{3}{2} \end{array}\right).
+	\end{align*}
+	\begin{align*}
+	d_x=Xd_y=\left( \begin{array}{ll} 1& 0 \\ 0 & 2 \end{array}\right)\left( \begin{array}{c} \frac{3}{2} \\ -\frac{3}{2} \end{array}\right)=\left( \begin{array}{c} \frac{3}{2} \\ -3 \end{array}\right).
+	\end{align*}
+	
+		\begin{figure}[H]
+			\centering
+			%	\includegraphics[width=0.7\textwidth]{ISE505H10F2.eps}
+			%	\includegraphics[width=0.7\textwidth]{ISE505H10F3.eps}
+			\includegraphics[width=0.22\textwidth]{ISE505H10F4.eps}
+			\includegraphics[width=0.3\textwidth]{ISE505H10F5.eps}
+			\caption{Problem 5.(a,b)}
+		\end{figure}
+		
+		
+	\item[(c)] $x=(\frac{1}{3},\frac{10}{3})^T$. $X=\begin{bmatrix}\frac{1}{3} & 0 \\ 0 & \frac{10}{3}\end{bmatrix}$. $X^{-1}=\begin{bmatrix} 3 & 0 \\ 0 & \frac{3}{10} \end{bmatrix}$ The affine scaling mapping is $y=X^{-1}x$ while the inverse mapping is $x=Xy$. Then the transformed linear program is
+	\begin{equation*}
+	\begin{array}{ll}
+	\min & -\frac{1}{3}y_1 - \frac{20}{3} y_2 \\
+	\text{s.t.} & \frac{2}{3}y_1 + \frac{10}{3}y_2 = 4 \\
+	& y_1,y_2 \geq 0
+	\end{array}
+	\end{equation*}
+	\begin{align*}
+	d_y=\left[  \left( \begin{array}{ll} 1& 0 \\ 0 & 1 \end{array}\right) - \left( \begin{array}{l} \frac{2}{3}\\ \frac{10}{3}\end{array}\right)\left[ (\frac{2}{3}, \frac{10}{3})\left( \begin{array}{l} \frac{2}{3}\\ \frac{10}{3} \end{array}\right)\right] ^{-1}(\frac{2}{3}, \frac{10}{3})\right]  \left( \begin{array}{c} -\frac{1}{3}\\- \frac{20}{3}\end{array}\right)=\left( \begin{array}{c} \frac{25}{26} \\ -\frac{5}{26} \end{array}\right).
+	\end{align*}
+	\begin{align*}
+	d_x=Xd_y=\left( \begin{array}{ll} \frac{1}{3} & 0 \\ 0 & \frac{10}{3} \end{array}\right)\left( \begin{array}{c}  \frac{25}{26} \\ -\frac{5}{26}  \end{array}\right)=\left( \begin{array}{c}  \frac{25}{78} \\ -\frac{50}{78}  \end{array}\right).
+	\end{align*}
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.25\textwidth]{ISE505H10F7.eps}
+			\includegraphics[width=0.4\textwidth]{ISE505H10F8.eps}
+			\caption{Problem 5.(c)}
+		\end{figure}
+\end{itemize}
+
+
+
+\end{document}
