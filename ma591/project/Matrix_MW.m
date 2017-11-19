@@ -35,7 +35,7 @@ while IDX>0
     fac2_lbd_gain = fac2_lbd_gain + trace(M*M*X);
     %update date distribution matrix
     W = expm(ita*sum_M);
-    X = 1/trace(W)*W
+    X = 1/trace(W)*W;
   
     %Count # of rounds
     T = T + 1;

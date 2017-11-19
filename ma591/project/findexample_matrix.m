@@ -6,18 +6,19 @@
 function IDX = findexample_matrix(A, X)
 
 % # of inequalities.
-n=length(A(1,1,:));
+n = length(A(1,1,:));
 epsi = 1e-04;
 
 for i = 1 : n
     if trace(A(:,:,i)'*X) < -epsi
-        gain_value = trace(A(:,:,i)'*X)
-        IDX = i
+%    if trace(A(:,:,i)'*X) < 0
+        IDX = i;
         return
     end
 end
 
-IDX = -1;
+IDX = -1
+pause
 return 
 
 
