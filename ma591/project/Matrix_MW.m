@@ -16,6 +16,7 @@ function [Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(A, X, rho, epsilon, ita
 %check feasibility
 IDX = findexample_matrix(A, X);
 
+
 %Initialize sum. 
 %sum_M: sum of cost matrix from beginning to current round.
 sum_M = zeros(m);
@@ -34,7 +35,7 @@ while IDX>0
     fac2_lbd_gain = fac2_lbd_gain + trace(M*M*X);
     %update date distribution matrix
     W = expm(ita*sum_M);
-    X = 1/trace(W)*W;
+    X = 1/trace(W)*W
   
     %Count # of rounds
     T = T + 1;

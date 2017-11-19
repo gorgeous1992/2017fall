@@ -1,42 +1,24 @@
 %%%This is the main file of code for the project of class MA591
-%%%Matrix Multiplicated Weights Algorithm for SDP
-
-%Generate one toy example with m = 3, n = 10;
+%%%Matrix Multiplicated Weights Algorithm for MAX CUT Problem
 clc
 clear all
 
-%% Generating examples
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%% Artifically generated example.
-% 
-% m = 10;
-% n = 50;
-% 
-% %Generate optimal density matrix X_opt
-% X_opt = Artificial_randomX_opt(m);
-% %Generate 3-d matrix A
-% A = Artificial_randomA(m, n, X_opt);
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% Generate one toy example with m = 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+L = cell2mat(struct2cell(load('L_toyExample.mat')));
+ trace(L*[1 -1 1 -1; -1 1 -1 1; 1 -1 1 -1; -1 1 -1 1])
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Hand calculating example
-% 
-% A(:,:,1) = [-2 0 ; 0 1];
-% A(:,:,2) = [-2 1 ; 2 2];
-% A(:,:,3) = [-1 0 ; 1 2];
-% 
-% v = [1/3; 2*sqrt(2)/3];
-% X_opt = v*v';
-% 
-% 
-% A
-% X_opt
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+optvalue = 16;
+[~,m] = size(L);
+n = m+1;
+A = MAXCUT_A(m, optvalue, L)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-% Set parameters:
+%% Set parameters:
 rho = para_rho(A);
-epsilon = 1e-1;
+epsilon = 0.01;
 ita = epsilon/(2*rho);
 %ita = 1/3;
 
@@ -48,7 +30,8 @@ X = 1/m*eye(m);
 
 %% Print the solution
 fprintf('\nSolution:\n')
-Solu
+Solu = 4*Solu
+Solu_cut = 0.25*trace(L*Solu)
 
 %% verify feasibility of Solution
 feas = zeros(n,1);
