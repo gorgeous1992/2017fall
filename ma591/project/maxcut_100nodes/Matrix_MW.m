@@ -26,7 +26,7 @@ T=0;
 gain = 0;
 while IDX>0
     %Obeserve gain matrix
-    M = 1/rho * A(:,:,IDX);
+    M = 1/rho(IDX) * A(:,:,IDX);
     sum_M = sum_M + M;
     
     %gain so far

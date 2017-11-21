@@ -7,7 +7,7 @@ function IDX = findexample_matrix(A, X)
 
 % # of inequalities.
 n = length(A(1,1,:));
-epsi = 1e-3;
+epsi = 1e-2;
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for i = 1 : n 

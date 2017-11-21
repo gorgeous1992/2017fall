@@ -10,14 +10,10 @@ n = length(A(1,1,:));
 epsi = 1e-03;
 
 for i = 1 : n 
-     trace(A(:,:,i)'*X)
     if trace(A(:,:,i)'*X) < -epsi
        
 %    if trace(A(:,:,i)'*X) < 0
-<<<<<<< HEAD
         trace(A(:,:,i)*X)
-=======
->>>>>>> f4b7f8e9c703331b339880f9befb304e11f07cd3
         IDX = i
         return
     end

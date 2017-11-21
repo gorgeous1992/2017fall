@@ -8,7 +8,7 @@ function rho = para_rho(A)
 
 temp = zeros(n,1);
 for i = 1 : n
-    temp(i) = norm(A(:,:,i));
+    temp(i) = norm(A(:,:,i), 'fro');
 end
 
 rho = max(temp);

@@ -9,7 +9,7 @@
 %        L: Laplacian matrix
 
 % Output: Good solution, # of rounds, total gain, best gain
-function [Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(L, A, X, rho, epsilon, ita)
+function [Solu, T, gain] = Matrix_MW(L, A, X, rho, ita)
 
 %record # of example n and the matrix size m.
 [m, ~, n] = size(A);
@@ -48,9 +48,6 @@ while IDX>0
     %continue loop if IDX >0, otherwise stop
     IDX = findexample_matrix(A, X);
 end
-
-bestgain = max(eig(sum_M));
-lbd_gain = max(eig(sum_M)) - ita*fac2_lbd_gain - log(n)/ita;
 
 Solu = X;
 end
