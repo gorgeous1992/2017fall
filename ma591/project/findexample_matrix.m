@@ -12,7 +12,8 @@ epsi = 1e-04;
 for i = 1 : n
     if trace(A(:,:,i)'*X) < -epsi
 %    if trace(A(:,:,i)'*X) < 0
-        IDX = i;
+        trace(A(:,:,i)*X)
+        IDX = i
         return
     end
 end

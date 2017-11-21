@@ -17,31 +17,31 @@ A = MAXCUT_A(m, optvalue, L)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Generate one big example with file L_pw05_100_0.mat
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-L = cell2mat(struct2cell(load('L_pw05_100_0.mat')));
-
-optvalue = NaN;
-[~,m] = size(L);
-n = m+1;
-A = MAXCUT_A(m, optvalue, L)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Generate one big example with file L_pw05_100_0.mat
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L = cell2mat(struct2cell(load('L_pw05_100_0.mat')));
+% 
+% optvalue = NaN;
+% [~,m] = size(L);
+% n = m+1;
+% A = MAXCUT_A(m, optvalue, L)
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Set parameters:
 rho = para_rho(A);
 epsilon = 0.01;
-ita = epsilon/(2*rho);
+%ita = epsilon/(2*rho);
 %epsi is the epsilon that for solving large-margin problem
 epsi = 1e-4;
-%ita = 1/3;
+ita = 1/3;
 
 %Initialize density matrix
 X = 1/m*eye(m);
 
 %Run Matrix MW algorithm
-[Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(A, X, rho, epsilon, ita);
+[Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(L, A, X, rho, epsilon, ita);
 
 
 

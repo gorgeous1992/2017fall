@@ -6,9 +6,10 @@
 %        epsilon:  relaxation of large-margin solution   (real number)
 %        ita: epsilon/(2*rho), parameter for updating weights (real number)
 %        A:    Coefficient 3-d Matrix (m by m by n)
+%        L: Laplacian matrix
 
 % Output: Good solution, # of rounds, total gain, best gain
-function [Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(A, X, rho, epsilon, ita)
+function [Solu, T, gain, bestgain, lbd_gain] = Matrix_MW(L, A, X, rho, epsilon, ita)
 
 %record # of example n and the matrix size m.
 [m, ~, n] = size(A);
@@ -36,7 +37,10 @@ while IDX>0
     %update date distribution matrix
     W = expm(ita*sum_M);
     X = 1/trace(W)*W;
-  
+    %Print 1/4 * L*X at each iteration
+    objvalue = trace(L*X)
+    
+    
     %Count # of rounds
     T = T + 1;
     
