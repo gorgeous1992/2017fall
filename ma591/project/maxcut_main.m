@@ -13,7 +13,8 @@ L = cell2mat(struct2cell(load('L_toyExample.mat')));
 optvalue = 16;
 [~,m] = size(L);
 n = m+1;
-A = MAXCUT_A(m, optvalue, L)
+A = MAXCUT_A(m, optvalue, L);
+A(:,:,m+1) = A(:,:,m+1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -22,20 +23,37 @@ A = MAXCUT_A(m, optvalue, L)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % L = cell2mat(struct2cell(load('L_pw05_100_0.mat')));
 % 
+<<<<<<< HEAD
 % optvalue = NaN;
 % [~,m] = size(L);
 % n = m+1;
 % A = MAXCUT_A(m, optvalue, L)
+=======
+% optvalue = 8190;
+% [~,m] = size(L);
+% n = m+1;
+% A = MAXCUT_A(m, optvalue, L);
+% %Rescale the last inequality
+% A(:,:,m+1) = (m+1)/trace(A(:,:,m+1))*A(:,:,m+1);
+>>>>>>> f4b7f8e9c703331b339880f9befb304e11f07cd3
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Set parameters:
 rho = para_rho(A);
+<<<<<<< HEAD
 epsilon = 0.01;
 %ita = epsilon/(2*rho);
 %epsi is the epsilon that for solving large-margin problem
 epsi = 1e-4;
 ita = 1/3;
+=======
+epsilon = 0.1;
+ita = epsilon/(2*rho);
+%epsi is the epsilon that for solving large-margin problem
+epsi = 1e-5;
+%ita = 1/3;
+>>>>>>> f4b7f8e9c703331b339880f9befb304e11f07cd3
 
 %Initialize density matrix
 X = 1/m*eye(m);

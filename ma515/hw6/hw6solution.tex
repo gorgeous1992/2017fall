@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color}
+\usepackage{mathtools, eucal}
+\usepackage{xparse}
+\usepackage{romannum}
+ 
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{MA 515 Homework 6}
+\author{Zheming Gao}
+\maketitle
+
+\section*{Problem 1}
+
+\section*{Problem 2}
+
+\begin{proof}
+
+Suppose $x \neq y$. Let $V = span\{x, y\}$ functional $f: V\rightarrow \mathbb R $ such that $\forall s, t\in \mathbb R$, 
+
+$$
+f(sx + ty) = s\|x\| - t\|y\|.
+$$
+
+Hence, $f(x) = \|x\|$, $f(y) = -\|y\|$ and $f(x)\neq f(y)$. By the theorem, there exists a functional $F: X\rightarrow \mathbb R$ such that $F = f$ on $V$ and $\|f\|_\infty = \|F\|_\infty$, which is a contradiction.
+
+\end{proof}
+
+\section*{Problem 3}
+
+
+\section*{Problem 7}
+
+\begin{proof}
+
+\begin{enumerate}
+\item
+
+$<x,x> = 1/2(\|x+x\|^2 - \|x\|^2 - \|x\|^2) = \|x\|^2 \geqslant 0$. And $<x,x> = 0$ if and only if $x = 0$.
+
+\item 
+
+It is also clear that $<x, y> = <y, x>, \forall x, y \in X$.
+
+\item
+We will show $<x, y+z> = <x, y>+<x, z>$, $\forall x, y, z\in X$. By definition, we know
+
+$$
+<x, y+z> = \frac{1}{2} (\|x+y+z\|^2 - \|x\|^2 - \|y+z\|^2).
+$$
+and 
+\begin{equation}\label{p7_1}
+\begin{aligned}
+\|x+y+z\|^2 = & 2\|x\|^2 + 2\|y+z\|^2 - \|x-y-z\|^2 \\
+ = & 2\|x+y\|^2 + 2\|z\|^2 - \|x+y-z\|^2
+\end{aligned}
+\end{equation}
+
+Also, with Parallelogram theorem, we have 
+
+$$
+\|x-y-z\|^2 + \|x+y-z\|^2 = 2\|x - z\| + 2\|y\|^2.
+$$
+
+Hence, plug it in (\ref{p7_1}) and have 
+
+$$
+\|x+y+z\|^2 = \|x\|^2 + \|y+z\|^2 + \|x+y\|^2 + \|z\|^2 - \|x - z\|^2 - \|y\|^2.
+$$
+
+which implies
+
+$$
+\begin{aligned}
+<x, y+z> =& \frac{1}{2} (\|x + y\|^2 - \|x - z\|^2 + \|z\|^2 - \|y\|^2) \\
+=& \frac{1}{2} (\|x + y\|^2 - \|y\|^2 - \|x\|^2 - \|x - z\|^2 + \|z\|^2 + \|x\|^2 )\\
+ =& <x, y> + <x, z>
+\end{aligned}
+$$
+
+\item
+
+We need to show that $<\lambda x, y> = \lambda<x, y>$, $\forall x, y\in X, \lambda \in \mathbb R$.
+
+To show this, we need a few steps. Firstly, it holds for $\lambda\in \mathbb N$ and it can be proved by induction. Also, 
+$$
+\begin{aligned}
+<x, -y> =& \frac{1}{2} (\|x - y\|^2  - \|x\|^2 - \|y\|^2) \\
+=& \frac{1}{2} (-\|x + y\|^2 + \|y\|^2 + \|x\|^2 )\\
+ =& -<x, y> 
+\end{aligned}
+$$ 
+
+Hence, it holds for $\lambda = -1$ and so holds for $\lambda\in \mathbb Z$. 
+
+Next we will show that it holds for $\lambda \in \mathbb Q$. Let $\lambda = p/q, (q\neq 0), p, q \in \mathbb Z$. Hence, 
+
+$$
+q<x, \lambda y> = q <x, \frac{p}{q}y> = <x, py> = p<x, y>.
+$$ 
+
+Both sides divided by $q$ and we have $<\lambda x, y> = \lambda<x, y>, \forall \lambda \in \mathbb Q$.
+
+Since $\mathbb Q$ is dense in $\mathbb R$, $\forall \lambda\in\mathbb R$, there exists a sequence of rational numbers $\{\lambda_n\}_{n\in\mathbb N}$ such that $\lambda_n \rightarrow \lambda$. Hence, $<\lambda x, y> = \lambda<x, y>, \forall \lambda \in \mathbb R$.
+
+In conclusion, $<\cdot, \cdot>$ is an inner product.
+
+\end{enumerate}
+
+\end{proof}
+
+\section*{Problem 8}
+
+\begin{enumerate}
+\item [(i)]
+
+\begin{proof}
+
+Suppose $\|\cdot\|_1$ is induced by inner product, i.e., $\|\cdot\|_1 = \sqrt{<\cdot, \cdot>}$. However, if so, then $\|\cdot\|$ must satisfy parallelogram identity. For $a = (1,1)^T, b = (-1, 2)^T$, $$
+2\|a\|_1^2 + 2\|b\|_1^2 = 26 \neq 18 = \|a - b\|_1^2 + \|a + b\|_1^2.
+$$
+This is a contradiction.
+
+\end{proof}
+
+\item [(ii)]
+
+Still, it breaks the parallelogram identity.
+
+Let $f(x) = x, g(x) = 2x$. Hence, $\|f\|_\infty = 1, \|g\|_\infty = 2$. But $\|f+g\|_\infty = 3, \|f-g\|_\infty = 1$. So 
+
+$$
+\|f+g\|_\infty + \|f-g\|_\infty \neq 2\|f\|_\infty + 2\|g\|_\infty.
+$$
+
+\end{enumerate}
+
+\section*{Problem 9}
+
+\begin{proof}
+
+\begin{enumerate}
+\item ["$\Rightarrow$"], proved in class. 
+ $\left\langle x, x_n \right\rangle$ converges $\left\langle x, x \right\rangle = \|x\|^2$. Hence, 
+ 
+$$
+\lim_{n\rightarrow +\infty} \|x_n - x\|^2 = \lim_{n\rightarrow +\infty} \left\langle x_n - x, x_n - x \right\rangle = \lim_{n\rightarrow +\infty} \|x_n\|^2 - 2\left\langle x, x_n \right\rangle + \|x\|^2 = 0
+$$
+
+\item ["$\Leftarrow$"]. If $x_n\rightarrow x$, then by Cauchy-Schwartz inequality,
+
+$$
+0\leqslant \lim_{n\rightarrow +\infty} \left| \left\langle x_n - x, x \right\rangle\right| \leqslant \lim_{n\rightarrow +\infty} \|x_n - x\| \|x\| = 0.
+$$
+
+By squeeze theorem, $\lim_{n\rightarrow +\infty} \left\langle x_n - x, x \right\rangle = 0$. Hence, $x_n \rightharpoonup x$. 
+
+Also, 
+$$
+\begin{aligned}
+0 = \varlimsup_{n\rightarrow +\infty} \|x_n - x\|^2 & = \varlimsup_{n\rightarrow +\infty} \left\langle x_n - x, x_n - x \right\rangle\\
+ = &  \varlimsup_{n\rightarrow +\infty} \|x_n\|^2 - 2 \varlimsup_{n\rightarrow +\infty} \left\langle x, x_n \right\rangle + \|x\|^2 \\
+= &  \varlimsup_{n\rightarrow +\infty} \|x_n\|^2 - 2 \lim_{n\rightarrow +\infty} \left\langle x, x_n \right\rangle + \|x\|^2 \\
+= &  \varlimsup_{n\rightarrow +\infty} \|x_n\|^2 - \|x\|^2
+\end{aligned}
+$$
+
+Similarly, we have $\varliminf_{n\rightarrow +\infty} \|x_n\|^2 - \|x\|^2 = 0$. Hence, $\lim_{n\rightarrow +\infty} \|x_n\| = \|x\|$.
+
+\end{enumerate}
+\end{proof}
+
+\section*{Problem 10}
+
+\begin{proof}
+
+\begin{enumerate}
+\item [(i)]
+
+(Shown in class) Since $\{e_n\}_{n\in \mathbb N}$ is an orthonormal basis of $\mathcal H$, for any $x\in \mathcal H$, it can be expressed as
+
+$$
+x = \sum_{i=1}^\infty \alpha_i e_i \qquad \alpha_i \in \mathbb R.
+$$
+
+Hence, 
+$$
+\left\langle x, e_i  \right\rangle = \alpha_i \quad \text{and} \quad \left\langle x, x  \right\rangle = \|x\|^2 = \sum_{i=1}^\infty\alpha_i ^2 < +\infty.
+$$
+
+Hence, 
+$$
+\lim_{n\rightarrow +\infty} \left\langle x, e_i  \right\rangle = \lim_{n\rightarrow +\infty} \alpha_i = 0.
+$$
+
+i.e., $e_n \rightharpoonup 0$.
+
+
+
+
+\item [(ii)]
+
+******
+
+***
+
+***********
+
+***********
+
+****************
+
+\end{enumerate}
+
+\end{proof}
+
+\end{document}
