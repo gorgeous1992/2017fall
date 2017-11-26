@@ -18,25 +18,76 @@
 %Or just google stuff
  
 \title{Project Report}
-\author{Missy Gaddy, Zheming Gao}
+\author{Melissa Gaddy, Zheming Gao}
 \maketitle
 
 \section{Max Cut problem}
 
 The max cut problem can be reformulate as the following form
 
-\begin{equation}
-\begin{array}{r l l l}
-\max & \frac{1}{4} L \bullet X & & \\
-\text{s.t.} & A_j \bullet X & \preceq & 0 \\
-& j = 1,\dots, n & &
+\begin{equation}\label{Originalproblem}
+\begin{array}{c c c c}
+\max & \frac{1}{4} L \bullet X &  & \\
+\text{s.t.} & (e_je_j^T) \bullet X  & =  1,  & \forall j = 1,\dots, n \\ 
+ & X  & \succeq  0. &
 \end{array}
 \end{equation}
+
+where $X\in \mathbb S_+^n$.
+
+If we denote the optimal value as $b$ and scale $X$ by $1/n$, then we would like to check the feasibility of the constraints:
+
+
+\begin{equation*}
+\begin{array}{c c c c}
+& \frac{n}{4b} L \bullet X & \geqslant 1 & \\
+& n(e_je_j^T) \bullet X  & =  1,  & \forall j = 1,\dots, n \\ 
+ & X  & \succeq  0. &
+\end{array}
+\end{equation*}
+
+Finally, if we take $A_j = n(e_je_j^T) - I, (j = 1,\dots, n)$, and $A_{n+1} = \frac{n}{4b} L - I$, then the feasibility problem can be reformed as 
+
+\begin{equation}\label{feasiblilityproblem}
+\begin{array}{c c c c}
+& A_j \bullet X & \geqslant 0 & \forall j = 1,\dots, n+1 \\
+& \text{Tr}(X) & = 1 &\\ 
+ & X  & \succeq  0. &
+\end{array}
+\end{equation}
+
+on which the Matrix-MW algorithm can be applied. To apply Matrix-MW, we would like to solve the large-margin problem with an error parameter $\delta >0$. Denote $K = \{X \succeq 0 | \text{Tr}(X) = 1\}$, we either solve the problem to an additive error of $\delta$, i.e., find $X \in K$ such that $A_j \bullet X  \geqslant -\delta,  \forall j = 1,\dots, n+1$, or prove the system (\ref{feasiblilityproblem}) is infeasible.
+
+
+Initialize $X^{(1)} = 1/n I$, and set parameters $\epsilon$, $\eta = -\ln(1-\epsilon)$, we apply Matrix-MW on three different examples. For each example, we list the result and errors for different parameters.
 
 
 
 
 \section{Results}
+\begin{table}[htbp]\label{toytable}
+\centering
+\begin{tabular}{||c|c|c|c|c||}
+\hline
+$\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+%\hline
+%$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
+\hline
+$\delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+\hline
+$\text{\# of rounds}$ & 20 & 328 & 3465  & 34827 \\
+\hline
+$\text{Rank} (X)$ & 4 & 4 & 4 & 4 \\
+\hline
+$\|X - X^*\|_2$ & 2.7700 & 2.7557 & 2.7556 & 2.7545 \\
+\hline
+$\|X - X^*\|_2 / \|X^*\|_2$ & 0.6925   & 0.6889 & 0.6887 & 0.6886\\
+\hline
+$|b^* - b|$ & 0.4595 & 0.0482 & 0.0039 & 0.0002 \\
+\hline
+\end{tabular}
+\caption{toy example}
+\end{table}
 
 \begin{table}[htbp]\label{10nodestable}
 \centering
@@ -44,14 +95,18 @@ The max cut problem can be reformulate as the following form
 \begin{tabular}{||c|c|c|c|c||}
 \hline
 $\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
-\hline
-$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
+%\hline
+%$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
 \hline
 $\delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
 \hline
 $\text{\# of rounds}$ & 19 & 633 & 7230 & 73228 \\
 \hline
+$\text{Rank} (X)$ & 10 & 10 & 10 & 10 \\
+\hline
 $\|X - X^*\|_2$ & 8.9298 & 8.9171 & 8.9169 & 8.9168 \\
+\hline
+$\|X - X^*\|_2 / \|X^*\|_2$ & 0.8930 & 0.8917 & 0.8917 & 0.8917 \\
 \hline
 $|b^* - b|$ & 1.9107 & 0.1908 & 0.0204 & 0.0011 \\
 \hline
@@ -61,12 +116,11 @@ $|b^* - b|$ & 1.9107 & 0.1908 & 0.0204 & 0.0011 \\
 
 \begin{table}[htbp]\label{100nodestable}
 \centering
-
 \begin{tabular}{||c|c|c|c|c||}
 \hline
 $\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
-\hline
-$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
+%\hline
+%$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
 \hline
 $\delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
 \hline
@@ -79,6 +133,30 @@ $|b^* - b|$ & 3.2430 & 0.7318 &  & \\
 \end{table}
 
 
+
+\subsection{Comments}
+
+\begin{enumerate}
+\item
+"\# or rounds" is the number of iterations for Matrix-MW algorithm. It stops when $A_j \bullet X  \geqslant -\delta$ is satisfied for any $j = 1, \dots, n+1$. 
+
+\item
+Solution $X$ and the value of $b = \frac{1}{4} L \bullet X$ are obtained from iteration. $X^*$ and $b^*$ are optimal solution and optimal value to problem (\ref{Originalproblem}). We list the error of solution $\|X- X^*\|_2$ and the error of object value $|b - b^*|$.
+
+\item Notice the solution absolute error in 2-norm is very large, so we also calculate the relative error in 2-norm for the toy example and the 10-node example.
+
+
+\item
+The 100-node example has blank units in table since the algorithm converges very slow when $\epsilon$ and $\delta$ are smaller than $10^{-2}$. (\# of iteration will exceed $10^{5}$ ). 
+
+\item
+Rank of the iteration solution is not 1. So the Rank = 1 constraint of original MAX CUT problem cannot be eliminated.
+
+
+\item 
+Notice that for each result, the $\epsilon$ and $\delta$ are in the same order of magnitude. The reason is, if we set $\epsilon$ and $\delta$ in different orders of magnitude, e.g., $\epsilon = 0.01$ and $\delta = 0.001$, or $\epsilon = 0.001$ and $\delta = 0.01$, the algorithm will not converge or converge very slow. From this we conclude that Matrix-MW is very parameter sensitive.
+
+\end{enumerate}
 
 
 
