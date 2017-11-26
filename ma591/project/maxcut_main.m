@@ -41,7 +41,7 @@ rho = para_rho(A);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ita (version 2)
 %epsilon = 9.1*1e-03;
-epsilon = 2*1e-03;
+epsilon = 1*1e-03;
 ita = -log(1-epsilon);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

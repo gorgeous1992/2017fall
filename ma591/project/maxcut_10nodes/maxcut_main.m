@@ -17,12 +17,12 @@ clear all
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Generate one big example with file L_pw05_100_0.mat
+%% Generate one big example with file L_toyExample_10nodes.mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-L = cell2mat(struct2cell(load('L_pw05_100_0.mat')));
+L = cell2mat(struct2cell(load('L_toyExample_10nodes.mat')));
 
-optvalue = 8190;
+optvalue = 80;
 [~,m] = size(L);
 n = m+1;
 A = MAXCUT_A(m, optvalue, L);
@@ -54,9 +54,9 @@ epsi = [0.1, 1e-3];
 X = 1/m*eye(m);
 
 %Run Matrix MW algorithm for epsi(1) to converges fast
-[temp_Solu, T1] = Matrix_MW(L, A, X, rho, ita(1), epsi(1));
-%Run again Matrix MW algorithm with solu from last run for epsi(2) to converges precisely
-[Solu, T2] = Matrix_MW(L, A, temp_Solu, rho, ita(2), epsi(2));
+[Solu, T] = Matrix_MW(L, A, X, rho, ita(2), epsi(2));
+% %Run again Matrix MW algorithm with solu from last run for epsi(2) to converges precisely
+% [Solu, T2] = Matrix_MW(L, A, temp_Solu, rho, ita(2), epsi(2));
 
 
 %% verify feasibility of Solution
@@ -84,9 +84,15 @@ Solu_value = 0.25*trace(L*Solu)
 %% Compare # of rounds with theoretical upper bound of rounds
 fprintf('\nTotal number of rounds:\n')
 total_rounds = T;
-upbd_rounds = 4*max(rho)^2*log(n)/epsilon^2;
-fprintf('Total: %d\nUpperbound: %f\n', T, upbd_rounds);
+%upbd_rounds = 4*(max(rho))^2*log(n)/epsilon^2;
+%fprintf('Total: %d\nUpperbound: %f\n', T, upbd_rounds);
+fprintf('Total: %d\n', T);
+
 
 %% Compare the generated answer and best cut
 fprintf('\nThe ptimal value = %f \n Our optimal value = %f\n', optvalue, Solu_value);
 
+%% Difference of Solution matrix and X_opt in norm
+X_opt = cell2mat(struct2cell(load('Xopt_toyExample_10nodes.mat')));
+err_X = norm(Solu - X_opt);
+fprintf('\n err_X = %f\n', err_X);
