@@ -9,13 +9,13 @@
 %        L: Laplacian matrix
 
 % Output: Good solution, # of rounds, total gain, best gain
-function [Solu, T, gain] = Matrix_MW(L, A, X, rho, ita)
+function [Solu, T] = Matrix_MW(L, A, X, rho, ita, epsi)
 
 %record # of example n and the matrix size m.
 [m, ~, n] = size(A);
 
 %check feasibility
-IDX = findexample_matrix(A, X);
+IDX = findexample_matrix(A, X, epsi);
 
 
 %Initialize sum. 
@@ -23,17 +23,11 @@ IDX = findexample_matrix(A, X);
 sum_M = zeros(m);
 
 T=0;
-gain = 0;
-fac2_lbd_gain = 0;
 while IDX>0
     %Obeserve gain matrix
     M = 1/rho * A(:,:,IDX);
     sum_M = sum_M + M;
     
-    %gain so far
-    gain = gain + trace(M*X);
-    %second term in lower bound of gain:
-    fac2_lbd_gain = fac2_lbd_gain + trace(M*M*X);
     %update date distribution matrix
     W = expm(ita*sum_M);
     X = 1/trace(W)*W;
@@ -46,7 +40,7 @@ while IDX>0
     
     %check feasibility
     %continue loop if IDX >0, otherwise stop
-    IDX = findexample_matrix(A, X);
+    IDX = findexample_matrix(A, X, epsi);
 end
 
 Solu = X;

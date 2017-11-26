@@ -3,11 +3,10 @@
 %Input: 3-dimensional tensor A and distribution X;
 %Output: the smallest index j such that A_j X <0;
 
-function IDX = findexample_maxcut(A, X)
+function IDX = findexample_maxcut(A, X, epsi)
 
 % # of inequalities.
 n = length(A(1,1,:));
-epsi = 1e-06;
 
 for i = 1 : n 
      trace(A(:,:,i)'*X)
