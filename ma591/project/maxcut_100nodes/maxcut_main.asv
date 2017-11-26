@@ -54,20 +54,15 @@ epsi = [1e-1, 1e-02, 1e-03, 1e-04];
 X = 1/m*eye(m);
 
 %Run Matrix MW algorithm for epsi(1) to converges fast
-[Solu, T1, ~] = Matrix_MW(L, A, X, rho, 6*ita(4), epsi(3));
-% %Run again Matrix MW algorithm with solu from last run for epsi(2) to converges precisely
-% for j = 1:9
-%     [temp_Solu, T1, sum_M] = Matrix_MW_force(L, A, temp_Solu, rho, (10-j)*...
-%         ita(2), (10-j)*epsi(2), T1, sum_M);
-% end
-% [Solu, T, ~] = Matrix_MW_force(L, A, temp_Solu, rho, ita(3), epsi(3), T1, sum_M);
-% 
-% 
+[temp_Solu, T1, W] = Matrix_MW(L, A, X, rho, ita(1), epsi(1));
+%Run again Matrix MW algorithm with solu from last run for epsi(2) to converges precisely
+[Solu, T2] = Matrix_MW_force(L, A, W, temp_Solu, rho, ita(2), epsi(2), T1, sum_M);
+
 
 %% verify feasibility of Solution
  feas = zeros(n,1);
 for i = 1:n
-    feas(i) = trace(A(:,:,i)*Solu);
+    feas( i) = trace(A(:,:,i)*Solu);
 end
 fprintf('Feasible?\n')
 if feas >= -epsi

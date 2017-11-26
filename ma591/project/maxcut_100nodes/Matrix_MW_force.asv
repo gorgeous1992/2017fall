@@ -1,18 +1,19 @@
 % Matrix Multiplicated Weights function (Gain version)
-% for sovling specific SDP.
+% This function is to continue computing based on the result of 
+%      big epsilon. To force MW to converge faster, we use a big epsilon
+%      and delta, and then run this function to make it converge.
 
-% Input: X:    Initial Distribution Matrix  (m by m)
+% Input: X:    Result Distribution Matrix  (m by m)
 %        rho:  ||A_i||             (m by 1 vector)
-%        epsi:  relaxation of large-margin solution   (real number)
-%        ita: epsilon/(2*rho), parameter for updating weights (real number)
+%        epsi:  relaxation of large-margin solution (smaller)   (real number)
+%        ita: -ln(1-epsilon), (real number)
 %        A:    Coefficient 3-d Matrix (m by m by n)
 %        L: Laplacian matrix L
-
+%        sum_M: to continue, we need sum_M as part of this algorithm.
+%        T1: T = T1 + # of rounds 
 
 % Output: Good solution, # of rounds, total gain, best gain
-%         sum_M: record it to use in Matrix_MW_force function.
-%   (deletedd)      W: weighted matrix. record it to use in Matrix_MW_force function.
-function [Solu, T, sum_M] = Matrix_MW(L, A, X, rho, ita, epsi)
+function [Solu, T] = Matrix_MW_force(L, A, X, rho, ita, epsi, T1, sum)
 
 %record # of example n and the matrix size m.
 [m, ~, n] = size(A);
@@ -20,25 +21,24 @@ function [Solu, T, sum_M] = Matrix_MW(L, A, X, rho, ita, epsi)
 %check feasibility
 IDX = findexample_maxcut(A, X, epsi);
 
-
-%Initialize sum. 
-%sum_M: sum of cost matrix from beginning to current round.
-sum_M = zeros(m);
-
-T=0;
+%continue counting # of rounds
+T = T1;
+% sum_M = sum;
 while IDX>0
     %Obeserve gain matrix
     M = 1/rho(IDX) * A(:,:,IDX);
-    sum_M = sum_M + M;
-    
+    %sum_M: sum of cost matrix from beginning to current round.
+    sum_M = sum_M + ita*M;
+   
     
     %update date distribution matrix
-    W = expm(ita*sum_M);
+    W = expm(sum_M);
     X = 1/trace(W)*W;
     
     %Print the value of cut
     current_cut = 1/4*trace(L*X)
-     
+    
+  
     %Count # of rounds
     T = T + 1;
     
@@ -49,9 +49,4 @@ end
 
 Solu = X;
 end
-
-
-
-
-
 

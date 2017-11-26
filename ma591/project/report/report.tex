@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{mathtools, eucal}
+\usepackage{graphicx}
+\usepackage{color}
+ 
+
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{Project Report}
+\author{Missy Gaddy, Zheming Gao}
+\maketitle
+
+\section{Max Cut problem}
+
+The max cut problem can be reformulate as the following form
+
+\begin{equation}
+\begin{array}{r l l l}
+\max & \frac{1}{4} L \bullet X & & \\
+\text{s.t.} & A_j \bullet X & \preceq & 0 \\
+& j = 1,\dots, n & &
+\end{array}
+\end{equation}
+
+
+
+
+\section{Results}
+
+\begin{table}[htbp]\label{10nodestable}
+\centering
+
+\begin{tabular}{||c|c|c|c|c||}
+\hline
+$\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+\hline
+$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
+\hline
+$\delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+\hline
+$\text{\# of rounds}$ & 19 & 633 & 7230 & 73228 \\
+\hline
+$\|X - X^*\|_2$ & 8.9298 & 8.9171 & 8.9169 & 8.9168 \\
+\hline
+$|b^* - b|$ & 1.9107 & 0.1908 & 0.0204 & 0.0011 \\
+\hline
+\end{tabular}
+\caption{10 nodes example}
+\end{table}
+
+\begin{table}[htbp]\label{100nodestable}
+\centering
+
+\begin{tabular}{||c|c|c|c|c||}
+\hline
+$\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+\hline
+$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
+\hline
+$\delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+\hline
+$\text{\# of rounds}$ & 2777 & 49971 &  & \\
+\hline
+$|b^* - b|$ & 3.2430 & 0.7318 &  & \\
+\hline
+\end{tabular}
+\caption{100 nodes example}
+\end{table}
+
+
+
+
+
+
+\end{document}
