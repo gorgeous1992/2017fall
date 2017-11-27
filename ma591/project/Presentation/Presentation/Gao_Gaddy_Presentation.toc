@@ -1,0 +1,4 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Algorithm Overview}{3}{0}{1}
+\beamer@sectionintoc {2}{MW Algorithm for Linear Programming}{8}{0}{2}
+\beamer@sectionintoc {3}{MW Algorithm for Semidefinite Programming}{18}{0}{3}
