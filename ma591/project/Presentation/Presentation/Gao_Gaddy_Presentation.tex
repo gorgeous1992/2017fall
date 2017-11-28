@@ -57,7 +57,7 @@
 \begin{frame}{Notation}
 \begin{itemize}
 \setlength\itemsep{2em}
-\item $t \in \mathbb{R}$: iteration number (aka - ``round'') 
+\item $t$: iteration number (aka - ``round'') 
 \item $T$: Number of iterations in total.
 
 \item $p^{(t)} \in \mathbb{R}^n$: probability vector for round $t$ \\
@@ -69,7 +69,7 @@
 
 %%%%%%%%%%%%%%%%%%%
 \begin{frame}{General MW Algorithm}
-Fix $\eta \leq \frac{1}{2}$. Initialize $w^{(0)}_i = 1 \forall i = 1,\ldots,n$.\\ \vspace{.5cm}
+Fix $\eta \leq \frac{1}{2}$. Initialize $w^{(0)}_i = 1$, $ \forall i = 1,\ldots,n$.\\ \vspace{.5cm}
 For $t = 1,\ldots, T$:
 \begin{enumerate}
 \setlength\itemsep{1.2em}
@@ -215,7 +215,7 @@ x_i &\geq 0 \quad \forall i
 \column{.5\textwidth}
 Now the SDP:
 \begin{align*}
-A_j \bullet x &\geq 0 \quad \forall j = 1,\ldots,m \\
+A_j \bullet X &\geq 0 \quad \forall j = 1,\ldots,m \\
 \text{tr}(X) &= 1 \\
 X & \succcurlyeq 0
 \end{align*}
