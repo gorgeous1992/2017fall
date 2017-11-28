@@ -58,11 +58,8 @@
 \begin{frame}{Notation}
 \begin{itemize}
 \setlength\itemsep{2em}
-<<<<<<< HEAD
-\item $t $: iteration number (aka - ``round'') 
-=======
+
 \item $t$: iteration number (aka - ``round'') 
->>>>>>> 1d1faa557a5c8d7febaf5a28157d71c468ec0835
 \item $T$: Number of iterations in total.
 
 \item $p^{(t)} \in \mathbb{R}^n$: probability vector for round $t$ \\
@@ -221,13 +218,8 @@ x_i &\geq 0 \quad \forall i
 Now the SDP:
 \begin{align*}
 A_j \bullet X &\geq 0 \quad \forall j = 1,\ldots,m \\
-<<<<<<< HEAD
 \text{Tr}(X) &= 1 \\
 X & \in \mathbb S_+^n
-=======
-\text{tr}(X) &= 1 \\
-X & \succcurlyeq 0
->>>>>>> 1d1faa557a5c8d7febaf5a28157d71c468ec0835
 \end{align*}
 \end{columns}
 \end{frame}
@@ -257,9 +249,23 @@ $$
 %%%%%%%%%%%%%%%%%%
 \begin{frame}{Recall the MAXCUT problem}
 Given a weighted graph $G = (E, V)$, find a partition of the vertices into two vertex sets $V_1$ and $V_2$, i.e., $V = V_1\bigcupdot V_2$, that maximizes the ``cut'' edge weights.\\
-\vspace{2cm}
-(pic of graph)
+\begin{figure}
+  \caption{Toy example}
+  \centering
+    \includegraphics[width=0.8\textwidth]{toyGraph.png}
+\end{figure}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%
+\begin{frame}{Recall the MAXCUT problem}
+Given a weighted graph $G = (E, V)$, find a partition of the vertices into two vertex sets $V_1$ and $V_2$, i.e., $V = V_1\bigcupdot V_2$, that maximizes the ``cut'' edge weights.\\
+\begin{figure}
+  \caption{Toy example}
+  \centering
+    \includegraphics[width=0.8\textwidth]{toyGraph_withLine.png}
+\end{figure}
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%
 \begin{frame}{Recall the MAXCUT problem}
@@ -309,15 +315,15 @@ $$
 
 %%%%%%%%%%%%%%%%%%
 \begin{frame}{Reformulating the MAXCUT relaxation}
-Decision form: Does there exist a $b$ such that
+Decision form: Does there exist a $b^*$ such that
 \begin{align*}
-\frac{1}{4} L \bullet X &\geq b \\
+\frac{1}{4} L \bullet X &\geq b^* \\
 X_{ii} &= 1 \quad \forall \; i=1\,\ldots,n\\
 X &\succcurlyeq 0
 \end{align*}
 Observe that $X_{ii} = 1 \implies (e_ie_i^T)\bullet X = 1$. Rescale $X$ by $\frac{1}{n}$. Arrive at the formulation:
 \begin{align*}
-\left(\frac{n}{4b} L - I\right) \bullet X &\geq 0 \\
+\left(\frac{n}{4b^*} L - I\right) \bullet X &\geq 0 \\
 \left(n(e_ie_i^T) - I\right) \bullet X &\geq 0 \quad \forall \; i = 1,\ldots,n \\
 \text{Tr}(X) &= 1 \\
 X &\succcurlyeq 0
@@ -327,7 +333,7 @@ X &\succcurlyeq 0
 %%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Reformulating the MAXCUT relaxation}
-Let $A_j = n(e_je_j^T) - I$, $j = 1, \dots, n$ and $A_{n+1} = \frac{n}{4b} L - I$. 
+Let $A_j = n(e_je_j^T) - I$, $j = 1, \dots, n$ and $A_{n+1} = \frac{n}{4b^*} L - I$. 
 
 \begin{align*}
 A_j \bullet X &\geq 0 \quad \forall \; j = 1,\ldots,n \\
@@ -376,15 +382,13 @@ $T$ & 20 & 328 & 3465  & 34827 \\
 %\hline
 %$\|X - X^*\|_2 / \|X^*\|_2$ & 0.6925   & 0.6889 & 0.6887 & 0.6886\\
 \hline
-$|b^* - b|$ & 0.4595 & 0.0482 & 0.0039 & 0.0002 \\
-\hline
-$\frac{|b^* - b|}{|b^*|}$ & $2.88\times 10^{-2}$ &  $3.01\times 10^{-3}$  & $2.44\times 10^{-4}$ &  $1.25\times 10^{-5}$\\
+$|b^* - b^{(T)}|$ & 0.4595 & 0.0482 & 0.0039 & 0.0002 \\
+\hline 
+$\frac{|b^* - b^{(T)}|}{|b^*|}$ & $2.88\times 10^{-2}$ &  $3.01\times 10^{-3}$  & $2.44\times 10^{-4}$ &  $1.25\times 10^{-5}$\\
 \hline
 \end{tabular}
 \caption{toy example}
 \end{table}
-
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%
@@ -409,9 +413,9 @@ $T$ & 19 & 633 & 7230 & 73228 \\
 %\hline
 %$\|X - X^*\|_2 / \|X^*\|_2$ & 0.8930 & 0.8917 & 0.8917 & 0.8917 \\
 \hline
-$|b^* - b|$ & 1.9107 & 0.1908 & 0.0204 & 0.0011 \\
+$|b^* - b^{(T)}|$ & 1.9107 & 0.1908 & 0.0204 & 0.0011 \\
 \hline
-$\frac{|b^* - b|}{|b^*|}$ & $2.39\times 10^{-2}$ &  $2.39\times 10^{-3}$  & $2.55\times 10^{-4}$ &  $1.38\times 10^{-5}$\\
+$\frac{|b^* - b^{(T)}|}{|b^*|}$ & $2.39\times 10^{-2}$ &  $2.39\times 10^{-3}$  & $2.55\times 10^{-4}$ &  $1.38\times 10^{-5}$\\
 \hline
 \end{tabular}
 \caption{10 nodes example}
@@ -433,9 +437,9 @@ $\epsilon, \delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
 \hline
 $T$ & 2777 & 49971 &  & \\
 \hline
-$|b^* - b|$ & 3.2430 & 0.7318 &  & \\
+$|b^* - b^{(T)}|$ & 3.2430 & 0.7318 &  & \\
 \hline
-$\frac{|b^* - b|}{|b^*|}$ & $3.96\times 10^{-4}$  & $8.94\times 10^{-5}$ & & \\
+$\frac{|b^* - b^{(T)}|}{|b^*|}$ & $3.96\times 10^{-4}$  & $8.94\times 10^{-5}$ & & \\
 \hline
 \end{tabular}
 \caption{100 nodes example}
