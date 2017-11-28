@@ -14,7 +14,8 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
 \usepackage{empheq}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
+\usepackage{MnSymbol}
 \usepackage{bbm,dsfont}
 
 \title[MW Algorithm]{The Multiplicative Weights Update Method:}
@@ -57,7 +58,7 @@
 \begin{frame}{Notation}
 \begin{itemize}
 \setlength\itemsep{2em}
-\item $t \in \mathbb{R}$: iteration number (aka - ``round'') 
+\item $t $: iteration number (aka - ``round'') 
 \item $T$: Number of iterations in total.
 
 \item $p^{(t)} \in \mathbb{R}^n$: probability vector for round $t$ \\
@@ -69,7 +70,7 @@
 
 %%%%%%%%%%%%%%%%%%%
 \begin{frame}{General MW Algorithm}
-Fix $\eta \leq \frac{1}{2}$. Initialize $w^{(0)}_i = 1 \forall i = 1,\ldots,n$.\\ \vspace{.5cm}
+Fix $\eta \leq \frac{1}{2}$. Initialize $w^{(0)}_i = 1$, $ \forall i = 1,\ldots,n$.\\ \vspace{.5cm}
 For $t = 1,\ldots, T$:
 \begin{enumerate}
 \setlength\itemsep{1.2em}
@@ -103,8 +104,8 @@ $$
 MW algorithm can be used to solve a linear classifier problem
 \begin{itemize}
 \item $m$ labeled examples $(\ell_j, a_j)$, with $\ell_j \in \{-1,1\}$ and $a_j \in \mathbb{R}^n$ 
-\item Want to find a normal vector $x$ to a hyperplane so that $$\text{sgn}(a_j^Tx) = \ell_j \quad \forall j$$
-\item Equivalently, we want to find $x$ such that $$\ell_j a_j^Tx \geq 0 \quad \forall j$$
+\item Want to find a normal vector $x$ to a hyperplane so that $$\text{sgn}(a_j^Tx) = \ell_j \quad \forall j = 1, \dots, m$$
+\item Equivalently, we want to find $x$ such that $$\ell_j a_j^Tx \geq 0 \quad \forall j = 1, \dots, m$$
 \end{itemize}
 (Redefine $a_j \to \ell_j a_j$)
 \end{frame}
@@ -115,7 +116,7 @@ MW Algorithm can be used to solve the following LP:
 \begin{align*}
 a_j^Tx &\geq 0 \quad \forall j = 1,\ldots,m \\
 \mathds{1}^Tx &= 1 \\
-x_i &\geq 0 \quad \forall i = 1,\ldots,m
+x_i &\geq 0 \quad \forall i = 1,\ldots,n
 \end{align*}
 ($x$ is analogous to the distribution $p$)\\
 %Assume there exists a \emph{large-margin solution} $x^*$ s.t. $a_j^T x^* \geq \epsilon$ for some $\epsilon \geq 0$.
@@ -215,9 +216,9 @@ x_i &\geq 0 \quad \forall i
 \column{.5\textwidth}
 Now the SDP:
 \begin{align*}
-A_j \bullet x &\geq 0 \quad \forall j = 1,\ldots,m \\
-\text{tr}(X) &= 1 \\
-X & \succcurlyeq 0
+A_j \bullet X &\geq 0 \quad \forall j = 1,\ldots,m \\
+\text{Tr}(X) &= 1 \\
+X & \in \mathbb S_+^n
 \end{align*}
 \end{columns}
 \end{frame}
@@ -230,33 +231,36 @@ X & \succcurlyeq 0
 %%%%%%%%%%%%%%%%%%
 \begin{frame}{Matrix MW Algorithm}
 Define $\rho = \max_j ||A_j||$, $\eta = -\text{ln}(1-\epsilon), \epsilon > 0$. \\ \vspace{.5cm}
-Initialize $W^{(0)} = I_n$. \\ \vspace{.5cm}
+Initialize $W^{(0)} = I_n$ \quad and $X^{(0)} = W^{(0)}/Tr(W^{(0)})$ . \\ \vspace{.5cm}
 While $\exists \; j$ s.t. $A_j \bullet X^{(t)} < 0$:
 \begin{enumerate}
 \setlength\itemsep{1.2em}
 \item Find the index $j$ such that $A_j \bullet X^{(t)} < 0$
 \item Obtain the payoff $M^{(t)} = \frac{A_j}{\rho}$
-\item Update the weight matrix $W^{(t)}$:
+\item Update the weight matrix $W^{(t)}$ and $X^{(t)}$:
 $$ W^{(t+1)} = \exp \left(\eta \sum_{\tau =1}^t M^{(\tau)}\right)$$
+$$
+X^{(t+1)} = \frac{W^{(t+1)}}{Tr(W^{(t+1)})}
+$$
 \end{enumerate}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%
 \begin{frame}{Recall the MAXCUT problem}
-Given a weighted graph $G$, find a partition of the vertices into two vertex sets $V_1$ and $V_2$ that maximizes the ``cut'' edge weights\\
+Given a weighted graph $G = (E, V)$, find a partition of the vertices into two vertex sets $V_1$ and $V_2$, i.e., $V = V_1\bigcupdot V_2$, that maximizes the ``cut'' edge weights.\\
 \vspace{2cm}
 (pic of graph)
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%
 \begin{frame}{Recall the MAXCUT problem}
-For a graph $G$ with $n$ vertices, the vector $x \in \mathbb{R}^n$ gives the partition:
+For a graph $G = (E,V)$ with $|V| = n$ and $V = V_1 \bigcupdot V_2$, the vector $x \in \mathbb{R}^n$ gives the partition:
 $$
 x_i = \begin{cases} 1, & \text{if } v_i \in V_1 \\
 -1 , & \text{if } v_i \in V_2
-\end{cases}
+\end{cases} \quad i = 1, \dots, n
 $$
-And $w_{ij} = $ the edge weight between vertex $i$ and vertex $j$
+Let $w_{ij} := $ the weight on edge $(i,j)$
 $$
 \max_{x \in \{-1,1\}^n}\;\;  \sum_{(i,j) \in E} w_{ij}\frac{1-x_ix_j}{2}
 $$
@@ -271,12 +275,27 @@ Introduce the auxiliary matrix variable $X = xx^T$:
  & x_i^2 = 1
 \end{align*}
 Then drop the rank 1 constraint for the relaxation:
+
+\begin{minipage}{0.6\linewidth}
+
+
 \begin{align*}
 \max_{X} \;\;  & \frac{1}{4} L \bullet X \\
 \text{s.t.} \;\; & X_{ii} = 1 \quad \forall \; i=1\,\ldots,n\\
  & X \succcurlyeq 0
 \end{align*}
-Where $L$ is the Laplacian matrix of the graph.
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+$$
+L_{ij} = \left\{ \begin{aligned}
+\sum _{k\in V} w_{ik},  \quad & i = j \\
+-w_{ij}, \quad & i \neq j
+\end{aligned}\right.
+$$
+
+\end{minipage}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%
@@ -312,14 +331,15 @@ X &\succcurlyeq 0
 
 \begin{frame}{Matrix MW algorithm for MAXCUT (Large-Margin)}
 Define $\rho = \max_j ||A_j||$, $\eta = -\text{ln}(1-\epsilon), \epsilon > 0$, $\delta > 0$. \\ \vspace{.5cm}
-Initialize $W^{(0)} = I_n$. \\ \vspace{.5cm}
+Initialize $W^{(0)} = I_n$ \quad and $X^{(0)} = W^{(0)}/Tr(W^{(0)})$. \\ \vspace{.5cm}
 While $\exists \; j$ s.t. $A_j \bullet X^{(t)} < -\delta$:
 \begin{enumerate}
 \setlength\itemsep{1.2em}
 \item Find the index $j$ such that $A_j \bullet X^{(t)} < -\delta$
 \item Obtain the payoff $M^{(t)} = \frac{A_j}{\rho}$
-\item Update the weight matrix $W^{(t)}$:
-$$ W^{(t+1)} = \exp \left(\eta \sum_{\tau =1}^t M^{(\tau)}\right)$$
+\item Update the weight matrix $W^{(t)}$ and $X^{(t)}$:
+$$ W^{(t+1)} = \exp \left(\eta \sum_{\tau =1}^t M^{(\tau)}\right) ,\ \ X^{(t+1)} = \frac{W^{(t+1)}}{Tr(W^{(t+1)})}$$
+
 \end{enumerate}
 \end{frame}
 
