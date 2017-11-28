@@ -58,7 +58,11 @@
 \begin{frame}{Notation}
 \begin{itemize}
 \setlength\itemsep{2em}
+<<<<<<< HEAD
 \item $t $: iteration number (aka - ``round'') 
+=======
+\item $t$: iteration number (aka - ``round'') 
+>>>>>>> 1d1faa557a5c8d7febaf5a28157d71c468ec0835
 \item $T$: Number of iterations in total.
 
 \item $p^{(t)} \in \mathbb{R}^n$: probability vector for round $t$ \\
@@ -217,8 +221,13 @@ x_i &\geq 0 \quad \forall i
 Now the SDP:
 \begin{align*}
 A_j \bullet X &\geq 0 \quad \forall j = 1,\ldots,m \\
+<<<<<<< HEAD
 \text{Tr}(X) &= 1 \\
 X & \in \mathbb S_+^n
+=======
+\text{tr}(X) &= 1 \\
+X & \succcurlyeq 0
+>>>>>>> 1d1faa557a5c8d7febaf5a28157d71c468ec0835
 \end{align*}
 \end{columns}
 \end{frame}
