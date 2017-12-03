@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.16)  1 DEC 2017 12:09
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.8.16)  2 DEC 2017 21:10
 entering extended mode
 **./solution_hw9.tex
 (solution_hw9.tex
@@ -118,18 +118,11 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count99
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\xetex.def"
+File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
+JK)
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
@@ -150,12 +143,12 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \TX@old@col=\dimen118
 \TX@target=\dimen119
 \TX@delta=\dimen120
-\TX@cols=\count100
+\TX@cols=\count99
 \TX@ftn=\toks27
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
+\c@float@type=\count100
 \float@exts=\toks28
 \float@box=\box28
 \@float@everytoks=\toks29
@@ -171,8 +164,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -189,9 +182,10 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -218,13 +212,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen121
-\Hy@linkcounter=\count102
-\Hy@pagecounter=\count103
+\Hy@linkcounter=\count101
+\Hy@pagecounter=\count102
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count104
+\Hy@SavedSpaceFactor=\count103
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -236,10 +230,10 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count105
+\c@Hy@tempcnt=\count104
 LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen122
-\Fld@menulength=\count106
+\Fld@menulength=\count105
 \Field@Width=\dimen123
 \Fld@charsize=\dimen124
 Package hyperref Info: Hyper figures OFF on input line 6358.
@@ -251,22 +245,37 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count107
-\c@Item=\count108
-\c@Hfootnote=\count109
+\Hy@abspage=\count106
+\c@Item=\count107
+\c@Hfootnote=\count108
 )
 
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Message: Driver (autodetected): hxetex.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count110
-\c@bookmark@seq@number=\count111
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hxetex.def"
+File: hxetex.def 2017/03/14 v6.85a Hyperref driver for XeTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\puenc.def"
+File: puenc.def 2017/03/14 v6.85a Hyperref: PDF Unicode definition (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\stringenc.sty"
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box30
+\c@Hy@AnnotLevel=\count109
+\HyField@AnnotCount=\count110
+\Fld@listcount=\count111
+\c@bookmark@seq@number=\count112
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
 )
 \Hy@SectionHShift=\skip51
 )
@@ -276,7 +285,7 @@ Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 147.
+Package color Info: Driver file: xetex.def on input line 147.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
@@ -287,18 +296,15 @@ Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+
+Package epstopdf Warning: Drivers other than `pdftex' and `luatex' are not supp
+orted.
+
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count112
-\Gm@cntv=\count113
-\c@Gm@tempcnt=\count114
+\Gm@cnth=\count113
+\Gm@cntv=\count114
+\c@Gm@tempcnt=\count115
 \Gm@bindingoffset=\dimen125
 \Gm@wd@mp=\dimen126
 \Gm@odd@mp=\dimen127
@@ -309,10 +315,10 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen132
 \Gm@dimlist=\toks30
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-\c@remark=\count115
+("C:\Program Files\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
+\c@remark=\count116
 
-No file solution_hw9.aux.
+(solution_hw9.aux)
 \openout1 = `solution_hw9.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -323,44 +329,34 @@ LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
-\scratchdimen=\dimen133
-\scratchbox=\box30
-\nofMPsegments=\count117
-\nofMParguments=\count118
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count119
-\MPscratchDim=\dimen134
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks32
-)
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 \AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring OFF on input line 34.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count122
+\c@section@level=\count117
 )
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
 LaTeX Info: Redefining \nameref on input line 34.
+
+(solution_hw9.out) (solution_hw9.out)
 \@outlinefile=\write3
 \openout3 = `solution_hw9.out'.
 
 
-*geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -401,61 +397,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--39
  []
 
 
-Overfull \hbox (6.86058pt too wide) in paragraph at lines 78--79
-[]\OT1/cmr/m/n/10.95 At $\OML/cmm/m/it/10.95 w \OT1/cmr/m/n/10.95 = (1\OML/cmm/
-m/it/10.95 ; \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 2)$, we find $\OML/cmm/m/i
-t/10.95 s \OT1/cmr/m/n/10.95 = (1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML
-/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 
-3)$. $\OML/cmm/m/it/10.95 d[] \OT1/cmr/m/n/10.95 = (\OMS/cmsy/m/n/10.95  \OT1/c
-mr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 4848\OML/cmm/m/it/10.95 ;
- \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 6061)$. $\OML/cmm/
-m/it/10.95 d[] \OT1/cmr/m/n/10.95 = (\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 0\
-OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 6061\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/
-10.95  \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 6061\OML/cmm
-/m/it/10.95 ; \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT
-1/cmr/m/n/10.95 1212\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.
-95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0909)$. 
+Overfull \hbox (6.85497pt too wide) in paragraph at lines 78--79
+[]\TU/lmr/m/n/10.95 At $\OML/cmm/m/it/10.95 w \OT1/cmr/m/n/10.95 = (1\OML/cmm/m
+/it/10.95 ; \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 2)$\TU/lmr/m/n/10.95 , we
+ find $\OML/cmm/m/it/10.95 s \OT1/cmr/m/n/10.95 = (1\OML/cmm/m/it/10.95 ; \OT1/
+cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; 
+\OT1/cmr/m/n/10.95 3)$\TU/lmr/m/n/10.95 . $\OML/cmm/m/it/10.95 d[] \OT1/cmr/m/n
+/10.95 = (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/
+cmr/m/n/10.95 4848\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95
+ :\OT1/cmr/m/n/10.95 6061)$\TU/lmr/m/n/10.95 . $\OML/cmm/m/it/10.95 d[] \OT1/cm
+r/m/n/10.95 = (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :
+\OT1/cmr/m/n/10.95 6061\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/
+n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 6061\OML/cmm/m/it/10.95 ; \OMS
+/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 
+1212\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m
+/it/10.95 :\OT1/cmr/m/n/10.95 0909)$\TU/lmr/m/n/10.95 . 
  []
 
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\se-ascii-print.def"
+File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
+
+)
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
  [2]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
  (solution_hw9.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
-
-
-Package rerunfilecheck Warning: File `solution_hw9.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `solution_hw9.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 112.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 112.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
- ) 
+ )
+(\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 6421 strings out of 493323
- 92839 string characters out of 3139066
- 194988 words of memory out of 3000000
- 9890 multiletter control sequences out of 15000+200000
- 9201 words of font info for 35 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 29i,11n,24p,256b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb>
-Output written on solution_hw9.pdf (2 pages, 98315 bytes).
-PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9405 strings out of 427834
+ 128223 string characters out of 3152470
+ 219562 words of memory out of 3000000
+ 13304 multiletter control sequences out of 15000+200000
+ 8696 words of font info for 39 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 29i,11n,24p,256b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on solution_hw9.pdf (2 pages).
