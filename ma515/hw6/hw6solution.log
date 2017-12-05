@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  3 DEC 2017 20:16
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  4 DEC 2017 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -317,21 +317,24 @@ Package: romannum 2009/09/03 v1.0b roman numerals
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stdclsdv/stdclsdv.sty
 Package: stdclsdv 2009/09/04 v1.1a Sectional divisions
 ))
+\c@theorem=\count133
+\c@corollary=\count134
+
 (./hw6solution.aux)
 \openout1 = `hw6solution.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -384,31 +387,37 @@ Package graphics Info: Driver file: xetex.def on input line 96.
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2]
-LaTeX Font Info:    Try loading font information for U+eus on input line 191.
+]
+Overfull \hbox (23.00046pt too wide) in paragraph at lines 99--100
+[]\OT1/cmr/m/n/12 If $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 is a fi-nite di-men-s
+ional normed space, then we take an or-thonor-mal ba-sis $\OMS/cmsy/m/n/12 f\OM
+L/cmm/m/it/12 e[]; [] ; e[]\OMS/cmsy/m/n/12 g ^^Z
+ []
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/ueus.fd
+[2] [3] [4]
+LaTeX Font Info:    Try loading font information for U+eus on input line 299.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [3] [4]
-(./hw6solution.aux) ) 
+)
+[5] [6] [7] (./hw6solution.aux) ) 
 Here is how much of TeX's memory you used:
- 9711 strings out of 493591
- 180003 string characters out of 6143546
- 203900 words of memory out of 5000000
- 13067 multiletter control sequences out of 15000+600000
- 12736 words of font info for 50 fonts, out of 8000000 for 9000
+ 9727 strings out of 493591
+ 180161 string characters out of 6143546
+ 203064 words of memory out of 5000000
+ 13083 multiletter control sequences out of 15000+600000
+ 13043 words of font info for 51 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 33i,11n,40p,10383b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,11n,40p,10383b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on hw6solution.pdf (4 pages).
+Output written on hw6solution.pdf (7 pages).

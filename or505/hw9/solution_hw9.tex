@@ -1,0 +1,112 @@
+
+% Header, contains document class declaration, imports required packages, a place to define
+% local commands.  Usually you don't have to mess around with any of this, provided
+% you can find the template which suits your needs.
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsgen,amstext,amsbsy,amsopn,amsfonts,amsthm}
+% standard AMS packages for symbols, formats, etc.
+\usepackage{url,graphicx,tabularx,array,float}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+% packages for web interface, graphics, etc,
+
+\pagestyle{plain}
+
+
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+\newtheorem{remark}{Remark}
+%\linespread{2} %-- Uncomment for Double Space
+
+
+% Main text/body.  Notice \begin{document} and \end{document}.  Many environments
+% in LaTeX are set up like this.
+
+\begin{document}
+
+\title{ISE/OR/MA 505 Solution \#11}
+\line
+\leftright{\today}{Tiantian Nie} %-- left and right positions in the header
+
+\section*{Exercise (1)}
+We list the key results at each iteration.
+\begin{table}[h]
+\centering
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      Iteration $k$ & $d_y^k=-X_kr^k$ & Step length $\alpha_k$ & $x^{k+1}$ & $c^Tx^k - c^Tx^{k+1}$ \\\hline
+      0 & $(-0.0682,0.0227,0.0227)$ & $14.52$ & $(0.0025,0.6650,0.3325)$ & $0.0825$ \\\hline
+      1 & $(-0.8333,0.0021,0.0021)\times 10^{-3}$ & $1.1880\times 10^3$ & $(0.0000,0.6666,0.3333)$ & $8.2500\times 10^{-4}$ \\\hline
+      2 & $(-0.8333,0.0000,0.0000)\times 10^{-5}$ & $1.1880\times 10^5$ & $(0.0000,0.6667,0.3333)$ & $8.2500\times 10^{-6}$ \\\hline
+    \end{tabular}
+\end{table}
+
+\section*{Textbook Problem 7.2}
+
+\begin{itemize}
+  \item[(a)] At the vertex $x=(0,0,0.5,0.5)$, the reduced costs are $r_1=-1$ and $r_2=0$. So the moving direction is $d_1=(1,0,-0.5,-0.5)$.
+  \item[(b)] $x=(0.01,0.01,0.49,0.49)$. Use Karmarkar's algorithm. $d^k_y=(0.0075,-0.0025,-0.0025,-0.0025)$. Since the transformation between $x$ and $y$ is nonlinear, we don't have a moving ``direction'' in $x-$space.
+  \item[(c)] Use the primal affine scaling algorithm. Moving direction is $(0.9998,-0.0002,-0.4998,-0.4998)\times 10^{-4}$.
+  \item[(d)] Set $\mu=0.01$. The central force is $(0.0098,0.098,-0.0098,-0.0098)$.
+
+  Moving direction is $(0.0198,0.0098,-0.0148,-0.0148)$.
+  \item[(e)] Compare the moving directions given by different algorithms. Think about how they are defined. Consider their effects on the performance of the algorithms. Think about the meaning of $\mu$.
+\end{itemize}
+
+\section*{Textbook Problem 7.3}
+\begin{itemize}
+  \item[(a)] Dual problem is
+  \begin{equation*}
+    \begin{array}{rl}
+      \max & w_2+1 \\
+      \text{s.t.} & w_2\leq -1 \\
+      & w_2 \leq 0 \\
+      & w_1+w_2\leq 0 \\
+      & -w_1+w_2\leq 0
+    \end{array}
+  \end{equation*}
+  \item[(b)] Obviously.
+  \item[(c)] At $w=(1,-2)$, we find $s=(1,2,1,3)$. $d^k_w=(-0.4848,0.6061)$. $d^k_s=(-0.6061,-0.6061,-0.1212,-1.0909)$.
+  \item[(d)] This moving direction is pointing to one of the dual optimal solutions.
+  \item[(e)] Set $\mu=0.01$. Centering force is $(-0.5152,1.3939)$. The moving direction is $(-47.9697,59.2121)$.
+  \item[(f)] Whether the direction in (e) is better than in (c) depends on the choice of $\mu$. Please try different $\mu$. Some directions fail to point to an optimal solution.
+\end{itemize}
+
+\section*{Textbook Problem 7.6}
+\begin{itemize}
+\item[(a)]Based on the representation of $x=y+q$, we may convert the original LP problem to the following LP problem in terms of the new variable $y$:
+\begin{align*}
+\min & \quad c^Ty+c^Tq\\
+\text{s.t.} & \quad Ay=b-Aq\\
+& \quad y\geq 0.
+\end{align*}
+Subtracting the constant $c^Tq$ in the objective, it becomes the following standard form LP problem:
+\begin{align*}
+\min & \quad c^Ty\\
+\text{s.t.} & \quad Ay=b-Aq\\
+& \quad y\geq 0.
+\end{align*}
+\item[(b)] For the above standard form LP problem, its dual problem is given by
+\begin{align*}
+\min & \quad (b-Aq)^Tw\\
+\text{s.t.} & \quad A^Tw\leq c.
+\end{align*}
+When $q=0$, the above dual problem becomes
+\begin{align*}
+\min & \quad b^Tw\\
+\text{s.t.} & \quad A^Tw\leq c,
+\end{align*}
+which is actually a regular dual problem for the original LP problem with $q=0$.
+\end{itemize}
+
+
+\end{document}

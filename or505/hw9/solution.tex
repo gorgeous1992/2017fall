@@ -1,0 +1,177 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, }
+\usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{mathtools, eucal}
+\usepackage{listings}  
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{subcaption}
+
+\usepackage{amsmath,amsgen,amstext,amsbsy,amsopn,amsfonts,amsthm}
+% standard AMS packages for symbols, formats, etc.
+\usepackage{graphicx,tabularx,array,geometry,float}
+%\usepackage{hyperref}
+% packages for web interface, graphics, etc,
+
+ 
+\newtheorem{remark}{Remark}
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{Homework 9 Solutions}
+\author{Fangroup}
+\maketitle
+
+\section*{Problem 1}
+
+\begin{enumerate}
+\item [(a)]
+We list the key results at each iteration.
+\begin{table}[h]
+\small
+\centering
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      Iteration $k$ & $d_y^k=-X_kr^k$ & Step length $\alpha_k$ & $x^{k+1}$ & $c^Tx^k - c^Tx^{k+1}$ \\\hline
+      0 & $(-0.0682,0.0227,0.0227)$ & $14.52$ & $(0.0025,0.6650,0.3325)$ & $0.0825$ \\\hline
+      1 & $(-0.8333,0.0021,0.0021)\times 10^{-3}$ & $1.1880\times 10^3$ & $(0.0000,0.6666,0.3333)$ & $8.2500\times 10^{-4}$ \\\hline
+      2 & $(-0.8333,0.0000,0.0000)\times 10^{-5}$ & $1.1880\times 10^5$ & $(0.0000,0.6667,0.3333)$ & $8.2500\times 10^{-6}$ \\\hline
+    \end{tabular}
+\end{table}
+
+Results:
+
+\begin{lstlisting}
+%Solution:
+solu =
+    0.0000
+    0.6667
+    0.3333
+
+%Number of iterations
+itnum =
+     6
+%Objective value
+obj =
+    1.6667
+
+\end{lstlisting}
+
+\item [(b)]
+
+\begin{table}[h]
+\footnotesize
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      Iteration $k$ & 0 & 1  & 2 \\
+      \hline
+      $d_w^k$ & $( -0.5714, 1.6327)$ & $(0.0221, 0.0223)$ & $(0.0888, 0.1853)\times 10^{-3}$  \\
+      \hline
+      $d_s^k$ & $(-1.0612, -0.4898, -2.2041)$ & $(-0.0444, -0.0665, -0.0003)$ & $(-0.0965, -0.0077, -0.2741)\times10^{-3}$  \\
+      \hline
+      $\beta_k$ & $1.3475$ & $5.0597$ &   \\
+      \hline
+      $w^k$ & $(0,0)$ & $(-0.7700, 2.2000)$ & $(-0.6582, 2.3131)$\\
+      \hline
+      $s^k$ & $(2,1,3)$ & $( 0.5700, 0.3400, 0.0300)$ & $ (0.3452, 0.0034, 0.0287)$ \\
+      \hline
+    \end{tabular}
+\end{table}
+
+Results:
+
+\begin{lstlisting}
+%Solution:
+solu_w =
+   -0.6582
+    2.3131
+solu_s =
+    0.3452
+    0.0034
+    0.0287
+
+%Number of iterations
+itnum =
+     2
+%Objective value
+obj =
+    1.6548    
+\end{lstlisting}
+
+\end{enumerate}
+
+\section*{Problem 2}
+It is on HW8.
+
+\section*{Problem 3}
+
+\begin{itemize}
+  \item[(a)] At the vertex $x=(0,0,0.5,0.5)$, the reduced costs are $r_1=-1$ and $r_2=0$. So the moving direction is $d_1=(1,0,-0.5,-0.5)$.
+  \item[(b)] $x=(0.01,0.01,0.49,0.49)$. Use Karmarkar's algorithm. $d^k_y=(0.0075,-0.0025,-0.0025,-0.0025)$. Since the transformation between $x$ and $y$ is nonlinear, we don't have a moving ``direction'' in $x-$space.
+  \item[(c)] Use the primal affine scaling algorithm. Moving direction is $(0.9998,-0.0002,-0.4998,-0.4998)\times 10^{-4}$.
+  \item[(d)] Set $\mu=0.01$. The central force is $(0.0098,0.098,-0.0098,-0.0098)$.
+
+  Moving direction is $(0.0198,0.0098,-0.0148,-0.0148)$.
+  \item[(e)] Compare the moving directions given by different algorithms. Think about how they are defined. Consider their effects on the performance of the algorithms. Think about the meaning of $\mu$.
+\end{itemize}
+
+\section*{Problem 4}
+
+\begin{itemize}
+  \item[(a)] Dual problem is
+  \begin{equation*}
+    \begin{array}{rl}
+      \max & w_2+1 \\
+      \text{s.t.} & w_2\leq -1 \\
+      & w_2 \leq 0 \\
+      & w_1+w_2\leq 0 \\
+      & -w_1+w_2\leq 0
+    \end{array}
+  \end{equation*}
+  \item[(b)] Obviously.
+  \item[(c)] At $w=(1,-2)$, we find $s=(1,2,1,3)$. $d^k_w=(-0.4848,0.6061)$. $d^k_s=(-0.6061,-0.6061,-0.1212,-1.0909)$.
+  \item[(d)] This moving direction is pointing to one of the dual optimal solutions.
+  \item[(e)] Set $\mu=0.01$. Centering force is $(-0.5152,1.3939)$. The moving direction is $(-47.9697,59.2121)$.
+  \item[(f)] Whether the direction in (e) is better than in (c) depends on the choice of $\mu$. Please try different $\mu$. Some directions fail to point to an optimal solution.
+\end{itemize}
+
+
+
+\section*{Problem 5}
+
+\begin{itemize}
+\item[(a)]Based on the representation of $x=y+q$, we may convert the original LP problem to the following LP problem in terms of the new variable $y$:
+\begin{align*}
+\min & \quad c^Ty+c^Tq\\
+\text{s.t.} & \quad Ay=b-Aq\\
+& \quad y\geq 0.
+\end{align*}
+Subtracting the constant $c^Tq$ in the objective, it becomes the following standard form LP problem:
+\begin{align*}
+\min & \quad c^Ty\\
+\text{s.t.} & \quad Ay=b-Aq\\
+& \quad y\geq 0.
+\end{align*}
+\item[(b)] For the above standard form LP problem, its dual problem is given by
+\begin{align*}
+\min & \quad (b-Aq)^Tw\\
+\text{s.t.} & \quad A^Tw\leq c.
+\end{align*}
+When $q=0$, the above dual problem becomes
+\begin{align*}
+\min & \quad b^Tw\\
+\text{s.t.} & \quad A^Tw\leq c,
+\end{align*}
+which is actually a regular dual problem for the original LP problem with $q=0$.
+\end{itemize}
+
+\end{document}
+
