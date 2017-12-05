@@ -7,6 +7,9 @@
 \usepackage{romannum}
  
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
 
  
 \begin{document}
@@ -23,6 +26,12 @@
 
 \section*{Problem 1}
 
+\begin{proof}
+
+Given $\bar x \in X$, let $V = span \{\bar x\}$ and define linear bounded operator $F: V \rightarrow \mathbb R$, such that $\forall x \in V$, $F(x) = \|x\|$. Hence, by Hahn-Banach theorem, there exists $\Phi: X\rightarrow \mathbb R$ such that $\Phi = F$ on $V$ and $\|\Phi\|_\infty = \|F\|_\infty$. Since $\bar x \in V\subset X$, $\|\Phi(\bar x)\| =  \|F(\bar x)\| = \|\bar x\|$.
+
+\end{proof}
+
 \section*{Problem 2}
 
 \begin{proof}
@@ -38,6 +47,105 @@ Hence, $f(x) = \|x\|$, $f(y) = -\|y\|$ and $f(x)\neq f(y)$. By the theorem, ther
 \end{proof}
 
 \section*{Problem 3}
+
+\begin{proof}
+
+Since $\Lambda: Y \rightarrow \mathbb R^n$, $\forall y\in Y$, $\Lambda(y) = (\Lambda_1(y), \dots, \Lambda_n(y))$, where linear bounded functionals $\Lambda_i : Y \rightarrow \mathbb R$, $\forall i = 1, \dots, n$. By Hahn-Banach theorem, there exists a linear bounded functional for each $i$ such that $\widetilde \Lambda_i: X \rightarrow \mathbb R$, and $\|\widetilde \Lambda_i\|_\infty = \|\Lambda_i\|_\infty$. Let operator $\widetilde\Lambda: X \rightarrow \mathbb R^n$ such that 
+
+$$
+\widetilde\Lambda(y) = (\widetilde\Lambda_1(y), \dots, \widetilde\Lambda_n(y)), \quad \forall y\in X.
+$$
+
+Also, we notice that $\|\Lambda_i\|_\infty \leqslant \|\Lambda\|_\infty$.
+Then, $\forall x\in X\cap S(0, 1)$ 
+
+$$
+\begin{aligned}
+\|\widetilde\Lambda(x)\| = & \sqrt{|\widetilde\Lambda_1(x)|^2 + \cdots + |\widetilde\Lambda_n(x)|^2} \\
+ \leqslant & \sqrt{(\|\widetilde\Lambda_1\|_\infty^2 + \cdots + \|\widetilde\Lambda_n\|_\infty^2) \|x\|_X^2} \\
+ = & \sqrt{(\|\Lambda_1\|_\infty^2 + \cdots + \|\Lambda_n\|_\infty^2)\|x\|_X^2} \\
+ \leqslant & \sqrt{n} \|\Lambda\|_\infty \|x\|_X.
+\end{aligned}
+$$ 
+
+Divided by $\|x\|_X$ on both sides and take supreme,we have
+
+$$
+\|\widetilde\Lambda\|_\infty \leqslant \sqrt{n} \|\Lambda\|_\infty.
+$$
+
+\end{proof}
+
+\section*{Problem 4}
+
+\begin{proof}
+
+We apply Banach-Alaoglu theorem directly, so there exists a subsequence $\{\varphi_{n_k}\}$ such that $\varphi_{n_k} \overset{\ast}{\rightharpoonup} \varphi  $. Hence, for any $x\in X$, $\varphi_{n_k}(x) \rightarrow \varphi(x)$. Additionally, we know for any $y_k \in S$, $\varphi_{n}(y_k) \rightarrow \varphi(y_k)$ and $\overline S = X$. Hence, $\varphi_{n}(x) \rightarrow \varphi(x)$, $\forall x \in X$. And it is equivalent to $\varphi_{n} \overset{\ast}{\rightharpoonup} \varphi$ on $X$. 
+
+Next, we need to show $\varphi$ is bounded. For any $x \in X\cap S(0, 1)$, 
+
+$$ 
+\|\varphi(x)\| = \lim_{n \rightarrow +\infty} \|\varphi_n(x)\| \leqslant M.
+$$
+
+Take supreme on left side of $\|x\| = 1$, we have $\|\varphi\|_\infty \leqslant M$.
+
+\end{proof}
+
+\section*{Problem 5}
+
+\begin{proof}
+
+If $X$ is a finite dimensional normed space, then we take an orthonormal basis $\{e_1, \dots, e_n\} \subset X$, and linear functionals $\{f_1, \dots, f_n\} \subset X^*$, such that 
+
+$$
+f_i (e_j) = \left\{
+\begin{aligned}
+1 \qquad i = j \\
+0 \qquad i \neq j 
+\end{aligned}\right.
+$$
+
+Hence, for each $x_j$, it can be expressed as $x_j = \sum_{i=1}^n \alpha_i^j e_i$ and $f_k(x_j) = \alpha_k^j$, $\forall k = 1, \dots, n$. Additionally, since $x_j \rightharpoonup x$, we have $f_k(x_j) \rightarrow f_k(x)$, $\forall k$. Hence, 
+
+$$
+\|x_j - x\|^2 = \|\sum_{i=1}^n \alpha_i^j e_i -  \sum_{i=1}^n \beta_i e_i\|^2 = \|\sum_{i=1}^n (f_i(x_j) - f_i(x)) e_i \|^2 \leqslant \sum_{i=1}^n |f_i(x_j) - f(x)|^2.
+$$
+
+since it is a finite summation and for each $i$, $|f_i(x_j) - f(x)|^2$ goes to $0$, as $j \rightarrow +\infty$. Hence, strongly convergence is proved.
+
+\end{proof}
+
+\section*{Problem 6}
+\begin{enumerate}
+\item [(i)]
+\begin{proof}
+
+$1<p<+\infty$ and $1/p + 1/q = 1$. For any $f\in (\ell^p)^*$, and $x\in \ell^p$, there exists $\alpha = \{\alpha_n\}_{n\in\mathbb N}\in \ell^q$ such that $f(x) = \sum_{i=1}^\infty \alpha_ix_i$.
+
+Hence, $\forall f\in (\ell^p)^*$, $f(e_j) = \sum_{i=1}^\infty \beta_i e_j^i$ and $\sum_{i=1}^\infty |\beta_i|^q < +\infty$.
+
+$$
+\|f(e_j) - 0\| = \|\beta_j - 0\| = |\beta_j|.
+$$
+
+Since $|\beta_i|^q \rightarrow 0$ as $i \rightarrow +\infty$, we know $\|f(e_j) - 0\| \rightarrow 0$, $\forall f\in (\ell^p)^*$  as $j\rightarrow +\infty$. Hence, $\{e_n\}_{n\geqslant 1}$ weakly converges to $0$ in $\ell^p$.
+
+\end{proof}
+
+\item[(ii)]
+
+\begin{proof}
+
+Any subsequece $\{e_{n_k}\}_{n\geqslant 1}$ is not Cauchy in $\ell^p$ and so it doesn't converge in $\ell^p$. Indeed, for each $k>l$, 
+
+$$
+\|e_{n_k} - e_{n_l}\| = \left( \sum_{i = 1}^\infty |e^i_{n_k} - e^i_{n_l}|^p\right)^{1/p} = 2^{1/p}.
+$$
+
+
+\end{proof}
+\end{enumerate}
 
 
 \section*{Problem 7}
@@ -275,6 +383,41 @@ Hence, $\{y_n\}$ converges since $\|y_n - x\|\rightarrow d_\Omega(x)$. And this 
 \end{proof}
 
 \item [(ii)]
+
+To show this, we would like to prove a lemma first.
+
+\begin{lemma}
+For any $x, y\in H$, $\alpha > 0$, 
+$$
+\langle x, y \rangle \leqslant 0 \iff \|x-\alpha y\| \geqslant \|x\|
+$$
+
+\end{lemma}
+
+\begin{proof}[Proof of Lemma]
+
+If $\langle x, y \rangle$, $\forall \alpha > 0$, 
+
+$$\langle x-\alpha y, x-\alpha y \rangle = \|x\|^2 + \alpha^2\|y\|^2 - 2\alpha\langle x, y\rangle \geqslant \|x\|^2.
+$$
+
+Conversely, if $\|x-\alpha y\| \geqslant \|x\|$, $\forall \alpha > 0$, i.e.,
+
+$$
+\langle x-\alpha y, x-\alpha y \rangle = \|x\|^2 + \alpha^2\|y\|^2 - 2\alpha\langle x, y\rangle \geqslant \|x\|^2.
+$$
+
+which implies $\alpha^2\|y\|^2 - 2\alpha\langle x, y\rangle \geqslant 0$, and so $\frac{\alpha}{2} \|y\|^2 \geqslant \langle x, y \rangle$. Let $\alpha \rightarrow 0^+$ and obtain $\langle x, y \rangle \leqslant 0$.
+
+\end{proof}
+
+Next we will show the claim. $y = \pi_\Omega (x)$ is equivalent to $\|x - y\| = \min_{w\in\Omega} \|x - w\|$, which is
+
+$$
+(\forall w \in \Omega), \|x - y\| \leqslant \|x - w\| = \|x - y - (w - y)\|.
+$$
+
+And use the lemma, it is equivalent to $\langle x - y, w - y \rangle \leqslant 0$.
 
 \end{enumerate}
 

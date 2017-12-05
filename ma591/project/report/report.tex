@@ -21,7 +21,33 @@
 \author{Melissa Gaddy, Zheming Gao}
 \maketitle
 
-\section{Max Cut problem}
+\section{Matrix Multiplicative Weights Algorithm and its application}
+
+In the preceding section, we've introduced Multiplicative Weights(MW) algorithm and apply it on solving Linear programming problems of some certain form. We refer to the setting as \textit{basic} or  \textit{scalar} case. Now we are considering some problem which has enough structure that we can obtain an analogous algorithm for them.
+
+Moving from vectors to matrices, and from probability vector to density matrix, now we refer to the current setting as \textit{matrix} case. 
+
+\begin{minipage}{0.5\linewidth}
+
+
+\begin{align*}
+a_j^T \textbf x \geqslant 0 \\
+\mathbf 1^T\textbf x = 1 \\
+\textbf x\geqslant 0.
+\end{align*}
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+\begin{align*}
+A_j \bullet X \geqslant 0 \\
+Tr(S) = 1 \\
+X \succeq 0.
+\end{align*}
+
+\end{minipage}
+
+\subsection{Max Cut problem}
 
 The max cut problem can be reformulate as the following form
 
@@ -35,7 +61,7 @@ The max cut problem can be reformulate as the following form
 
 where $X\in \mathbb S_+^n$.
 
-If we denote the optimal value as $b$ and scale $X$ by $1/n$, then we would like to check the feasibility of the constraints:
+If we denote the optimal value as $b$ and scale $X$ by $1/n$, then we would like to check the feasibility of the constraints: 
 
 
 \begin{equation*}
@@ -64,7 +90,7 @@ Initialize $X^{(1)} = 1/n I$, and set parameters $\epsilon$, $\eta = -\ln(1-\eps
 
 
 
-\section{Results}
+\subsubsection{Results}
 \begin{table}[htbp]\label{toytable}
 \centering
 \begin{tabular}{||c|c|c|c|c||}
@@ -134,7 +160,7 @@ $|b^* - b|$ & 3.2430 & 0.7318 &  & \\
 
 
 
-\subsection{Comments}
+\subsubsection{Comments}
 
 \begin{enumerate}
 \item
