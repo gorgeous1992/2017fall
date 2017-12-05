@@ -3,12 +3,15 @@
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{enumitem}
 \usepackage{placeins}
+\usepackage{algorithm}
 \usepackage{mathtools, eucal}
 \usepackage{graphicx}
 \usepackage{color}
- 
+\usepackage[noend]{algpseudocode}
+ \newtheorem{theorem}{Theorem}
+\def\bf{\textbf}
+\def\BState{\State\hskip-\ALG@thistlm}
 
- 
 \begin{document}
  
 %\renewcommand{\qedsymbol}{\filledbox}
@@ -23,7 +26,42 @@
 
 \section{Matrix Multiplicative Weights Algorithm and its application}
 
-In the preceding section, we've introduced Multiplicative Weights(MW) algorithm and apply it on solving Linear programming problems of some certain form. We refer to the setting as \textit{basic} or  \textit{scalar} case. Now we are considering some problem which has enough structure that we can obtain an analogous algorithm for them.
+
+
+\subsection{Matrix MW Algorithm}
+
+The motivation of Matrix MW Algorithm is similar to MW algorithm introduced in the preceding section.
+
+Imagine a 2-player zero-sum game. The first player chooses a unit vector $\bf v$, and the second player chooses a matrix $M$ such that $\textbf{0} \preceq M \preceq I$. The second player has to pay $\bf v^TM\bf v$ to the first.We allow the first player to choose the vector $v$ from distribution $\mathcal D$ over the unit ball. In this case, we are interested in studying the value
+
+$$
+\mathbb E_{\mathcal D} \left[(\bf v^\top M\bf v)\right] = M \bullet \mathbb E_{\mathcal D} \left[\bf v\bf v^\top\right]
+$$
+
+Now the matrix $P:= \mathbb E_{\mathcal D} \left[\bf v\bf v^\top\right]$ is a density matrix, which has properties of positive semidefinite and trace 1.
+
+As in MW algorithm, we consider an online 2-player zero-sum game. At each round the first player has to react to the opponent who picks matrix $M$. The matrix $M$ is called an \textit{observed event}. An online algorithm for first player to observe the event $M^{(t)}$ and choose a density matrix $P^{(t)}$ at each round $t = 1, \dots, T$. After $T$ rounds the best fixed vector $\bf v$ is the one that maximize the total payoff $\sum_{t = 1}^T \bf v^\top M \bf v$. 
+
+For a symmetric matrix $A\in \mathbb R^n$, we denote its eigenvalues in an order as $\lambda_1(A) \geqslant \cdots \geqslant \lambda_n(A)$. Then it is obvious to see that the best maximizer $\bf v$ is the unit eigenvector of the largest eigenvalue of $\sum_{t = 1}^T M^{(t)}$, i.e., $\lambda_1(\sum_{t = 1}^T M^{(t)})$. The goal of this online algorithm is to find a solution vector $\bf v$ such that the value of $\bf v^\top M \bf v$ is not much less than the smallest expected value. We won't know which fixed vector $\bf v$ will be the best until we finish the last round. Hence, this algorithm has the advantage to make decisions while the game is playing.
+
+Analogously, the Matrix MW algorithm is the following.
+
+\begin{algorithm}\label{MMWoriginal}
+   \caption{Matrix Multiplicative Weights Algorithm}
+    \begin{algorithmic}[]
+      \State Fix an $\epsilon < \frac{1}{2}$, and let $\eta = -\ln(1-\epsilon)$. 
+    \For{$t = 1, 2, \dots, T$ }
+    \State 1. Compute weight matrix $W^{(t)} = \exp(\eta\sum_{\tau =1 }^{t-1} M^{(\tau)})$.
+    \State 2. Compute density matrix $P^{(t)} = \frac{W^{(t)}}{Tr(W^{(t)})}$.
+    \State 3. Observe the event $M^{(t)}$.
+     \EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\FloatBarrier
+
+\subsection{Solving SDP with Matrix MW Algorithm}
+We've introduced Multiplicative Weights(MW) algorithm and apply it on solving Linear programming problems of some certain form. We refer to the setting as \textit{basic} or  \textit{scalar} case. Now we are considering some problem which has enough structure that we can obtain an analogous algorithm for them.
 
 Moving from vectors to matrices, and from probability vector to density matrix, now we refer to the current setting as \textit{matrix} case. 
 
@@ -41,11 +79,43 @@ a_j^T \textbf x \geqslant 0 \\
 
 \begin{align*}
 A_j \bullet X \geqslant 0 \\
-Tr(S) = 1 \\
+Tr(X) = 1 \\
 X \succeq 0.
 \end{align*}
 
 \end{minipage}
+
+Notice that the feasibility problem on right hand side is a SDP problem. We are interested in using Matrix MW Algorithm to solve SDP problems of this certain form. As before, to fit the algorithm on this problem, we need to slightly modify Matrix MW Algorithm. Let parameter $\rho = \max_j\|A_j\|$. At each round $t$, set the observe event (gain matrix) $M^{(t)} = A_j/\rho$. 
+
+\begin{algorithm}\label{MMWfeasibility}
+   \caption{Matrix Multiplicative Weights Algorithm - SDP}
+    \begin{algorithmic}[]
+      \State Fix an $\epsilon < \frac{1}{2}$, and let $\eta = -\ln(1-\epsilon)$. $\rho = \max_j\|A_j\|$. 
+      \State Initialize $W^{(0)} = I$, $X^{(0)} = \frac{1}{n}I$.
+    \While{$A_j \bullet X^{(t)} < 0$}
+    \State 1. Observe gain matrix $M^{(t)} = \frac{A_j}{\rho}$.
+    
+    \State 2. Compute weight matrix $W^{(t)} = \exp(\eta\sum_{\tau =1 }^t M^{(\tau)})$.
+    \State 3. Compute density matrix $X^{(t)} = \frac{W^{(t)}}{Tr(W^{(t)})}$.
+     \EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+The Matrix Multiplicative Weights Algorithm - SDP gives an lower bound of the gain in total.
+
+\begin{theorem}
+
+The Matrix Multiplicative Weights algorithm generates $X^{(t)}$, $t = 1, \dots, T$ such that:
+
+$$
+\sum_{t=1}^TM^{(t)} \bullet X^{(t)} \geqslant (1 + \epsilon) \lambda_1\left(\sum_{t=1}^T M^{(t)}\right) - \frac{\ln n}{\epsilon} 
+$$
+\end{theorem}
+
+(Add reference, A Combinatorial, Primal-Dual approach)
+
+**************************************************************************
+
 
 \subsection{Max Cut problem}
 
