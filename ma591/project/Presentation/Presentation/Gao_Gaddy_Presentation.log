@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  28 NOV 2017 12:57
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  29 NOV 2017 08:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1448,27 +1448,25 @@ Overfull \hbox (9.99608pt too wide) detected at line 314
 
 ] [26
 
-] [27
-
 ]
 Overfull \hbox (2.9783pt too wide) in paragraph at lines 392--392
  [] 
  []
 
-[28
+[27
 
 ]
 Overfull \hbox (2.9783pt too wide) in paragraph at lines 423--423
  [] 
  []
 
-[29
+[28
+
+] [29
 
 ] [30
 
 ] [31
-
-] [32
 
 ]
 \tf@nav=\write6
@@ -1493,12 +1491,12 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 482.
  ) 
 Here is how much of TeX's memory you used:
- 27982 strings out of 493591
- 546015 string characters out of 6143546
+ 27980 strings out of 493591
+ 545999 string characters out of 6143546
  610317 words of memory out of 5000000
- 30790 multiletter control sequences out of 15000+600000
+ 30788 multiletter control sequences out of 15000+600000
  24740 words of font info for 88 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  56i,17n,67p,413b,667s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Gao_Gaddy_Presentation.pdf (32 pages).
+Output written on Gao_Gaddy_Presentation.pdf (31 pages).

@@ -135,7 +135,7 @@ While $\exists \; j$ s.t. $a_j^T x^{(t)} < 0$
 \item Update $x^{(t)}$: for each $i$,
 $$ x_i^{(t+1)} = x_i^{(t)}\exp(\eta m_i^{(t)})$$
 \end{enumerate}
-,\end{frame}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%
 \begin{frame}{Linear Classifier: Toy Example}
@@ -344,19 +344,19 @@ X &\succcurlyeq 0
 \end{frame}
 
 
-\begin{frame}{Matrix MW algorithm for MAXCUT (Large-Margin)}
-Define $\rho = \max_j ||A_j||$, $\eta = -\text{ln}(1-\epsilon), \epsilon > 0$, $\delta > 0$. \\ \vspace{.5cm}
-Initialize $W^{(0)} = I_n$ \quad and $X^{(0)} = W^{(0)}/Tr(W^{(0)})$. \\ \vspace{.5cm}
-While $\exists \; j$ s.t. $A_j \bullet X^{(t)} < -\delta$:
-\begin{enumerate}
-\setlength\itemsep{1.2em}
-\item Find the index $j$ such that $A_j \bullet X^{(t)} < -\delta$
-\item Obtain the payoff $M^{(t)} = \frac{A_j}{\rho}$
-\item Update the weight matrix $W^{(t)}$ and $X^{(t)}$:
-$$ W^{(t+1)} = \exp \left(\eta \sum_{\tau =1}^t M^{(\tau)}\right) ,\ \ X^{(t+1)} = \frac{W^{(t+1)}}{Tr(W^{(t+1)})}$$
+%\begin{frame}{Matrix MW algorithm for MAXCUT (Large-Margin)}
+%Define $\rho = \max_j ||A_j||$, $\eta = -\text{ln}(1-%\epsilon), \epsilon > 0$, $\delta > 0$. \\ \vspace{.5cm}
+%Initialize $W^{(0)} = I_n$ \quad and $X^{(0)} = W^{(0)}/%Tr(W^{(0)})$. \\ \vspace{.5cm}
+%While $\exists \; j$ s.t. $A_j \bullet X^{(t)} < -\delta$:
+%\begin{enumerate}
+%\setlength\itemsep{1.2em}
+%\item Find the index $j$ such that $A_j \bullet X^{(t)} < -\delta$
+%\item Obtain the payoff $M^{(t)} = \frac{A_j}{\rho}$
+%\item Update the weight matrix $W^{(t)}$ and $X^{(t)}$:
+%$$ W^{(t+1)} = \exp \left(\eta \sum_{\tau =1}^t M^{(\tau)}\right) ,\ \ X^{(t+1)} = \frac{W^{(t+1)}}{Tr(W^{(t+1)})}$$
 
-\end{enumerate}
-\end{frame}
+%\end{enumerate}
+%\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%
@@ -368,7 +368,7 @@ Number of nodes: 4. $b^* = 16$.
 \centering\small
 \begin{tabular}{||c|c|c|c|c||}
 \hline
-$\epsilon, \delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+$\epsilon $& 0.1 & 0.01 & 0.001 & 0.0001 \\
 %\hline
 %$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
 %\hline
@@ -399,7 +399,7 @@ Number of nodes: 10. $b^* = 80$.
 
 \begin{tabular}{||c|c|c|c|c||}
 \hline
-$\epsilon, \delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+$\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
 %\hline
 %$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
 %\hline
@@ -429,7 +429,7 @@ Number of nodes: 100. $b^* = 8190$.
 \centering
 \begin{tabular}{||c|c|c|c|c||}
 \hline
-$\epsilon, \delta$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
+$\epsilon$ & 0.1 & 0.01 & 0.001 & 0.0001 \\
 %\hline
 %$\eta$ & 0.1054 & 0.0101 & 0.0010 & 0.0001 \\
 %\hline
@@ -454,7 +454,7 @@ $\frac{|b^* - b^{(T)}|}{|b^*|}$ & $3.96\times 10^{-4}$  & $8.94\times 10^{-5}$ &
 \item 
 Use the MW algorithm to solve Linear Classification problems.
 \item
-Matrix MW algorithm performance depends on $\epsilon$ and $\delta$. (Parameter sensitive).
+Matrix MW algorithm performance depends on $\epsilon$. (Parameter sensitive).
 \end{itemize}
 \end{frame}
 
